@@ -13,10 +13,10 @@ sweep for corrections. No-one needs to touch it when new statistics come out.
 |---|---|
 | **Overview** | England headline figures, quarterly prevention and relief duties (the old Flourish chart), monthly rough sleeping after leaving asylum support (the other Flourish chart), share of all duties, asylum support population, and grants of protection compared with duties. Any region or local authority can be selected. |
 | **Regions** | Regional comparison table (latest quarter, change on previous quarter and year, share, trend) and the **top 5 local authorities in every region** for any quarter and measure. |
-| **Local authorities** | A profile for each council: figures, national and regional rank, trends, rough sleeping, people in asylum support and a quarterly table. |
+| **Local authority trends** | A profile for each council: figures, national and regional rank, trends, rough sleeping, people in asylum support and a quarterly table. |
 | **Map** | Choropleth of every council by measure and quarter, with zoom to region. |
-| **Rankings & data** | Sortable and filterable table of all councils, with CSV download. Full long-format datasets are also available. |
-| **About the data** | Definitions, caveats, the exact source files in use, and how to embed charts. |
+| **Local authority tables** | Sortable and filterable table of all councils, with CSV download. |
+| **About the data** | Definitions, caveats, the exact source files in use, full dataset downloads, and how to embed charts. |
 
 ## Data sources (found automatically)
 

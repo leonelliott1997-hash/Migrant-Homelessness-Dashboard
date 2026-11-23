@@ -898,7 +898,7 @@ VIEWS.map = async ({ params }) => {
   document.getElementById("map-top").innerHTML = ranked.map((a, i) => `<li><span class="rank">${i + 1}</span><a href="#/la/${a.code}">${esc(a.name)}</a><span class="num">${fmtV(a.value)}</span><span class="bar"><i style="width:${(a.value / max) * 100}%"></i></span></li>`).join("") || `<li class="muted">None recorded</li>`;
 };
 
-// ---------------------------------------------------------------- Rankings & data
+// ---------------------------------------------------------------- Local authority tables (#/rankings)
 VIEWS.rankings = ({ params }) => {
   let q = params.get("q"); if (!splitQuarters().includes(q)) q = latestQ();
   const region = params.get("region") || "";
@@ -931,8 +931,8 @@ VIEWS.rankings = ({ params }) => {
   });
 
   $view.innerHTML = `
-    <h2>Rankings &amp; data</h2>
-    <p class="lede">Every local authority in England. Sort by any column, filter by region, and download the figures.</p>
+    <h2>Local authority tables</h2>
+    <p class="lede">Every local authority in England. Sort by any column, filter by region, and download the table. The full datasets are on the <a href="#/about">About the data</a> page.</p>
     <div class="controls">
       <label class="control">Quarter<select id="q">${quarterOptions(splitQuarters(), q)}</select></label>
       <label class="control">Region<select id="region"><option value="">All England</option>${REGION_ORDER.map((c) => `<option value="${c}" ${c === region ? "selected" : ""}>${esc(regionName(c))}</option>`).join("")}</select></label>
@@ -945,18 +945,7 @@ VIEWS.rankings = ({ params }) => {
         <td><b>${fmt(r.total)}</b></td><td>${cell("prevention", r.code, q)}</td><td>${cell("relief", r.code, q)}</td>
         <td class="delta">${r.change == null ? "–" : deltaSpan(r.total, r.total - r.change, { pct: false })}</td><td>${fmt(r.last4)}</td>
         <td>${fmtPct(r.shareP)}</td><td>${fmtPct(r.shareR)}</td><td>${fmtRate(r.rate)}</td><td>${fmtPct(r.prevshare, 0)}</td><td>${fmt(r.rough)}</td><td>${fmt(r.support)}</td></tr>`).join("")}</tbody></table></div>
-    <p class="note">${rows.length} local authorities. "[x]" = missing: the council did not submit data for this quarter, or MHCLG excluded it for data quality reasons. "Last 12 months" is left blank if any of the four quarters is missing. "Relief share" is left blank for councils with fewer than ${PREV_MIN_BASE} duties in the quarter. Rough sleeping figures are monthly estimates from the Rough Sleeping Data Framework. Asylum support is people receiving Home Office support at the end of ${qLong(D.asylum_support.quarters.at(-1))}.</p>
-
-    <div class="section card">
-      <h3>Download the full datasets</h3>
-      <p class="sub">Long-format CSV files covering every area and period, updated with each release.</p>
-      <ul>
-        <li><a href="data/homelessness_duties_asylum_support_leavers.csv" download>Homelessness duties owed to households leaving asylum accommodation, by area and quarter (CSV)</a></li>
-        <li><a href="data/rough_sleeping_asylum_support_leavers.csv" download>Rough sleeping after leaving asylum support, by area and month (CSV)</a></li>
-        <li><a href="data/people_in_asylum_support_by_area.csv" download>People in asylum support, by area and quarter (CSV)</a></li>
-        <li><a href="data/data.json">Everything as one JSON file</a> (used by this site)</li>
-      </ul>
-    </div>`;
+    <p class="note">${rows.length} local authorities. "[x]" = missing: the council did not submit data for this quarter, or MHCLG excluded it for data quality reasons. "Last 12 months" is left blank if any of the four quarters is missing. "Relief share" is left blank for councils with fewer than ${PREV_MIN_BASE} duties in the quarter. Rough sleeping figures are monthly estimates from the Rough Sleeping Data Framework. Asylum support is people receiving Home Office support at the end of ${qLong(D.asylum_support.quarters.at(-1))}.</p>    </div>`;
 
   document.getElementById("q").addEventListener("change", (e) => setParams({ q: e.target.value === latestQ() ? null : e.target.value }));
   document.getElementById("region").addEventListener("change", (e) => setParams({ region: e.target.value || null }));
@@ -1047,6 +1036,15 @@ VIEWS.about = () => {
       <li><a href="${esc(s.grants.page)}">${esc(s.grants.name)}</a>: ${esc(s.grants.title)}.</li>
     </ul>
     <p>Data last checked: ${new Date(D.meta.generated).toLocaleString("en-GB", { dateStyle: "long", timeStyle: "short" })}.</p>
+
+    <h3 id="downloads">Download the full datasets</h3>
+    <p>Long-format CSV files covering every area and period, updated with each release.</p>
+    <ul>
+      <li><a href="data/homelessness_duties_asylum_support_leavers.csv" download>Homelessness duties owed to households leaving asylum accommodation, by area and quarter (CSV)</a></li>
+      <li><a href="data/rough_sleeping_asylum_support_leavers.csv" download>Rough sleeping after leaving asylum support, by area and month (CSV)</a></li>
+      <li><a href="data/people_in_asylum_support_by_area.csv" download>People in asylum support, by area and quarter (CSV)</a></li>
+      <li><a href="data/data.json">Everything as one JSON file</a> (used by this site)</li>
+    </ul>
 
     <h3>Embedding charts on your website</h3>
     <p>Any page can be embedded without the header and navigation by adding <code>?embed=1</code> to the address. For example, the overview for the North West:</p>
