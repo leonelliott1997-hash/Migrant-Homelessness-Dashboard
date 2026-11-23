@@ -23,7 +23,7 @@ const MEASURES = {
   relief: { label: "Asylum leaver relief duties", short: "Asylum leaver relief", color: "var(--relief)" },
   rate: { label: "Homelessness duties per 100 people in asylum support", short: "Homelessness duties per 100 people in asylum support", color: "var(--accent)" },
 };
-const MEASURE_BUTTONS = [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Homelessness duties per 100 people in asylum support"]];
+const MEASURE_BUTTONS = [["total", "Prevention + Relief Duties"], ["prevention", "Prevention Duties"], ["relief", "Relief Duties"], ["rate", "Duties per 100 people in asylum support"]];
 
 // ---------------------------------------------------------------- state
 let D = null;          // the data
