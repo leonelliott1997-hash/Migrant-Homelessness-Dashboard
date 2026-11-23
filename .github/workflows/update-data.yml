@@ -1,0 +1,109 @@
+name: Update data and publish dashboard
+
+on:
+  schedule:
+    # A quick look at GOV.UK's release calendar each weekday at 10:00 UTC (after the
+    # 09:30 UK release time). The full update only runs on release days, the day after,
+    # when a source page has changed, and on Mondays (weekly sweep).
+    # See pipeline/release_check.py.
+    - cron: "0 10 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-parse every source file (use after changing the pipeline)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - run: pip install -r pipeline/requirements.txt
+
+      - name: Is there a release today?
+        id: gate
+        env:
+          FORCE_RUN: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}
+        run: python pipeline/release_check.py
+
+      - name: Fetch and process latest releases
+        id: pipeline
+        if: steps.gate.outputs.run == 'true'
+        run: python pipeline/update_data.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Sanity-check the data before publishing
+        if: steps.gate.outputs.run == 'true'
+        run: python pipeline/check_data.py
+
+      - name: Commit updated data
+        id: commit
+        run: |
+          git config user.name "data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data pipeline/cache
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            # GitHub pauses scheduled workflows after 60 days without repository activity.
+            # Keep it alive with an empty commit if the last commit is over 50 days old.
+            if [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt 4320000 ]; then
+              git commit --allow-empty -m "Keep scheduled data checks active"
+              git push
+            fi
+          else
+            git commit -m "Data update $(date -u +%Y-%m-%d): ${{ steps.gate.outputs.reason }}"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open an issue announcing new releases
+        if: steps.pipeline.outputs.new_releases != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BODY: ${{ steps.pipeline.outputs.new_releases }}
+        run: |
+          printf 'The dashboard has been updated with new releases:\n\n%s\n\nPlease sense-check the dashboard and close this issue.\n' "$BODY" > body.md
+          gh issue create --title "New data published $(date -u +%Y-%m-%d)" --body-file body.md
+
+  deploy:
+    needs: [update]
+    # Publish after a data change, a manual run, or a push that changes the site
+    if: >-
+      always() && (needs.update.result == 'skipped' ||
+      (needs.update.result == 'success' && (needs.update.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')))
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: deployment
+        uses: actions/deploy-pages@v4
