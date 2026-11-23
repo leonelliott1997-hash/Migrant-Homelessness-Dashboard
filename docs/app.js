@@ -614,7 +614,7 @@ VIEWS.regions = ({ params }) => {
     <div class="section">
       <div class="section-head"><h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
         <div class="control">Ranked by${seg("m", MEASURE_BUTTONS, measure)}</div></div>
-      <p class="lede">${measure === "rate" ? `Households owed a duty after leaving asylum accommodation per 100 people in asylum support at the start of the quarter. Only areas with at least ${RATE_MIN_BASE} people in support are ranked; the small figures show households and people in support.` : `${esc(MEASURES[measure].label)} for households required to leave Home Office asylum accommodation. Change shown against the previous quarter.`}</p>
+      <p class="lede">${measure === "rate" ? `Households owed a duty after leaving asylum accommodation per 100 people in asylum support at the start of the quarter. The small numbers show households owed duties and people in support.` : `${esc(MEASURES[measure].label)} for households required to leave Home Office asylum accommodation. Change shown against the previous quarter.`}</p>
       <div class="region-grid">${REGION_ORDER.map((c) => {
         const v = mv(c, q);
         return `<div class="card region-card"><div class="rc-head"><h3><a href="#/overview?area=${c}" style="color:inherit">${esc(regionName(c))}</a></h3>
