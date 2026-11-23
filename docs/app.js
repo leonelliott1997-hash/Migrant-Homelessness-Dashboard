@@ -18,11 +18,12 @@ const REST = "REST";
 const LONDON = "E12000007";
 
 const MEASURES = {
-  total: { label: "Prevention + relief duties", short: "Total duties", color: "var(--accent)" },
-  prevention: { label: "Prevention duties", short: "Prevention", color: "var(--prevention)" },
-  relief: { label: "Relief duties", short: "Relief", color: "var(--relief)" },
+  total: { label: "Asylum leaver prevention + relief duties", short: "Asylum leaver duties", color: "var(--accent)" },
+  prevention: { label: "Asylum leaver prevention duties", short: "Asylum leaver prevention", color: "var(--prevention)" },
+  relief: { label: "Asylum leaver relief duties", short: "Asylum leaver relief", color: "var(--relief)" },
   rate: { label: "Households owed a duty per 100 people in asylum support", short: "Per 100 in support", color: "var(--accent)" },
 };
+const MEASURE_BUTTONS = [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Rate per 100 in support"]];
 
 // ---------------------------------------------------------------- state
 let D = null;          // the data
@@ -411,17 +412,17 @@ VIEWS.overview = ({ params }) => {
                <div class="delta">${deltaSpan(tot, hv("total", ENGLAND, yq))} vs ${qLong(yq)}</div>`}
       </div>
       <div class="tiles">
-        ${tile("Prevention duties", fmt(pre), `${deltaSpan(pre, V("prevention", ENGLAND, cmpAt))} ${cmpText}`, "var(--prevention)")}
-        ${tile("Relief duties", fmt(rel), `${deltaSpan(rel, V("relief", ENGLAND, cmpAt))} ${cmpText}`, "var(--relief)")}
+        ${tile("Asylum leaver prevention duties", fmt(pre), `${deltaSpan(pre, V("prevention", ENGLAND, cmpAt))} ${cmpText}`, "var(--prevention)")}
+        ${tile("Asylum leaver relief duties", fmt(rel), `${deltaSpan(rel, V("relief", ENGLAND, cmpAt))} ${cmpText}`, "var(--relief)")}
         ${tile("Prevention vs relief", fmtPct(prevShare(ENGLAND, q, Y), 0), `of these duties were prevention: ${ratioText(pdRatio(ENGLAND, q, Y))}`, "var(--prevention)")}
         ${tile("Share of all prevention duties", fmtPct(shareOf("prevention", ENGLAND, q, Y)), `of the ${fmt(V("prevention_all", ENGLAND))} households owed a prevention duty in England were leaving asylum accommodation`, "var(--prevention)")}
         ${tile("Share of all relief duties", fmtPct(shareOf("relief", ENGLAND, q, Y)), `of the ${fmt(V("relief_all", ENGLAND))} households owed a relief duty in England were leaving asylum accommodation`, "var(--relief)")}
-        ${tile("Sleeping rough after leaving asylum support", Y ? fmt(rsVal) : fmt(rsVal),
-          Y ? `average per month, 12 months to ${mLong(lastM)} · ${deltaSpan(rsVal, rsCmp, { abs: false })} on the 12 months before`
-            : `${rs.month ? mLong(rs.month) : ""} · ${deltaSpan(rs.value, rs.prev, { pct: false })} vs previous month`, "var(--rough)")}
         ${tile("Rate per 100 people in asylum support", fmtRate(rateNow),
           Y ? `households owed a duty in the year per 100 people in support (average of the four quarters) · ${fmtRate(rateCmp)} the year before`
             : `households owed a duty per 100 people in support at the start of the quarter · ${fmtRate(rateCmp)} last quarter`)}
+        ${tile("Sleeping rough after leaving asylum support", Y ? fmt(rsVal) : fmt(rsVal),
+          Y ? `average per month, 12 months to ${mLong(lastM)} · ${deltaSpan(rsVal, rsCmp, { abs: false })} on the 12 months before`
+            : `${rs.month ? mLong(rs.month) : ""} · ${deltaSpan(rs.value, rs.prev, { pct: false })} vs previous month`, "var(--rough)")}
         ${tile("People in asylum support (England)", fmt(sup.value), `at end of ${sup.quarter ? qLong(sup.quarter) : ""} · ${deltaSpan(sup.value, sup.prev, { abs: false })} on a year earlier`, "var(--support)")}
         ${tile("Grants of protection (UK)", fmt(gVal), `${Y ? yearLabel(G.quarters[gi]) : qLong(G.quarters[gi])}, main applicants · ${deltaSpan(gVal, gCmp, { abs: false })} ${Y ? "on the year before" : "vs last quarter"}`)}
       </div>
@@ -446,7 +447,7 @@ VIEWS.overview = ({ params }) => {
     </div>
     <div class="grid grid-2">
       <div class="card"><h3>Households owed homelessness duties upon leaving Home Office accommodation</h3>
-        <p class="sub">${esc(areaName(area))}, per quarter</p>${legend([["var(--prevention)", "Prevention duties"], ["var(--relief)", "Relief duties"]])}<div class="chart" id="c-duties"></div>
+        <p class="sub">${esc(areaName(area))}, per quarter</p>${legend([["var(--prevention)", "Asylum leaver prevention duties"], ["var(--relief)", "Asylum leaver relief duties"]])}<div class="chart" id="c-duties"></div>
         <p class="embed-source">Source: MHCLG statutory homelessness statistics</p></div>
       <div class="card"><h3>Prevention share</h3>
         <p class="sub">${esc(areaName(area))}, % of duties that were prevention duties (help before becoming homeless) rather than relief duties</p>
@@ -485,8 +486,8 @@ VIEWS.overview = ({ params }) => {
   columnChart(document.getElementById("c-duties"), {
     labels: qs.map(qShort), tipLabels: qs.map(qLong),
     series: [
-      { name: "Prevention duties", color: "var(--prevention)", values: qs.map((x) => hv("prevention", area, x)), flags: qs.map((x) => flagOf("prevention", area, x)) },
-      { name: "Relief duties", color: "var(--relief)", values: qs.map((x) => hv("relief", area, x)), flags: qs.map((x) => flagOf("relief", area, x)) },
+      { name: "Asylum leaver prevention duties", color: "var(--prevention)", values: qs.map((x) => hv("prevention", area, x)), flags: qs.map((x) => flagOf("prevention", area, x)) },
+      { name: "Asylum leaver relief duties", color: "var(--relief)", values: qs.map((x) => hv("relief", area, x)), flags: qs.map((x) => flagOf("relief", area, x)) },
     ],
     onClick: null,
   });
@@ -586,26 +587,35 @@ VIEWS.regions = ({ params }) => {
 
   $view.innerHTML = `
     <h2>Regions</h2>
-    <p class="lede">How each region compares, and the five local authorities with the highest numbers in each region. Select a quarter and measure; click a local authority to see its profile.</p>
+    <p class="lede">How each region compares, and the five local authorities with the highest numbers in each region. Choose a quarter, then a measure: the shaded columns and the top 5 lists change with the measure. Click a local authority to see its profile.</p>
     <div class="controls">
       <label class="control">Quarter<select id="q">${quarterOptions(qList, q)}</select></label>
-      <div class="control">Measure${seg("m", [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Rate per 100 in support"]], measure)}</div>
     </div>
-    <div class="table-wrap"><table>
-      <thead><tr><th class="l">Area</th><th>${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th>vs previous quarter</th><th>vs ${qShort(yq)}</th><th>% of all prevention duties</th><th>% of all relief duties</th><th>Prevention share</th><th>Prevention : relief</th>${measure === "rate" ? "" : "<th>Per 100 in support</th>"}<th class="l">Last 12 quarters</th></tr></thead>
+    <div class="table-wrap"><table class="region-table">
+      <thead>
+        <tr>
+          <th class="l" rowspan="2">Area</th>
+          <th class="grp dyn-head" colspan="4"><div class="grp-label">Choose a measure: these four columns change</div>${seg("m", MEASURE_BUTTONS, measure)}</th>
+          <th class="grp static-head edge" colspan="${measure === "rate" ? 4 : 5}"><div class="grp-label">Other indicators, ${qShort(q)}</div><div class="grp-sub">Always shown: not affected by the measure buttons</div></th>
+        </tr>
+        <tr>
+          <th class="dyn">${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th class="dyn">vs previous quarter</th><th class="dyn">vs ${qShort(yq)}</th><th class="dyn l">Last 12 quarters</th>
+          <th class="edge">% of all prevention duties</th><th>% of all relief duties</th><th>Prevention share</th><th>Prevention : relief</th>${measure === "rate" ? "" : "<th>Per 100 in support</th>"}
+        </tr>
+      </thead>
       <tbody>${rows.map((c) => {
         const v = mv(c, q);
-        const t = hv("total", c, q), r = hv("relief", c, q);
         const sep = c === REST ? ' style="border-bottom:2px solid var(--axis)"' : "";
-        return `<tr${sep}><td class="l"><a href="#/overview?area=${c}">${c === ENGLAND ? "<b>England</b>" : esc(areaName(c))}</a></td><td><b>${mf(v)}</b></td>
-          <td class="delta">${md(v, mv(c, pq))}</td><td class="delta">${md(v, mv(c, yq))}</td>
-          <td>${fmtPct(shareOf("prevention", c, q))}</td><td>${fmtPct(shareOf("relief", c, q))}</td><td>${fmtPct(prevShare(c, q), 0)}</td><td>${pdRatio(c, q) == null ? "–" : fmtRatio(pdRatio(c, q)) + " : 1"}</td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}
-          <td class="l">${sparkline(spanQ.map((x) => mv(c, x)), { color: MEASURES[measure].color })}</td></tr>`;
+        return `<tr${sep}><td class="l"><a href="#/overview?area=${c}">${c === ENGLAND ? "<b>England</b>" : esc(areaName(c))}</a></td>
+          <td class="dyn"><b>${mf(v)}</b></td><td class="dyn delta">${md(v, mv(c, pq))}</td><td class="dyn delta">${md(v, mv(c, yq))}</td>
+          <td class="dyn l">${sparkline(spanQ.map((x) => mv(c, x)), { color: MEASURES[measure].color })}</td>
+          <td class="edge">${fmtPct(shareOf("prevention", c, q))}</td><td>${fmtPct(shareOf("relief", c, q))}</td><td>${fmtPct(prevShare(c, q), 0)}</td><td>${pdRatio(c, q) == null ? "–" : fmtRatio(pdRatio(c, q)) + " : 1"}</td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}</tr>`;
       }).join("")}</tbody></table></div>
     <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "% of all prevention / relief duties" = the share of all households owed that duty, for any reason, who were leaving asylum accommodation. "Prevention share" = % of these households' duties that were prevention rather than relief; "Prevention : relief" shows the same as a ratio. "Per 100 in support" = households owed a duty per 100 people in asylum support in the area at the start of the quarter.</p>
 
     <div class="section">
-      <h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
+      <div class="section-head"><h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
+        <div class="control">Ranked by${seg("m", MEASURE_BUTTONS, measure)}</div></div>
       <p class="lede">${measure === "rate" ? `Households owed a duty after leaving asylum accommodation per 100 people in asylum support at the start of the quarter. Only areas with at least ${RATE_MIN_BASE} people in support are ranked; the small figures show households and people in support.` : `${esc(MEASURES[measure].label)} for households required to leave Home Office asylum accommodation. Change shown against the previous quarter.`}</p>
       <div class="region-grid">${REGION_ORDER.map((c) => {
         const v = mv(c, q);
@@ -654,8 +664,8 @@ VIEWS.la = ({ arg, params }) => {
     </div>
     <div class="tiles">
       ${tile(`Households owed a duty, ${qShort(q)}`, latestMissing ? notSubmitted : fmt(t), latestMissing ? "No data from this council this quarter" : `${deltaSpan(t, hv("total", code, pq))} vs ${qShort(pq)}`)}
-      ${tile("Prevention duties", latestMissing ? notSubmitted : fmt(p), latestMissing ? "" : `${deltaSpan(p, hv("prevention", code, pq), { pct: false })} vs last quarter`, "var(--prevention)")}
-      ${tile("Relief duties", latestMissing ? notSubmitted : fmt(r), latestMissing ? "" : `${deltaSpan(r, hv("relief", code, pq), { pct: false })} vs last quarter`, "var(--relief)")}
+      ${tile("Asylum leaver prevention duties", latestMissing ? notSubmitted : fmt(p), latestMissing ? "" : `${deltaSpan(p, hv("prevention", code, pq), { pct: false })} vs last quarter`, "var(--prevention)")}
+      ${tile("Asylum leaver relief duties", latestMissing ? notSubmitted : fmt(r), latestMissing ? "" : `${deltaSpan(r, hv("relief", code, pq), { pct: false })} vs last quarter`, "var(--relief)")}
       ${tile("Rank this quarter", rank ? `${rank} <span style="font-size:14px;font-weight:400;color:var(--ink-2)">of ${all.length}</span>` : "–", rankR ? `${ordinal(rankR)} of ${inReg.length} in ${esc(regionName(a.region))}` : "Not ranked: no data this quarter")}
       ${tile("Last 12 months", last12 == null ? notSubmitted.replace("Not submitted", "Incomplete") : fmt(last12),
         last12 == null ? `Missing data for ${missingIn(code, q).map(qShort).join(", ") || "a quarter"}` : `${deltaSpan(last12, sumLast("total", code, yq))} vs year before`)}
@@ -673,7 +683,7 @@ VIEWS.la = ({ arg, params }) => {
     <div class="section"><div class="section-head"><h2>Trends</h2><div class="control no-embed">${seg("range", [["3y", "Last 3 years"], ["all", "All"]], range)}</div></div>
     <div class="grid grid-2">
       <div class="card"><h3>Households owed a duty after leaving Home Office accommodation</h3><p class="sub">${esc(a.name)}, per quarter</p>
-        ${legend([["var(--prevention)", "Prevention duties"], ["var(--relief)", "Relief duties"]])}<div class="chart" id="c-duties"></div>
+        ${legend([["var(--prevention)", "Asylum leaver prevention duties"], ["var(--relief)", "Asylum leaver relief duties"]])}<div class="chart" id="c-duties"></div>
         <p class="embed-source">Source: MHCLG statutory homelessness statistics</p></div>
       <div class="card"><h3>People sleeping rough after leaving asylum support</h3><p class="sub">${esc(a.name)}, per month</p><div class="chart" id="c-rough"></div></div>
       <div class="card"><h3>People in asylum support</h3><p class="sub">${esc(a.name)}, end of each quarter</p><div class="chart" id="c-support"></div>
@@ -686,8 +696,8 @@ VIEWS.la = ({ arg, params }) => {
   columnChart(document.getElementById("c-duties"), {
     labels: qs.map(qShort), tipLabels: qs.map(qLong),
     series: [
-      { name: "Prevention duties", color: "var(--prevention)", values: qs.map((x) => hv("prevention", code, x)), flags: qs.map((x) => flagOf("prevention", code, x)) },
-      { name: "Relief duties", color: "var(--relief)", values: qs.map((x) => hv("relief", code, x)), flags: qs.map((x) => flagOf("relief", code, x)) },
+      { name: "Asylum leaver prevention duties", color: "var(--prevention)", values: qs.map((x) => hv("prevention", code, x)), flags: qs.map((x) => flagOf("prevention", code, x)) },
+      { name: "Asylum leaver relief duties", color: "var(--relief)", values: qs.map((x) => hv("relief", code, x)), flags: qs.map((x) => flagOf("relief", code, x)) },
     ],
   });
   const R = D.rough_sleeping, rsv = R.asylum[code];
@@ -700,7 +710,7 @@ VIEWS.la = ({ arg, params }) => {
   else document.getElementById("c-support").innerHTML = `<p class="empty">No one in asylum support was recorded in this area.</p>`;
 
   const tq = splitQuarters().slice().reverse();
-  document.getElementById("la-table").innerHTML = `<thead><tr><th class="l">Quarter</th><th>Prevention</th><th>Relief</th><th>Total</th><th>% of all prevention</th><th>% of all relief</th><th>Prevention share</th></tr></thead><tbody>${
+  document.getElementById("la-table").innerHTML = `<thead><tr><th class="l">Quarter</th><th>Asylum leaver prevention</th><th>Asylum leaver relief</th><th>Asylum leaver total</th><th>% of all prevention</th><th>% of all relief</th><th>Prevention share</th></tr></thead><tbody>${
     tq.map((x) => `<tr><td class="l">${qLong(x)}</td><td>${cell("prevention", code, x)}</td><td>${cell("relief", code, x)}</td><td><b>${cell("total", code, x)}</b></td><td>${fmtPct(shareOf("prevention", code, x))}</td><td>${fmtPct(shareOf("relief", code, x))}</td><td>${fmtPct(prevShare(code, x), 0)}</td></tr>`).join("")}</tbody>
     <caption style="caption-side:bottom;text-align:left;padding:6px 10px;font-size:12px;color:var(--muted)">[x] = missing: not submitted by the council, or excluded by MHCLG for data quality.</caption>`;
 };
@@ -742,9 +752,9 @@ function laSearch(el, onPick) {
 let GEO = null;
 // Map metrics. "periods" says which period types the metric supports.
 const MAP_MEASURES = {
-  total: { label: "Households owed a duty (prevention + relief)", periods: ["quarter", "year"] },
-  prevention: { label: "Prevention duties", periods: ["quarter", "year"] },
-  relief: { label: "Relief duties", periods: ["quarter", "year"] },
+  total: { label: "Asylum leaver duties (prevention + relief)", periods: ["quarter", "year"] },
+  prevention: { label: "Asylum leaver prevention duties", periods: ["quarter", "year"] },
+  relief: { label: "Asylum leaver relief duties", periods: ["quarter", "year"] },
   rate: { label: "Households owed a duty per 100 people in asylum support", periods: ["quarter", "year"], continuous: true },
   prevshare: { label: "Prevention share (% of duties that were prevention)", periods: ["quarter", "year"], continuous: true, pct: true, breaks: [0.0001, 0.2, 0.4, 0.6, 0.8] },
   shareP: { label: "% of all prevention duties that were people leaving asylum accommodation", periods: ["quarter", "year"], continuous: true, pct: true, breaks: [0.0001, 0.01, 0.02, 0.05, 0.1, 0.2] },
@@ -877,7 +887,7 @@ VIEWS.map = async ({ params }) => {
       showTip(`<div class="t-title">${esc(areaName(c) || f.properties.name)}</div><div class="muted" style="margin-bottom:4px">${esc(regionName(D.areas[c]?.region))}</div>` +
         `<div class="muted" style="margin-bottom:4px">${esc(when)}</div>` +
         tipRow(null, M.label.replace(/ \(.*\)$/, ""), v == null ? (measure === "rate" && (Y ? sumLast("total", c, q) : hv("total", c, q)) != null ? `under ${RATE_MIN_BASE} in support` : measure === "rough" ? "no data" : "not submitted") : fmtV(v)) +
-        (["total", "prevention", "relief", "rate", "prevshare", "shareP", "shareR"].includes(measure) ? tipRow("var(--prevention)", "Prevention", fmt(Y ? sumLast("prevention", c, q) : hv("prevention", c, q))) + tipRow("var(--relief)", "Relief", fmt(Y ? sumLast("relief", c, q) : hv("relief", c, q))) : "") +
+        (["total", "prevention", "relief", "rate", "prevshare", "shareP", "shareR"].includes(measure) ? tipRow("var(--prevention)", "Asylum leaver prevention", fmt(Y ? sumLast("prevention", c, q) : hv("prevention", c, q))) + tipRow("var(--relief)", "Asylum leaver relief", fmt(Y ? sumLast("relief", c, q) : hv("relief", c, q))) : "") +
         tipRow("var(--support)", "In asylum support", fmt(supportAt(c, measure === "support" ? q : S.quarters.at(-1)) ?? 0)), ev);
     })
     .on("mouseleave", hideTip)
@@ -901,7 +911,7 @@ VIEWS.rankings = ({ params }) => {
   const lastMonth = D.rough_sleeping.months.at(-1);
   const cols = [
     ["name", "Local authority", "l"], ["region", "Region", "l"],
-    ["total", `Total ${qShort(q)}`], ["prevention", "Prevention"], ["relief", "Relief"],
+    ["total", `Asylum leaver duties ${qShort(q)}`], ["prevention", "Asylum leaver prevention"], ["relief", "Asylum leaver relief"],
     ["change", "Change vs prev. quarter"], ["last4", "Last 12 months"], ["shareP", "% of all prevention duties"], ["shareR", "% of all relief duties"], ["rate", "Per 100 in asylum support"], ["prevshare", "Prevention share"],
     ["rough", `Rough sleeping ${mShort(lastMonth)}`], ["support", "In asylum support"],
   ];

@@ -239,3 +239,15 @@ body.embed .embed-source { display: block; }
 
 /* an odd card out at the end of a two-column grid spans the full width */
 .grid-2 > .card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+/* Regions table: the shaded columns are the ones the measure buttons change */
+.region-table thead th { position: static; vertical-align: bottom; }
+.region-table th.grp { text-align: left; white-space: normal; padding-top: 10px; padding-bottom: 10px; }
+.region-table .grp-label { font-size: 12.5px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
+.region-table .grp-sub { font-size: 12px; font-weight: 400; color: var(--muted); }
+.region-table th.dyn-head { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); }
+.region-table th.dyn { background: color-mix(in srgb, var(--accent) 11%, var(--surface)); color: var(--ink); }
+.region-table td.dyn { background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+.region-table tbody tr:hover td.dyn { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+.region-table .edge { border-left: 2px solid var(--axis); }
+.region-table .seg button { padding: 5px 10px; font-size: 13px; }
