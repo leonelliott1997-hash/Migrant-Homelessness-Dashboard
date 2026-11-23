@@ -235,3 +235,6 @@ body.embed .embed-source { display: block; }
   .site-header .tabs, .controls, .btn { display: none !important; }
   .site-header { position: static; }
 }
+
+/* an odd card out at the end of a two-column grid spans the full width */
+.grid-2 > .card:last-child:nth-child(odd) { grid-column: 1 / -1; }

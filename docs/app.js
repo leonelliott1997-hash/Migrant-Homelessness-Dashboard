@@ -123,11 +123,36 @@ function rate(code, q, measure = "total") {
   if (v == null || base == null || base < RATE_MIN_BASE) return null;
   return (v / base) * 100;
 }
+// Year ending q: duties summed over the four quarters, divided by the average of the four
+// start-of-quarter asylum support populations, x 100. Null if any quarter is missing or the
+// average base is below RATE_MIN_BASE.
+const avgBaseYear = (code, q) => {
+  const b = [0, 1, 2, 3].map((k) => rateBase(code, prevQ(q, k)));
+  return b.some((x) => x == null) ? null : d3.mean(b);
+};
+function rateYear(code, q) {
+  const n = sumLast("total", code, q), base = avgBaseYear(code, q);
+  if (n == null || base == null || base < RATE_MIN_BASE) return null;
+  return (n / base) * 100;
+}
+// Prevention share: the % of duties that were prevention (help before homelessness) rather
+// than relief (help once already homeless). Not shown for councils with fewer than
+// PREV_MIN_BASE duties in the period, where one or two cases swing the percentage.
+const PREV_MIN_BASE = 10;
+function prevShare(code, q, year = false, all = false) {
+  const [pm, rm] = all ? ["prevention_all", "relief_all"] : ["prevention", "relief"];
+  const p = year ? sumLast(pm, code, q) : hv(pm, code, q), r = year ? sumLast(rm, code, q) : hv(rm, code, q);
+  if (p == null || r == null || p + r === 0) return null;
+  if (!all && D.areas[code]?.type === "la" && p + r < PREV_MIN_BASE) return null;
+  return p / (p + r);
+}
+const yearLabel = (q) => { const [y, n] = q.split("-Q"); return `year ending ${["March", "June", "September", "December"][n - 1]} ${y}`; };
+const yearShort = (q) => { const [y, n] = q.split("-Q"); return `${["Mar", "Jun", "Sep", "Dec"][n - 1]} ${y}`; };
 const fmtRate = (v) => (v == null ? "–" : v < 10 ? v.toFixed(1) : Math.round(v).toString());
 
 function rankLAs(measure, q, region = null) {
   return LAS.filter((a) => !region || a.region === region)
-    .map((a) => ({ ...a, value: measure === "last4" ? sumLast("total", a.code, q) : measure === "rate" ? rate(a.code, q) : hv(measure, a.code, q) }))
+    .map((a) => ({ ...a, value: measure === "last4" ? sumLast("total", a.code, q) : measure === "rate" ? rate(a.code, q) : measure === "rate4" ? rateYear(a.code, q) : hv(measure, a.code, q) }))
     .filter((a) => a.value != null)
     .sort((a, b) => b.value - a.value || a.name.localeCompare(b.name));
 }
@@ -332,37 +357,64 @@ VIEWS.overview = ({ params }) => {
   const area = params.get("area") || ENGLAND;
   const range = params.get("range") || "3y";
   const topBy = params.get("top") === "rate" ? "rate" : "total";
+  const period = params.get("period") === "year" ? "year" : "quarter";
+  const Y = period === "year";
   const q = latestQ(), pq = prevQ(q), yq = prevQ(q, 4);
-  const tot = hv("total", ENGLAND, q), pre = hv("prevention", ENGLAND, q), rel = hv("relief", ENGLAND, q);
-  const rs = rsLatest(ENGLAND), sup = supportLatest(ENGLAND);
-  const G = D.grants, gi = G.quarters.length - 1;
-  const top = rankLAs("total", q).slice(0, 5);
-  const share = shareAll(ENGLAND, q);
+  // Period-aware values: the latest quarter, or the four quarters to the latest quarter
+  const V = (m, code, at = q) => (Y ? sumLast(m, code, at) : hv(m, code, at));
+  const label = Y ? yearLabel(q) : qLong(q);
+  const cmpAt = Y ? yq : pq;                                   // main comparison
+  const cmpText = Y ? `vs ${yearLabel(yq)}` : "vs previous quarter";
+  const tot = V("total", ENGLAND), pre = V("prevention", ENGLAND), rel = V("relief", ENGLAND);
+  const totAll = V("total_all", ENGLAND), relAll = V("relief_all", ENGLAND);
+  const share = tot != null && totAll ? tot / totAll : null;
   const relShare = tot ? rel / tot : null;
+  const rateNow = Y ? rateYear(ENGLAND, q) : rate(ENGLAND, q), rateCmp = Y ? rateYear(ENGLAND, yq) : rate(ENGLAND, pq);
+  const sup = supportLatest(ENGLAND);
+  // Rough sleeping: latest month, or the monthly average over the last 12 months
+  const R0 = D.rough_sleeping, rsE = R0.asylum[ENGLAND] || [], lastM = R0.months.at(-1);
+  const rsAvg = (end) => { const v = rsE.slice(Math.max(0, end - 12), end).filter((x) => x != null); return v.length === 12 ? d3.mean(v) : null; };
+  const rs = rsLatest(ENGLAND);
+  const rsVal = Y ? rsAvg(rsE.length) : rs.value, rsCmp = Y ? rsAvg(rsE.length - 12) : rs.prev;
+  // Grants: latest quarter, or the latest four quarters
+  const G = D.grants, gi = G.quarters.length - 1;
+  const gSum = (end) => (end >= 3 ? d3.sum(G.grants.slice(end - 3, end + 1)) : null);
+  const gVal = Y ? gSum(gi) : G.grants[gi], gCmp = Y ? gSum(gi - 4) : G.grants[gi - 1];
+  const top = rankLAs(Y ? "last4" : "total", q).slice(0, 5);
   const dirWord = (a, b) => (a == null || b == null || !b ? "" : a > b ? `up ${Math.round(((a - b) / b) * 100)}%` : a < b ? `down ${Math.round(((b - a) / b) * 100)}%` : "unchanged");
 
   $view.innerHTML = `
+  <div class="controls" style="justify-content:space-between;align-items:center">
+    <div class="control">Show figures for${seg("period", [["quarter", `Latest quarter (${qLong(q)})`], ["year", `Year ending ${yearShort(q)}`]], period)}</div>
+  </div>
   <div class="headline">
     <div class="headline-grid">
       <div>
-        <div class="hero-label">Households owed a homelessness duty after being required to leave Home Office asylum accommodation, England, ${qLong(q)}</div>
+        <div class="hero-label">Households owed a homelessness duty after being required to leave Home Office asylum accommodation, England, ${label}</div>
         <div class="hero">${fmt(tot)}</div>
-        <div class="delta">${deltaSpan(tot, hv("total", ENGLAND, pq))} vs previous quarter</div>
-        <div class="delta">${deltaSpan(tot, hv("total", ENGLAND, yq))} vs ${qLong(yq)}</div>
+        ${Y ? `<div class="delta">${deltaSpan(tot, V("total", ENGLAND, yq))} vs ${yearLabel(yq)}</div>`
+            : `<div class="delta">${deltaSpan(tot, hv("total", ENGLAND, pq))} vs previous quarter</div>
+               <div class="delta">${deltaSpan(tot, hv("total", ENGLAND, yq))} vs ${qLong(yq)}</div>`}
       </div>
       <div class="tiles">
-        ${tile("Prevention duties", fmt(pre), `${deltaSpan(pre, hv("prevention", ENGLAND, pq))} vs last quarter`, "var(--prevention)")}
-        ${tile("Relief duties", fmt(rel), `${deltaSpan(rel, hv("relief", ENGLAND, pq))} vs last quarter`, "var(--relief)")}
-        ${tile("Share of all homelessness duties", fmtPct(share), `of ${fmt(hv("total_all", ENGLAND, q))} households owed a duty`)}
-        ${tile("Sleeping rough after leaving asylum support", fmt(rs.value), `${rs.month ? mLong(rs.month) : ""} · ${deltaSpan(rs.value, rs.prev, { pct: false })} vs previous month`, "var(--rough)")}
-        ${tile("Rate per 100 people in asylum support", fmtRate(rate(ENGLAND, q)), `households owed a duty per 100 people in support at the start of the quarter · ${fmtRate(rate(ENGLAND, pq))} last quarter`)}
+        ${tile("Prevention duties", fmt(pre), `${deltaSpan(pre, V("prevention", ENGLAND, cmpAt))} ${cmpText}`, "var(--prevention)")}
+        ${tile("Relief duties", fmt(rel), `${deltaSpan(rel, V("relief", ENGLAND, cmpAt))} ${cmpText}`, "var(--relief)")}
+        ${tile("Prevention share", fmtPct(prevShare(ENGLAND, q, Y), 0), `of these duties were prevention (before homelessness) · all homeless households: ${fmtPct(prevShare(ENGLAND, q, Y, true), 0)}`, "var(--prevention)")}
+        ${tile("Share of all homelessness duties", fmtPct(share), `of ${fmt(totAll)} households owed a duty`)}
+        ${tile("Sleeping rough after leaving asylum support", Y ? fmt(rsVal) : fmt(rsVal),
+          Y ? `average per month, 12 months to ${mLong(lastM)} · ${deltaSpan(rsVal, rsCmp, { abs: false })} on the 12 months before`
+            : `${rs.month ? mLong(rs.month) : ""} · ${deltaSpan(rs.value, rs.prev, { pct: false })} vs previous month`, "var(--rough)")}
+        ${tile("Rate per 100 people in asylum support", fmtRate(rateNow),
+          Y ? `households owed a duty in the year per 100 people in support (average of the four quarters) · ${fmtRate(rateCmp)} the year before`
+            : `households owed a duty per 100 people in support at the start of the quarter · ${fmtRate(rateCmp)} last quarter`)}
         ${tile("People in asylum support (England)", fmt(sup.value), `at end of ${sup.quarter ? qLong(sup.quarter) : ""} · ${deltaSpan(sup.value, sup.prev, { abs: false })} on a year earlier`, "var(--support)")}
-        ${tile("Grants of protection (UK)", fmt(G.grants[gi]), `${qLong(G.quarters[gi])}, main applicants · ${deltaSpan(G.grants[gi], G.grants[gi - 1], { abs: false })} vs last quarter`)}
+        ${tile("Grants of protection (UK)", fmt(gVal), `${Y ? yearLabel(G.quarters[gi]) : qLong(G.quarters[gi])}, main applicants · ${deltaSpan(gVal, gCmp, { abs: false })} ${Y ? "on the year before" : "vs last quarter"}`)}
       </div>
     </div>
-    <p class="summary">In ${qLong(q)}, councils in England owed a homelessness duty to <b>${fmt(tot)}</b> households because they had to leave Home Office asylum accommodation: ${fmt(pre)} prevention duties and ${fmt(rel)} relief duties.
-    That is ${dirWord(tot, hv("total", ENGLAND, pq)) || "–"} on the previous quarter and ${dirWord(tot, hv("total", ENGLAND, yq)) || "–"} on the same quarter last year.
-    <b>${fmtPct(relShare, 0)}</b> were already homeless when they were assessed (relief duty), compared with ${fmtPct(hv("relief_all", ENGLAND, q) / hv("total_all", ENGLAND, q), 0)} of all households owed a duty.
+    <p class="summary">In the ${Y ? yearLabel(q) : `quarter ${qLong(q)}`}, councils in England owed a homelessness duty to <b>${fmt(tot)}</b> households because they had to leave Home Office asylum accommodation: ${fmt(pre)} prevention duties and ${fmt(rel)} relief duties.
+    ${Y ? `That is ${dirWord(tot, V("total", ENGLAND, yq)) || "–"} on the previous 12 months.`
+        : `That is ${dirWord(tot, hv("total", ENGLAND, pq)) || "–"} on the previous quarter and ${dirWord(tot, hv("total", ENGLAND, yq)) || "–"} on the same quarter last year.`}
+    <b>${fmtPct(relShare, 0)}</b> were already homeless when they were assessed (relief duty), compared with ${fmtPct(relAll / totAll, 0)} of all households owed a duty.
     The local authorities with the most were ${top.map((a) => `<a href="#/la/${a.code}">${esc(a.name)}</a> (${fmt(a.value)})`).join(", ")}.</p>
   </div>
 
@@ -378,6 +430,10 @@ VIEWS.overview = ({ params }) => {
       <div class="card"><h3>Households owed homelessness duties upon leaving Home Office accommodation</h3>
         <p class="sub">${esc(areaName(area))}, per quarter</p>${legend([["var(--prevention)", "Prevention duties"], ["var(--relief)", "Relief duties"]])}<div class="chart" id="c-duties"></div>
         <p class="embed-source">Source: MHCLG statutory homelessness statistics</p></div>
+      <div class="card"><h3>Prevention share</h3>
+        <p class="sub">${esc(areaName(area))}, % of duties that were prevention duties (help before becoming homeless) rather than relief duties, compared with all households owed a duty</p>
+        ${legend([["var(--prevention)", "Leaving asylum accommodation"], ["var(--context)", "All households"]])}<div class="chart" id="c-prevshare"></div>
+        <p class="note">A higher share means more people got help before they lost their accommodation.</p></div>
       <div class="card"><h3>People sleeping rough after leaving asylum support</h3>
         <p class="sub">${esc(areaName(area))}, people seen sleeping rough during the month who had left asylum support in the previous 85 days</p><div class="chart" id="c-rough"></div>
         <p class="note">Estimates from councils' management information (Rough Sleeping Data Framework). Not comparable with the statutory homelessness figures.</p></div>
@@ -396,8 +452,8 @@ VIEWS.overview = ({ params }) => {
   </div>
 
   <div class="section">
-    <div class="card"><div class="section-head" style="margin-bottom:4px"><div><h3>Where need is highest, ${qLong(q)}</h3>
-        <p class="sub" style="margin:0">${topBy === "rate" ? `Highest number of households owed a duty per 100 people in asylum support (areas with at least ${RATE_MIN_BASE} people in support)` : "Local authorities with the most households owed a duty (prevention + relief)"}</p></div>
+    <div class="card"><div class="section-head" style="margin-bottom:4px"><div><h3>Where need is highest, ${label}</h3>
+        <p class="sub" style="margin:0">${topBy === "rate" ? `Highest number of households owed a duty per 100 people in asylum support (areas with at least ${RATE_MIN_BASE} people in support)` : "Local authorities with the most households owed a duty (prevention + relief)"}${Y ? `. Change is against the ${yearLabel(yq)}; councils with a missing quarter are left out.` : ""}</p></div>
         ${seg("top", [["total", "Number"], ["rate", "Rate per 100 in support"]], topBy)}</div>
       <ol class="toplist" id="top10"></ol>
       <p class="note"><a href="#/rankings">See all local authorities →</a> · <a href="#/regions">Top 5 in each region →</a></p></div>
@@ -414,6 +470,14 @@ VIEWS.overview = ({ params }) => {
       { name: "Relief duties", color: "var(--relief)", values: qs.map((x) => hv("relief", area, x)), flags: qs.map((x) => flagOf("relief", area, x)) },
     ],
     onClick: null,
+  });
+  lineChart(document.getElementById("c-prevshare"), {
+    labels: qs.map(qShort), tipLabels: qs.map(qLong),
+    series: [
+      { name: "Leaving asylum accommodation", color: "var(--prevention)", values: qs.map((x) => prevShare(area, x)) },
+      { name: "All households", color: "var(--context)", values: qs.map((x) => prevShare(area, x, false, true)) },
+    ],
+    yFormat: (v) => fmtPct(v, 0), yTickFormat: d3.format(".0%"), yMax: 1,
   });
   const R = D.rough_sleeping;
   const ms = range === "all" ? R.months : R.months.slice(-36);
@@ -458,7 +522,9 @@ VIEWS.overview = ({ params }) => {
   });
   if (!rq.some((x) => rate(area, x) != null)) document.getElementById("c-rate").innerHTML = `<p class="empty">Too few people in asylum support here to calculate a rate.</p>`;
   onSeg($view, "top", (v) => setParams({ top: v === "total" ? null : v }));
-  topList(document.getElementById("top10"), rankLAs(topBy, q).slice(0, 10), q, topBy, true);
+  onSeg($view, "period", (v) => setParams({ period: v === "quarter" ? null : v }));
+  const topMeasure = Y ? (topBy === "rate" ? "rate4" : "last4") : topBy;
+  topList(document.getElementById("top10"), rankLAs(topMeasure, q).slice(0, 10), q, topMeasure, true);
 };
 
 function tile(label, value, delta, color) {
@@ -469,13 +535,15 @@ function tile(label, value, delta, color) {
 function topList(el, items, q, measure, showRegion = false) {
   const max = d3.max(items, (d) => d.value) || 1;
   el.innerHTML = items.length ? items.map((a, i) => {
-    if (measure === "rate") {
-      const n = hv("total", a.code, q), base = rateBase(a.code, q);
+    if (measure === "rate" || measure === "rate4") {
+      const n = measure === "rate" ? hv("total", a.code, q) : sumLast("total", a.code, q);
+      const base = measure === "rate" ? rateBase(a.code, q) : Math.round(avgBaseYear(a.code, q));
       return `<li><span class="rank">${i + 1}</span><a href="#/la/${a.code}" title="${esc(a.name)}">${esc(a.name)}${showRegion ? ` <span class="muted" style="font-size:12px">${esc(regionName(a.region))}</span>` : ""}</a>
         <span class="num">${fmtRate(a.value)}<span class="chg delta" style="color:var(--ink-2)">${fmt(n)} of ${fmt(base)}</span></span>
         <span class="bar"><i style="width:${(a.value / max) * 100}%"></i></span></li>`;
     }
-    const prev = measure === "last4" ? sumLast("total", a.code, prevQ(q)) : hv(measure, a.code, prevQ(q));
+    // last4 (year ending) compares with the year before; quarterly measures with the previous quarter
+    const prev = measure === "last4" ? sumLast("total", a.code, prevQ(q, 4)) : hv(measure, a.code, prevQ(q));
     return `<li><span class="rank">${i + 1}</span><a href="#/la/${a.code}" title="${esc(a.name)}">${esc(a.name)}${showRegion ? ` <span class="muted" style="font-size:12px">${esc(regionName(a.region))}</span>` : ""}</a>
       <span class="num">${fmt(a.value)}<span class="chg delta">${deltaSpan(a.value, prev, { pct: false })}</span></span>
       <span class="bar"><i style="width:${(a.value / max) * 100}%"></i></span></li>`;
@@ -503,17 +571,17 @@ VIEWS.regions = ({ params }) => {
       <div class="control">Measure${seg("m", [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Rate per 100 in support"]], measure)}</div>
     </div>
     <div class="table-wrap"><table>
-      <thead><tr><th class="l">Area</th><th>${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th>vs previous quarter</th><th>vs ${qShort(yq)}</th><th>Share of all duties</th><th>Relief as % of total</th>${measure === "rate" ? "" : "<th>Per 100 in support</th>"}<th class="l">Last 12 quarters</th></tr></thead>
+      <thead><tr><th class="l">Area</th><th>${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th>vs previous quarter</th><th>vs ${qShort(yq)}</th><th>Share of all duties</th><th>Prevention share</th>${measure === "rate" ? "" : "<th>Per 100 in support</th>"}<th class="l">Last 12 quarters</th></tr></thead>
       <tbody>${rows.map((c) => {
         const v = mv(c, q);
         const t = hv("total", c, q), r = hv("relief", c, q);
         const sep = c === REST ? ' style="border-bottom:2px solid var(--axis)"' : "";
         return `<tr${sep}><td class="l"><a href="#/overview?area=${c}">${c === ENGLAND ? "<b>England</b>" : esc(areaName(c))}</a></td><td><b>${mf(v)}</b></td>
           <td class="delta">${md(v, mv(c, pq))}</td><td class="delta">${md(v, mv(c, yq))}</td>
-          <td>${fmtPct(shareAll(c, q))}</td><td>${t && r != null ? fmtPct(r / t, 0) : "–"}</td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}
+          <td>${fmtPct(shareAll(c, q))}</td><td>${fmtPct(prevShare(c, q), 0)} <span class="muted" style="font-size:11.5px">(all: ${fmtPct(prevShare(c, q, false, true), 0)})</span></td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}
           <td class="l">${sparkline(spanQ.map((x) => mv(c, x)), { color: MEASURES[measure].color })}</td></tr>`;
       }).join("")}</tbody></table></div>
-    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Per 100 in support" = households owed a duty per 100 people in asylum support in the area at the start of the quarter.</p>
+    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Prevention share" = % of these duties that were prevention rather than relief, with the figure for all homeless households in brackets. "Per 100 in support" = households owed a duty per 100 people in asylum support in the area at the start of the quarter.</p>
 
     <div class="section">
       <h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
@@ -570,6 +638,9 @@ VIEWS.la = ({ arg, params }) => {
       ${tile("Rank this quarter", rank ? `${rank} <span style="font-size:14px;font-weight:400;color:var(--ink-2)">of ${all.length}</span>` : "–", rankR ? `${ordinal(rankR)} of ${inReg.length} in ${esc(regionName(a.region))}` : "Not ranked: no data this quarter")}
       ${tile("Last 12 months", last12 == null ? notSubmitted.replace("Not submitted", "Incomplete") : fmt(last12),
         last12 == null ? `Missing data for ${missingIn(code, q).map(qShort).join(", ") || "a quarter"}` : `${deltaSpan(last12, sumLast("total", code, yq))} vs year before`)}
+      ${tile("Prevention share", fmtPct(prevShare(code, q), 0),
+        prevShare(code, q) != null ? `of these duties were prevention · all households here: ${fmtPct(prevShare(code, q, false, true), 0)} · England: ${fmtPct(prevShare(ENGLAND, q), 0)}`
+          : latestMissing ? "No data this quarter" : `Not shown: fewer than ${PREV_MIN_BASE} duties this quarter${prevShare(code, q, true) != null ? ` · year ending ${yearShort(q)}: ${fmtPct(prevShare(code, q, true), 0)}` : ""}`, "var(--prevention)")}
       ${tile("Share of all duties in this area", fmtPct(shareAll(code, q)), `England: ${fmtPct(shareAll(ENGLAND, q))}`)}
       ${tile("Rate per 100 people in asylum support", fmtRate(rate(code, q)),
         rate(code, q) != null ? `${fmt(t)} households / ${fmt(rateBase(code, q))} people in support · England: ${fmtRate(rate(ENGLAND, q))}`
@@ -647,15 +718,32 @@ function laSearch(el, onPick) {
 
 // ---------------------------------------------------------------- Map
 let GEO = null;
+// Map metrics. "periods" says which period types the metric supports.
 const MAP_MEASURES = {
-  total: { label: "Households owed a duty (prevention + relief), quarter", quarterly: true },
-  prevention: { label: "Prevention duties, quarter", quarterly: true },
-  relief: { label: "Relief duties, quarter", quarterly: true },
-  last4: { label: "Households owed a duty, last 12 months", quarterly: true },
-  rate: { label: "Households owed a duty per 100 people in asylum support, quarter", quarterly: true },
-  rough: { label: "Sleeping rough after leaving asylum support, latest month", quarterly: false },
-  support: { label: "People in asylum support, latest quarter", quarterly: false },
+  total: { label: "Households owed a duty (prevention + relief)", periods: ["quarter", "year"] },
+  prevention: { label: "Prevention duties", periods: ["quarter", "year"] },
+  relief: { label: "Relief duties", periods: ["quarter", "year"] },
+  rate: { label: "Households owed a duty per 100 people in asylum support", periods: ["quarter", "year"], continuous: true },
+  prevshare: { label: "Prevention share (% of duties that were prevention)", periods: ["quarter", "year"], continuous: true, pct: true },
+  rough: { label: "Sleeping rough after leaving asylum support (average per month)", periods: ["quarter", "year"], continuous: true },
+  support: { label: "People in asylum support (at end of quarter)", periods: ["quarter"] },
 };
+// Months (YYYY-MM) covered by a quarter, or by the year ending that quarter
+function monthsOf(q, year) {
+  const [y, n] = q.split("-Q").map(Number);
+  const out = [];
+  for (let k = (year ? 11 : 2); k >= 0; k--) { const d = new Date(Date.UTC(y, n * 3 - 1 - k, 1)); out.push(d.toISOString().slice(0, 7)); }
+  return out;
+}
+function rsAverage(code, q, year) {
+  const R = D.rough_sleeping, s = R.asylum[code];
+  if (!s) return null;
+  const vals = monthsOf(q, year).map((m) => { const i = R.months.indexOf(m); return i < 0 ? undefined : s[i]; });
+  if (vals.some((v) => v === undefined)) return undefined;   // period not covered by the data
+  const ok = vals.filter((v) => v != null);
+  return ok.length === vals.length ? d3.mean(ok) : null;
+}
+const fmtDec = (v) => (v == null ? "–" : v < 10 ? (Math.round(v * 10) / 10).toString() : fmt(v));
 const RAMP = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"];
 
 function niceBreaks(values) {
@@ -667,35 +755,54 @@ function niceBreaks(values) {
 }
 
 VIEWS.map = async ({ params }) => {
-  const measure = MAP_MEASURES[params.get("m")] ? params.get("m") : "total";
-  const qList = measure === "total" || measure === "last4" ? Q : measure === "rate" ? Q.filter((x) => D.asylum_support.quarters.includes(prevQ(x))) : splitQuarters();
-  let q = params.get("q"); if (!qList.includes(q)) q = latestQ();
+  // Backwards compatibility: the old "last 12 months" measure is now total + year ending
+  let measure = params.get("m") === "last4" ? "total" : params.get("m");
+  if (!MAP_MEASURES[measure]) measure = "total";
+  const M = MAP_MEASURES[measure];
+  let period = params.get("period") === "year" || params.get("m") === "last4" ? "year" : "quarter";
+  if (!M.periods.includes(period)) period = "quarter";
+  const Y = period === "year";
+  // Quarters available for this metric and period
+  const S = D.asylum_support;
+  let qList = measure === "prevention" || measure === "relief" || measure === "prevshare" ? splitQuarters()
+    : measure === "rate" ? Q.filter((x) => S.quarters.includes(prevQ(x)))
+    : measure === "support" ? S.quarters
+    : measure === "rough" ? Q.concat(S.quarters).filter((x, i, a) => a.indexOf(x) === i).sort().filter((x) => rsAverage(ENGLAND, x, Y) !== undefined)
+    : Q;
+  if (Y && measure !== "rough") qList = qList.slice(3);   // a year ending needs four quarters
+  let q = params.get("q"); if (!qList.includes(q)) q = qList.at(-1);
   const region = params.get("region") || "";
   const focus = params.get("focus");
   const valueOf = (code) => {
-    if (measure === "rough") return rsLatest(code).value;
-    if (measure === "support") return supportLatest(code).value ?? 0;
-    if (measure === "last4") return sumLast("total", code, q);
-    if (measure === "rate") return rate(code, q);
-    return hv(measure, code, q);
+    if (measure === "rough") return rsAverage(code, q, Y) ?? null;
+    if (measure === "support") return supportAt(code, q) ?? 0;
+    if (measure === "rate") return Y ? rateYear(code, q) : rate(code, q);
+    if (measure === "prevshare") return prevShare(code, q, Y);
+    return Y ? sumLast(measure, code, q) : hv(measure, code, q);
   };
-  const when = measure === "rough" ? mLong(D.rough_sleeping.months.at(-1)) : measure === "support" ? "end of " + qLong(D.asylum_support.quarters.at(-1)) : measure === "last4" ? `${qShort(prevQ(q, 3))} to ${qShort(q)}` : qLong(q);
+  const when = measure === "support" ? "end of " + qLong(q) : Y ? yearLabel(q) : qLong(q);
+  const periodOptions = qList.slice().reverse().map((x) => `<option value="${x}" ${x === q ? "selected" : ""}>${Y ? "Year ending " + yearShort(x) : qLong(x)}</option>`).join("");
+  const missingNote = measure === "rate" ? `the council did not submit${Y ? " for one or more quarters" : ""}, or fewer than ${RATE_MIN_BASE} people were in asylum support there`
+    : measure === "prevshare" ? `the council did not submit, or had fewer than ${PREV_MIN_BASE} duties in the period`
+    : measure === "rough" ? "no rough sleeping data for the area" : measure === "support" ? "none" : `the council did not submit${Y ? " for one or more of the four quarters" : ""}`;
 
   $view.innerHTML = `
     <h2>Map</h2>
-    <p class="lede">Where people leaving asylum accommodation are presenting as homeless. Hover over an area for its figures, click to open its profile.</p>
+    <p class="lede">Where people leaving asylum accommodation are presenting as homeless. Choose a metric, then the period. Hover over an area for its figures, click to open its profile.</p>
     <div class="controls">
-      <label class="control">Measure<select id="m">${Object.entries(MAP_MEASURES).map(([k, v]) => `<option value="${k}" ${k === measure ? "selected" : ""}>${esc(v.label)}</option>`).join("")}</select></label>
-      ${MAP_MEASURES[measure].quarterly ? `<label class="control">Quarter<select id="q">${quarterOptions(qList, q)}</select></label>` : ""}
+      <label class="control">1. Metric<select id="m">${Object.entries(MAP_MEASURES).map(([k, v]) => `<option value="${k}" ${k === measure ? "selected" : ""}>${esc(v.label)}</option>`).join("")}</select></label>
+      <div class="control">2. Period${M.periods.length > 1 ? seg("period", [["quarter", "Quarter"], ["year", "Year ending"]], period) : `<span style="padding:7px 0;color:var(--ink-2)">Quarter only (a count at one point in time)</span>`}</div>
+      <label class="control">3. ${Y ? "Year ending" : "Quarter"}<select id="q">${periodOptions}</select></label>
       <label class="control">Zoom to region<select id="region"><option value="">All England</option>${REGION_ORDER.map((c) => `<option value="${c}" ${c === region ? "selected" : ""}>${esc(regionName(c))}</option>`).join("")}</select></label>
     </div>
     <div class="map-layout">
       <div class="card map"><div id="map" style="width:100%"></div>
-        <div id="scale" class="scale"></div><p class="note">${esc(MAP_MEASURES[measure].label.split(",")[0])}, ${esc(when)}. Grey = none recorded. Hatched = no data (the council did not submit${measure === "rate" ? `, or fewer than ${RATE_MIN_BASE} people were in asylum support there` : ", or, for 12-month totals, a quarter is missing"}). Boundaries: ONS, December 2024.</p></div>
-      <div class="card"><div id="map-info"><h3>${region ? esc(regionName(region)) : "England"}: highest</h3><ol class="toplist" id="map-top"></ol></div></div>
+        <div id="scale" class="scale"></div><p class="note">${esc(M.label)}, ${esc(when)}. Grey = none recorded. Hatched = no data (${missingNote}).${measure === "rate" && Y ? " Year rate = households owed a duty in the four quarters per 100 people in support (average of the four start-of-quarter figures)." : ""} Boundaries: ONS, December 2024.</p></div>
+      <div class="card"><div id="map-info"><h3>${region ? esc(regionName(region)) : "England"}: highest, ${esc(when)}</h3><ol class="toplist" id="map-top"></ol></div></div>
     </div>`;
   document.getElementById("m").addEventListener("change", (e) => setParams({ m: e.target.value === "total" ? null : e.target.value }));
-  document.getElementById("q")?.addEventListener("change", (e) => setParams({ q: e.target.value === latestQ() ? null : e.target.value }));
+  onSeg($view, "period", (v) => setParams({ period: v === "quarter" ? null : v }));
+  document.getElementById("q").addEventListener("change", (e) => setParams({ q: e.target.value === qList.at(-1) ? null : e.target.value }));
   document.getElementById("region").addEventListener("change", (e) => setParams({ region: e.target.value || null, focus: null }));
 
   const $map = document.getElementById("map");
@@ -706,9 +813,10 @@ VIEWS.map = async ({ params }) => {
     if (parseRoute().view !== "map") return;
   }
   const values = new Map(GEO.features.map((f) => [f.properties.code, valueOf(f.properties.code)]));
-  const isRate = measure === "rate";
+  const isRate = !!M.continuous;
+  const fmtV = measure === "rate" ? fmtRate : measure === "rough" ? fmtDec : M.pct ? (v) => fmtPct(v, 0) : fmt;
   // Rates are continuous: bands start at 0 and are labelled "a–b"; counts use whole-number bands.
-  const breaks = isRate ? [0.0001, ...niceBreaks([...values.values()].filter((v) => v != null)).slice(1)] : niceBreaks([...values.values()].filter((v) => v != null));
+  const breaks = M.pct ? [0.0001, 0.2, 0.4, 0.6, 0.8] : isRate ? [0.0001, ...niceBreaks([...values.values()].filter((v) => v != null)).slice(1)] : niceBreaks([...values.values()].filter((v) => v != null));
   // spread however many classes there are evenly across the ramp (light -> dark)
   const color = (v) => {
     if (v == null) return "url(#missing-hatch)";
@@ -718,7 +826,7 @@ VIEWS.map = async ({ params }) => {
   };
   // legend
   const classes = breaks.map((b, i) => [b, breaks[i + 1] ? (isRate ? breaks[i + 1] : breaks[i + 1] - 1) : null]);
-  const bandLabel = (lo, hi) => isRate ? (hi == null ? `${fmtRate(lo)}+` : `${lo < 0.001 ? "0" : fmtRate(lo)}–${fmtRate(hi)}`)
+  const bandLabel = (lo, hi) => isRate ? (hi == null ? `${fmtV(lo)}+` : `${lo < 0.001 ? "0" : fmtV(lo)}–${fmtV(hi)}`)
     : hi == null ? fmt(lo) + "+" : lo === hi ? fmt(lo) : fmt(lo) + "–" + fmt(hi);
   const hatchCss = "repeating-linear-gradient(45deg, var(--axis) 0 1.5px, var(--surface) 1.5px 5px)";
   document.getElementById("scale").innerHTML = `<div><i style="background:var(--zero)"></i>0</div>` +
@@ -741,9 +849,10 @@ VIEWS.map = async ({ params }) => {
     .on("mousemove", (ev, f) => {
       const c = f.properties.code, v = values.get(c);
       showTip(`<div class="t-title">${esc(areaName(c) || f.properties.name)}</div><div class="muted" style="margin-bottom:4px">${esc(regionName(D.areas[c]?.region))}</div>` +
-        tipRow(null, MAP_MEASURES[measure].label.split(",")[0], v == null ? (isRate ? (hv("total", c, q) == null ? "not submitted" : `under ${RATE_MIN_BASE} in support`) : MAP_MEASURES[measure].quarterly ? "not submitted" : "no data") : isRate ? fmtRate(v) : fmt(v)) +
-        (MAP_MEASURES[measure].quarterly && measure !== "last4" ? tipRow("var(--prevention)", "Prevention", fmt(hv("prevention", c, q))) + tipRow("var(--relief)", "Relief", fmt(hv("relief", c, q))) : "") +
-        tipRow("var(--support)", "In asylum support", fmt(supportLatest(c).value ?? 0)), ev);
+        `<div class="muted" style="margin-bottom:4px">${esc(when)}</div>` +
+        tipRow(null, M.label.replace(/ \(.*\)$/, ""), v == null ? (measure === "rate" && (Y ? sumLast("total", c, q) : hv("total", c, q)) != null ? `under ${RATE_MIN_BASE} in support` : measure === "rough" ? "no data" : "not submitted") : fmtV(v)) +
+        (["total", "prevention", "relief", "rate", "prevshare"].includes(measure) ? tipRow("var(--prevention)", "Prevention", fmt(Y ? sumLast("prevention", c, q) : hv("prevention", c, q))) + tipRow("var(--relief)", "Relief", fmt(Y ? sumLast("relief", c, q) : hv("relief", c, q))) : "") +
+        tipRow("var(--support)", "In asylum support", fmt(supportAt(c, measure === "support" ? q : S.quarters.at(-1)) ?? 0)), ev);
     })
     .on("mouseleave", hideTip)
     .on("click", (ev, f) => { if (D.areas[f.properties.code]) location.hash = `#/la/${f.properties.code}`; });
@@ -752,7 +861,7 @@ VIEWS.map = async ({ params }) => {
   const ranked = LAS.filter((a) => !region || a.region === region).map((a) => ({ ...a, value: valueOf(a.code) }))
     .filter((a) => a.value > 0).sort((a, b) => b.value - a.value).slice(0, 15);
   const max = ranked[0]?.value || 1;
-  document.getElementById("map-top").innerHTML = ranked.map((a, i) => `<li><span class="rank">${i + 1}</span><a href="#/la/${a.code}">${esc(a.name)}</a><span class="num">${isRate ? fmtRate(a.value) : fmt(a.value)}</span><span class="bar"><i style="width:${(a.value / max) * 100}%"></i></span></li>`).join("") || `<li class="muted">None recorded</li>`;
+  document.getElementById("map-top").innerHTML = ranked.map((a, i) => `<li><span class="rank">${i + 1}</span><a href="#/la/${a.code}">${esc(a.name)}</a><span class="num">${fmtV(a.value)}</span><span class="bar"><i style="width:${(a.value / max) * 100}%"></i></span></li>`).join("") || `<li class="muted">None recorded</li>`;
 };
 
 // ---------------------------------------------------------------- Rankings & data
@@ -767,7 +876,7 @@ VIEWS.rankings = ({ params }) => {
   const cols = [
     ["name", "Local authority", "l"], ["region", "Region", "l"],
     ["total", `Total ${qShort(q)}`], ["prevention", "Prevention"], ["relief", "Relief"],
-    ["change", "Change vs prev. quarter"], ["last4", "Last 12 months"], ["share", "Share of all duties"], ["rate", "Per 100 in asylum support"],
+    ["change", "Change vs prev. quarter"], ["last4", "Last 12 months"], ["share", "Share of all duties"], ["rate", "Per 100 in asylum support"], ["prevshare", "Prevention share"],
     ["rough", `Rough sleeping ${mShort(lastMonth)}`], ["support", "In asylum support"],
   ];
   let rows = LAS.filter((a) => (!region || a.region === region) && (!search || a.name.toLowerCase().includes(search.toLowerCase()))).map((a) => {
@@ -775,7 +884,7 @@ VIEWS.rankings = ({ params }) => {
     return {
       code: a.code, name: a.name, region: regionName(a.region), total: t,
       prevention: hv("prevention", a.code, q), relief: hv("relief", a.code, q),
-      change: t != null && tp != null ? t - tp : null, last4: sumLast("total", a.code, q), share: shareAll(a.code, q), rate: rate(a.code, q),
+      change: t != null && tp != null ? t - tp : null, last4: sumLast("total", a.code, q), share: shareAll(a.code, q), rate: rate(a.code, q), prevshare: prevShare(a.code, q),
       rough: rsLatest(a.code).value, support: supportLatest(a.code).value ?? 0,
     };
   });
@@ -801,8 +910,8 @@ VIEWS.rankings = ({ params }) => {
       <tbody>${rows.map((r) => `<tr><td class="l"><a href="#/la/${r.code}">${esc(r.name)}</a></td><td class="l">${esc(r.region)}</td>
         <td><b>${fmt(r.total)}</b></td><td>${cell("prevention", r.code, q)}</td><td>${cell("relief", r.code, q)}</td>
         <td class="delta">${r.change == null ? "–" : deltaSpan(r.total, r.total - r.change, { pct: false })}</td><td>${fmt(r.last4)}</td>
-        <td>${fmtPct(r.share)}</td><td>${fmtRate(r.rate)}</td><td>${fmt(r.rough)}</td><td>${fmt(r.support)}</td></tr>`).join("")}</tbody></table></div>
-    <p class="note">${rows.length} local authorities. "[x]" = missing: the council did not submit data for this quarter, or MHCLG excluded it for data quality reasons. "Last 12 months" is left blank if any of the four quarters is missing. Rough sleeping figures are monthly estimates from the Rough Sleeping Data Framework. Asylum support is people receiving Home Office support at the end of ${qLong(D.asylum_support.quarters.at(-1))}.</p>
+        <td>${fmtPct(r.share)}</td><td>${fmtRate(r.rate)}</td><td>${fmtPct(r.prevshare, 0)}</td><td>${fmt(r.rough)}</td><td>${fmt(r.support)}</td></tr>`).join("")}</tbody></table></div>
+    <p class="note">${rows.length} local authorities. "[x]" = missing: the council did not submit data for this quarter, or MHCLG excluded it for data quality reasons. "Last 12 months" is left blank if any of the four quarters is missing. "Prevention share" is left blank for councils with fewer than ${PREV_MIN_BASE} duties in the quarter. Rough sleeping figures are monthly estimates from the Rough Sleeping Data Framework. Asylum support is people receiving Home Office support at the end of ${qLong(D.asylum_support.quarters.at(-1))}.</p>
 
     <div class="section card">
       <h3>Download the full datasets</h3>
@@ -825,8 +934,8 @@ VIEWS.rankings = ({ params }) => {
     th.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
   });
   document.getElementById("dl").addEventListener("click", () => {
-    const head = ["area_code", "local_authority", "region", "quarter", "prevention_duties", "relief_duties", "total_duties", "change_vs_previous_quarter", "total_last_12_months", "share_of_all_duties", "per_100_in_asylum_support", `rough_sleeping_${lastMonth}`, "people_in_asylum_support"];
-    const lines = [head.join(",")].concat(rows.map((r) => [r.code, `"${r.name}"`, `"${r.region}"`, q, r.prevention ?? "", r.relief ?? "", r.total ?? "", r.change ?? "", r.last4 ?? "", r.share != null ? r.share.toFixed(4) : "", r.rate != null ? r.rate.toFixed(2) : "", r.rough ?? "", r.support ?? ""].join(",")));
+    const head = ["area_code", "local_authority", "region", "quarter", "prevention_duties", "relief_duties", "total_duties", "change_vs_previous_quarter", "total_last_12_months", "share_of_all_duties", "per_100_in_asylum_support", "prevention_share", `rough_sleeping_${lastMonth}`, "people_in_asylum_support"];
+    const lines = [head.join(",")].concat(rows.map((r) => [r.code, `"${r.name}"`, `"${r.region}"`, q, r.prevention ?? "", r.relief ?? "", r.total ?? "", r.change ?? "", r.last4 ?? "", r.share != null ? r.share.toFixed(4) : "", r.rate != null ? r.rate.toFixed(2) : "", r.prevshare != null ? r.prevshare.toFixed(3) : "", r.rough ?? "", r.support ?? ""].join(",")));
     const blob = new Blob([lines.join("\n")], { type: "text/csv" });
     const link = Object.assign(document.createElement("a"), { href: URL.createObjectURL(blob), download: `migrant-homelessness-${q}${region ? "-" + regionName(region).replace(/\W+/g, "-").toLowerCase() : ""}.csv` });
     link.click();
@@ -837,6 +946,11 @@ VIEWS.rankings = ({ params }) => {
 // ---------------------------------------------------------------- About
 VIEWS.about = () => {
   const s = D.meta.sources;
+  // Live worked example: the council with the most households owed a duty in the latest quarter
+  const lq = latestQ(), ex = rankLAs("total", lq).find((a) => rate(a.code, lq) != null);
+  const exN = ex ? hv("total", ex.code, lq) : null, exBase = ex ? rateBase(ex.code, lq) : null;
+  const engN = hv("total", ENGLAND, lq), engBase = rateBase(ENGLAND, lq);
+  const exY = ex ? sumLast("total", ex.code, lq) : null, exYBase = ex ? avgBaseYear(ex.code, lq) : null;
   const embedBase = location.origin + location.pathname;
   $view.innerHTML = `<div class="prose">
     <h2>About the data</h2>
@@ -848,11 +962,38 @@ VIEWS.about = () => {
       <dt>Relief duty</dt><dd>The council must help a household that is <i>already</i> homeless to secure accommodation. A high share of relief duties means people are reaching the council only after they have become homeless.</dd>
       <dt>Households leaving Home Office accommodation</dt><dd>Households whose reason for loss, or threat of loss, of their last settled home was recorded as "Required to leave accommodation provided by Home Office as asylum support" (MHCLG tables A2P and A2R). Before April 2020 MHCLG published prevention and relief combined, so only the total is shown for those quarters.</dd>
       <dt>Share of all duties</dt><dd>These households as a percentage of all households owed a prevention or relief duty, for any reason, in the same area and quarter.</dd>
-      <dt>Rate per 100 people in asylum support</dt><dd>Households owed a duty after leaving asylum accommodation in a quarter, per 100 people receiving asylum support in the same area at the start of that quarter (the end of the previous quarter). It shows where homelessness is high <i>relative to</i> the number of people in support, not just where numbers are biggest. It is not calculated for areas with fewer than 50 people in support, where a handful of cases would give misleading rates. People often leave support in one area and approach a council in another, especially in and around London, so area rates are a guide. The rate also mixes households (duties) with people (support), so it is not the percentage of people leaving support who become homeless.</dd>
+      <dt>Prevention share</dt><dd>The percentage of these duties that were prevention duties rather than relief duties: prevention ÷ (prevention + relief). A higher share means more households got help <i>before</i> they lost their accommodation, which is the aim of the Homelessness Reduction Act. It is shown next to the same figure for all households owed a duty, for comparison. For councils it is not shown where there were fewer than ${PREV_MIN_BASE} duties in the period, because one or two cases would swing the percentage a lot.</dd>
+      <dt>Rate per 100 people in asylum support</dt><dd>Households owed a duty per 100 people in asylum support in the same area. <a href="#rate-explainer" onclick="document.getElementById('rate-explainer').scrollIntoView();return false;">How it is calculated and what it does and doesn't show</a>.</dd>
       <dt>Rough sleeping after leaving asylum support</dt><dd>People seen sleeping rough during the month who had left asylum support in the previous 85 days. These are estimates from councils' management information, collected through the Rough Sleeping Data Framework, and are not directly comparable with the statutory homelessness figures.</dd>
       <dt>People in asylum support</dt><dd>People receiving Home Office asylum support (Section 95, Section 4 and Section 98) on the last day of the quarter, by the local authority where they live. Areas with large numbers in support are where future move-on need is likely to arise.</dd>
       <dt>Grants of protection</dt><dd>Initial asylum decisions granting refugee status or humanitarian protection to main applicants (UK-wide). Shown to compare timing with homelessness duties.</dd>
     </dl>
+
+    <h3 id="rate-explainer">How the rate per 100 is calculated</h3>
+    <p>The rate is the number of households owed a homelessness duty after leaving Home Office asylum accommodation in a quarter, divided by the number of people in asylum support in the same council area at the start of that quarter, multiplied by 100.</p>
+    ${ex ? `<div class="card" style="margin:10px 0">
+      <p style="margin:0 0 6px"><b>Worked example: ${esc(ex.name)}, ${qLong(lq)}</b></p>
+      <ul style="margin:0;padding-left:20px">
+        <li><b>${fmt(exN)}</b> households were owed a prevention or relief duty after being required to leave Home Office asylum accommodation in ${qLong(lq)} (MHCLG tables A2P and A2R).</li>
+        <li><b>${fmt(exBase)}</b> people were living in ${esc(ex.name)} on Home Office asylum support at the end of ${qLong(prevQ(lq))}, the start of the quarter (Home Office table Asy_D11).</li>
+        <li>${fmt(exN)} ÷ ${fmt(exBase)} × 100 = <b>${fmtRate(rate(ex.code, lq))}</b> households per 100 people in support.</li>
+      </ul>
+      <p class="note" style="margin-top:8px">For England as a whole: ${fmt(engN)} ÷ ${fmt(engBase)} × 100 = ${fmtRate(rate(ENGLAND, lq))}.</p>
+    </div>` : ""}
+    <p><b>Why the start of the quarter?</b> The people who leave asylum support during a quarter come from those who were in support at the start of it.</p>
+    <p><b>Year-ending rates</b> add up the four quarters' duties and divide by the average of the four start-of-quarter support figures. Because they count a whole year of duties, they are roughly four times the quarterly rates, so don't compare a year-ending rate with a quarterly one.${ex && exY != null && exYBase != null ? ` For ${esc(ex.name)} in the ${yearLabel(lq)}: ${fmt(exY)} ÷ ${fmt(Math.round(exYBase))} × 100 = ${fmtRate(rateYear(ex.code, lq))}.` : ""}</p>
+
+    <h3>What the rate shows</h3>
+    <p>It adjusts for how many people in asylum support live in each area. Raw counts mostly follow where asylum accommodation is concentrated, so the largest dispersal areas always come top. The rate shows where homelessness is high <i>relative to</i> that population. A high rate suggests that a larger share of people moving on from support in that area end up needing homelessness help. That could point to weak move-on support, a tight housing market, or people arriving from other areas.</p>
+
+    <h3>What the rate doesn't show</h3>
+    <ul>
+      <li><b>It isn't the percentage of people who become homeless.</b> The top of the calculation counts <i>households</i>; the bottom counts <i>people</i>. A family of four in support who are owed one duty count once on top and four times underneath.</li>
+      <li><b>It uses everyone in support, not just people leaving.</b> Most people in support are not leaving in any given quarter. The Home Office does not publish how many people leave support in each council area, so the number in support is the closest measure available.</li>
+      <li><b>People move between areas.</b> Someone can leave support in one council area and approach a different council for help, especially in and around London. That pushes rates up in areas people move to and down in areas they leave.</li>
+      <li><b>Small areas are unstable.</b> No rate is shown where fewer than ${RATE_MIN_BASE} people were in support, and even above that a few cases can swing a rate a lot from one quarter to the next.</li>
+    </ul>
+    <p>Treat it as a rough comparison alongside the raw numbers, not a precise measure.</p>
 
     <h3>Things to bear in mind</h3>
     <ul>

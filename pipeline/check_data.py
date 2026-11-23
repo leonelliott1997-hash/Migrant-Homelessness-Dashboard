@@ -47,6 +47,21 @@ if ENGLAND in H["prevention"] and ENGLAND in H["prevention_all"]:
     la_sum = sum((H["prevention"].get(c, [None] * len(Q))[i] or 0) for c in las)
     check(abs(la_sum - p) <= max(100, 0.1 * p), f"local authorities sum to {la_sum} but England is {p}")
 
+# A council code that stopped reporting recently usually means its code changed:
+# add old -> new to SUCCESSORS in update_data.py so its series stays joined up.
+recent = Q[-4:]
+for c, a in d["areas"].items():
+    if a["type"] == "la" and not a.get("current"):
+        vals = H["total"].get(c, [None] * len(Q))[-4:]
+        check(all(v is None for v in vals),
+              f"{a['name']} ({c}) has data in {[q for q, v in zip(recent, vals) if v is not None]} but not in "
+              f"the latest quarter: has its code changed? Add it to SUCCESSORS in update_data.py")
+# Every current council should be on the map
+geo = json.loads((DATA.parent / "la_boundaries.geojson").read_text(encoding="utf-8"))
+geo_codes = {f["properties"]["code"] for f in geo["features"]}
+missing_geo = [d["areas"][c]["name"] for c in las if c not in geo_codes]
+check(not missing_geo, f"no map boundary for {missing_geo}: update pipeline/fetch_boundaries.py or SUCCESSORS")
+
 R = d["rough_sleeping"]
 check(len(R["months"]) >= 12, "fewer than 12 months of rough sleeping data")
 check(R["asylum"].get(ENGLAND, [None])[-1] is not None, "latest England rough sleeping value missing")

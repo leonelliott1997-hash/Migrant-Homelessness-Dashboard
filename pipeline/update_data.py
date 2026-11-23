@@ -508,6 +508,61 @@ def load_grants(src: dict, force=False) -> dict:
 
 # ------------------------------------------------------------------------ assemble
 
+# Councils whose ONS code changed without the council being abolished (e.g. a boundary
+# change). Old code -> new code. Their figures are joined into one continuous series.
+# pipeline/check_data.py fails if a council code disappears and isn't listed here.
+SUCCESSORS = {
+    "E08000016": "E08000038",  # Barnsley: new code from April 2025 (boundary change with Sheffield)
+    "E08000019": "E08000039",  # Sheffield: new code from April 2025
+}
+
+
+def apply_successors(hl, rs, support):
+    """Re-key old council codes to their successors in every source."""
+    for rec in hl.values():
+        for table in ("prevention", "relief", "combined"):
+            t = rec.get(table)
+            if not t:
+                continue
+            for old, new in SUCCESSORS.items():
+                if old in t and new not in t:
+                    t[new] = t.pop(old)
+                elif old in t:
+                    t.pop(old)  # both present in one file: keep the new code
+    for old, new in SUCCESSORS.items():
+        if old in rs["data"]:
+            o = rs["data"].pop(old)
+            if new in rs["data"]:
+                n = rs["data"][new]
+                for k in ("v", "t"):
+                    n[k] = [a if a is not None else b for a, b in zip(n[k], o[k])]
+            else:
+                rs["data"][new] = o
+    support = dict(support)
+    support["total"] = dict(support["total"])
+    for old, new in SUCCESSORS.items():
+        if old in support["total"]:
+            o = support["total"].pop(old)
+            n = support["total"].get(new, [None] * len(o))
+            support["total"][new] = [(a or 0) + (b or 0) if (a is not None or b is not None) else None for a, b in zip(o, n)]
+            support["regions"].setdefault(new, support["regions"].get(old))
+            support["names"].pop(old, None)
+            support["regions"].pop(old, None)
+        support["latest_by_type"].pop(old, None)
+    # map boundaries use the December 2024 codes
+    geo = OUT / "la_boundaries.geojson"
+    if geo.exists():
+        g = json.loads(geo.read_text(encoding="utf-8"))
+        changed = False
+        for f in g["features"]:
+            if f["properties"]["code"] in SUCCESSORS:
+                f["properties"]["code"] = SUCCESSORS[f["properties"]["code"]]
+                changed = True
+        if changed:
+            geo.write_text(json.dumps(g, separators=(",", ":")), encoding="utf-8")
+    return hl, rs, support
+
+
 def build(force=False):
     hl, hl_meta = load_homelessness(force)
     rs, rs_meta = load_rough_sleeping(force)
@@ -515,6 +570,7 @@ def build(force=False):
     log(f"Home Office: {imm['support']['title']}")
     support = load_support(imm["support"], force)
     grants = load_grants(imm["decisions"], force)
+    hl, rs, support = apply_successors(hl, rs, support)
 
     quarters = quarter_range(min(hl), max(hl))
     latest_q = quarters[-1]

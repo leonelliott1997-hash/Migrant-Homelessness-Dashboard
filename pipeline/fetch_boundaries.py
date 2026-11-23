@@ -38,8 +38,9 @@ def main():
         if len(page) < 200:
             break
         offset += 200
+    from update_data import SUCCESSORS  # councils whose code changed since these boundaries
     out = {"type": "FeatureCollection", "features": [
-        {"type": "Feature", "properties": {"code": f["properties"][CODE], "name": f["properties"][NAME]},
+        {"type": "Feature", "properties": {"code": SUCCESSORS.get(f["properties"][CODE], f["properties"][CODE]), "name": f["properties"][NAME]},
          "geometry": {"type": f["geometry"]["type"], "coordinates": rnd(f["geometry"]["coordinates"])}}
         for f in feats]}
     OUT.parent.mkdir(parents=True, exist_ok=True)
