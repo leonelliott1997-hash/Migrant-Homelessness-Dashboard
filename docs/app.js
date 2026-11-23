@@ -1,4 +1,4 @@
-/* Migrant Homelessness Tracker
+/* Refugee Homelessness Tracker
  * Reads data/data.json (built by pipeline/update_data.py) and renders every view
  * client-side. No build step: plain JS + d3.
  */
@@ -1048,7 +1048,7 @@ VIEWS.about = () => {
 
     <h3>Embedding charts on your website</h3>
     <p>Any page can be embedded without the header and navigation by adding <code>?embed=1</code> to the address. For example, the overview for the North West:</p>
-    <pre style="white-space:pre-wrap;background:var(--surface-2);padding:10px;border-radius:8px;font-size:12.5px">&lt;iframe src="${esc(embedBase)}?embed=1#/overview?area=E12000002" width="100%" height="900" style="border:0" title="Migrant homelessness tracker"&gt;&lt;/iframe&gt;</pre>
+    <pre style="white-space:pre-wrap;background:var(--surface-2);padding:10px;border-radius:8px;font-size:12.5px">&lt;iframe src="${esc(embedBase)}?embed=1#/overview?area=E12000002" width="100%" height="900" style="border:0" title="Refugee homelessness tracker"&gt;&lt;/iframe&gt;</pre>
     <p>Local authority profiles work the same way, for example <code>?embed=1#/la/E08000025</code> for Birmingham.</p>
   </div>`;
 };

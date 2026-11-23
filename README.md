@@ -1,4 +1,4 @@
-# Migrant Homelessness Tracker
+# Refugee Homelessness Tracker
 
 An automatically updating dashboard showing where people leaving Home Office asylum
 accommodation are becoming homeless in England, by region and local authority.
@@ -101,7 +101,7 @@ Add `?embed=1` to any page address to hide the header and navigation, for exampl
 
 ```html
 <iframe src="https://<your-account>.github.io/<repo>/?embed=1#/overview?area=E12000002"
-        width="100%" height="900" style="border:0" title="Migrant homelessness tracker"></iframe>
+        width="100%" height="900" style="border:0" title="Refugee homelessness tracker"></iframe>
 ```
 
 ## Notes on the figures
