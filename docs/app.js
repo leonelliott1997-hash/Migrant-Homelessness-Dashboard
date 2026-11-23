@@ -21,9 +21,9 @@ const MEASURES = {
   total: { label: "Asylum leaver prevention + relief duties", short: "Asylum leaver duties", color: "var(--accent)" },
   prevention: { label: "Asylum leaver prevention duties", short: "Asylum leaver prevention", color: "var(--prevention)" },
   relief: { label: "Asylum leaver relief duties", short: "Asylum leaver relief", color: "var(--relief)" },
-  rate: { label: "Households owed a duty per 100 people in asylum support", short: "Per 100 in support", color: "var(--accent)" },
+  rate: { label: "Homelessness duties per 100 people in asylum support", short: "Homelessness duties per 100 people in asylum support", color: "var(--accent)" },
 };
-const MEASURE_BUTTONS = [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Rate per 100 in support"]];
+const MEASURE_BUTTONS = [["total", "Prevention + relief"], ["prevention", "Prevention"], ["relief", "Relief"], ["rate", "Homelessness duties per 100 people in asylum support"]];
 
 // ---------------------------------------------------------------- state
 let D = null;          // the data
@@ -409,7 +409,7 @@ VIEWS.overview = ({ params }) => {
         ${tile("Prevention share", fmtPct(prevShare(ENGLAND, q, Y), 0), `of asylum leaver duties were prevention (help before becoming homeless) rather than relief`, "var(--prevention)")}
         ${tile("Asylum leavers as % of all prevention duties", fmtPct(shareOf("prevention", ENGLAND, q, Y)), `of the ${fmt(V("prevention_all", ENGLAND))} households owed a prevention duty in England were leaving asylum accommodation`, "var(--prevention)")}
         ${tile("Asylum leavers as % of all relief duties", fmtPct(shareOf("relief", ENGLAND, q, Y)), `of the ${fmt(V("relief_all", ENGLAND))} households owed a relief duty in England were leaving asylum accommodation`, "var(--relief)")}
-        ${tile("Rate per 100 people in asylum support", fmtRate(rateNow),
+        ${tile("Homelessness duties per 100 people in asylum support", fmtRate(rateNow),
           Y ? `households owed a duty in the year per 100 people in support (average of the four quarters) · ${fmtRate(rateCmp)} the year before`
             : `households owed a duty per 100 people in support at the start of the quarter · ${fmtRate(rateCmp)} last quarter`)}
         ${tile("Sleeping rough after leaving asylum support", Y ? fmt(rsVal) : fmt(rsVal),
@@ -453,7 +453,7 @@ VIEWS.overview = ({ params }) => {
         ${legend([["var(--prevention)", "Asylum leavers as % of all prevention duties"], ["var(--relief)", "Asylum leavers as % of all relief duties"]])}<div class="chart" id="c-share"></div></div>
       <div class="card"><h3>People in asylum support</h3>
         <p class="sub">${esc(areaName(area))}, people receiving Home Office asylum support at the end of each quarter (Section 95, 4 and 98). This is where future move-on need will arise.</p><div class="chart" id="c-support"></div></div>
-      <div class="card"><h3>Rate per 100 people in asylum support</h3>
+      <div class="card"><h3>Homelessness duties per 100 people in asylum support</h3>
         <p class="sub">${esc(areaName(area))}, households owed a duty after leaving asylum accommodation per 100 people in asylum support in the area at the start of the quarter</p><div class="chart" id="c-rate"></div>
         <p class="note">People often leave support in one area and approach a council in another, so area rates are a guide, not an exact measure.</p></div>
       <div class="card"><h3>Grants of protection and homelessness duties</h3>
@@ -466,7 +466,7 @@ VIEWS.overview = ({ params }) => {
   <div class="section">
     <div class="card"><div class="section-head" style="margin-bottom:4px"><div><h3>Where need is highest, ${label}</h3>
         <p class="sub" style="margin:0">${topBy === "rate" ? `Highest number of households owed a duty per 100 people in asylum support (areas with at least ${RATE_MIN_BASE} people in support)` : "Local authorities with the most households owed a duty (prevention + relief)"}${Y ? `. Change is against the ${yearLabel(yq)}; councils with a missing quarter are left out.` : ""}</p></div>
-        ${seg("top", [["total", "Number"], ["rate", "Rate per 100 in support"]], topBy)}</div>
+        ${seg("top", [["total", "Number"], ["rate", "Homelessness duties per 100 people in asylum support"]], topBy)}</div>
       <ol class="toplist" id="top10"></ol>
       <p class="note"><a href="#/rankings">See all local authorities →</a> · <a href="#/regions">Top 5 in each region →</a></p></div>
   </div>`;
@@ -592,7 +592,7 @@ VIEWS.regions = ({ params }) => {
         </tr>
         <tr>
           <th class="dyn">${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th class="dyn">vs previous quarter</th><th class="dyn">vs ${qShort(yq)}</th><th class="dyn l">Last 12 quarters</th>
-          <th class="edge">Asylum leavers as % of all prevention duties</th><th>Asylum leavers as % of all relief duties</th><th>Prevention share</th>${measure === "rate" ? "" : "<th>Per 100 in support</th>"}
+          <th class="edge">Asylum leavers as % of all prevention duties</th><th>Asylum leavers as % of all relief duties</th><th>Prevention share</th>${measure === "rate" ? "" : "<th>Homelessness duties per 100 people in asylum support</th>"}
         </tr>
       </thead>
       <tbody>${rows.map((c) => {
@@ -603,7 +603,7 @@ VIEWS.regions = ({ params }) => {
           <td class="dyn l">${sparkline(spanQ.map((x) => mv(c, x)), { color: MEASURES[measure].color })}</td>
           <td class="edge">${fmtPct(shareOf("prevention", c, q))}</td><td>${fmtPct(shareOf("relief", c, q))}</td><td>${fmtPct(prevShare(c, q), 0)}</td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}</tr>`;
       }).join("")}</tbody></table></div>
-    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Asylum leavers as % of all prevention / relief duties" = of all households owed that duty in the area, for any reason, the percentage who were leaving Home Office asylum accommodation. "Prevention share" = % of asylum leaver duties that were prevention rather than relief. "Per 100 in support" = households owed a duty per 100 people in asylum support in the area at the start of the quarter.</p>
+    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Asylum leavers as % of all prevention / relief duties" = of all households owed that duty in the area, for any reason, the percentage who were leaving Home Office asylum accommodation. "Prevention share" = % of asylum leaver duties that were prevention rather than relief. "Homelessness duties per 100 people in asylum support" = households owed a duty after leaving asylum accommodation per 100 people in asylum support in the area at the start of the quarter.</p>
 
     <div class="section">
       <div class="section-head"><h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
@@ -666,7 +666,7 @@ VIEWS.la = ({ arg, params }) => {
           : latestMissing ? "No data this quarter" : `Not shown: fewer than ${PREV_MIN_BASE} duties this quarter${prevShare(code, q, true) != null ? ` · year ending ${yearShort(q)}: ${fmtPct(prevShare(code, q, true), 0)}` : ""}`, "var(--prevention)")}
       ${tile("Asylum leavers as % of all prevention duties here", fmtPct(shareOf("prevention", code, q)), `of all households owed a prevention duty · England: ${fmtPct(shareOf("prevention", ENGLAND, q))}`, "var(--prevention)")}
       ${tile("Asylum leavers as % of all relief duties here", fmtPct(shareOf("relief", code, q)), `of all households owed a relief duty · England: ${fmtPct(shareOf("relief", ENGLAND, q))}`, "var(--relief)")}
-      ${tile("Rate per 100 people in asylum support", fmtRate(rate(code, q)),
+      ${tile("Homelessness duties per 100 people in asylum support", fmtRate(rate(code, q)),
         rate(code, q) != null ? `${fmt(t)} households / ${fmt(rateBase(code, q))} people in support · England: ${fmtRate(rate(ENGLAND, q))}`
           : (rateBase(code, q) ?? 0) < RATE_MIN_BASE ? `Not calculated: fewer than ${RATE_MIN_BASE} people in support here` : "No data this quarter")}
       ${tile("Sleeping rough after leaving asylum support", fmt(rs.value), rs.month ? mLong(rs.month) : "No data", "var(--rough)")}
@@ -747,7 +747,7 @@ const MAP_MEASURES = {
   total: { label: "Asylum leaver duties (prevention + relief)", periods: ["quarter", "year"] },
   prevention: { label: "Asylum leaver prevention duties", periods: ["quarter", "year"] },
   relief: { label: "Asylum leaver relief duties", periods: ["quarter", "year"] },
-  rate: { label: "Households owed a duty per 100 people in asylum support", periods: ["quarter", "year"], continuous: true },
+  rate: { label: "Homelessness duties per 100 people in asylum support", periods: ["quarter", "year"], continuous: true },
   prevshare: { label: "Prevention share (% of duties that were prevention)", periods: ["quarter", "year"], continuous: true, pct: true, breaks: [0.0001, 0.2, 0.4, 0.6, 0.8] },
   shareP: { label: "Asylum leavers as % of all prevention duties", periods: ["quarter", "year"], continuous: true, pct: true, breaks: [0.0001, 0.01, 0.02, 0.05, 0.1, 0.2] },
   shareR: { label: "Asylum leavers as % of all relief duties", periods: ["quarter", "year"], continuous: true, pct: true, breaks: [0.0001, 0.01, 0.02, 0.05, 0.1, 0.2] },
@@ -904,7 +904,7 @@ VIEWS.rankings = ({ params }) => {
   const cols = [
     ["name", "Local authority", "l"], ["region", "Region", "l"],
     ["total", `Asylum leaver duties ${qShort(q)}`], ["prevention", "Asylum leaver prevention"], ["relief", "Asylum leaver relief"],
-    ["change", "Change vs prev. quarter"], ["last4", "Last 12 months"], ["shareP", "Asylum leavers as % of all prevention duties"], ["shareR", "Asylum leavers as % of all relief duties"], ["rate", "Per 100 in asylum support"], ["prevshare", "Prevention share"],
+    ["change", "Change vs prev. quarter"], ["last4", "Last 12 months"], ["shareP", "Asylum leavers as % of all prevention duties"], ["shareR", "Asylum leavers as % of all relief duties"], ["rate", "Homelessness duties per 100 people in asylum support"], ["prevshare", "Prevention share"],
     ["rough", `Rough sleeping ${mShort(lastMonth)}`], ["support", "In asylum support"],
   ];
   let rows = LAS.filter((a) => (!region || a.region === region) && (!search || a.name.toLowerCase().includes(search.toLowerCase()))).map((a) => {
@@ -991,13 +991,13 @@ VIEWS.about = () => {
       <dt>Households leaving Home Office accommodation</dt><dd>Households whose reason for loss, or threat of loss, of their last settled home was recorded as "Required to leave accommodation provided by Home Office as asylum support" (MHCLG tables A2P and A2R). Before April 2020 MHCLG published prevention and relief combined, so only the total is shown for those quarters.</dd>
       <dt>Asylum leavers as a % of all prevention / relief duties</dt><dd>Of all households owed a prevention duty (or a relief duty), for any reason, the percentage who were leaving Home Office asylum accommodation, in the same area and period. It shows how much of a council's homelessness workload comes from people leaving asylum support.</dd>
       <dt>Prevention share</dt><dd>The percentage of asylum leaver duties that were prevention duties rather than relief duties: prevention ÷ (prevention + relief). A higher share means more households got help <i>before</i> they lost their accommodation, which is the aim of the Homelessness Reduction Act. For councils it is not shown where there were fewer than ${PREV_MIN_BASE} duties in the period, because one or two cases would swing the percentage a lot.</dd>
-      <dt>Rate per 100 people in asylum support</dt><dd>Households owed a duty per 100 people in asylum support in the same area. <a href="#rate-explainer" onclick="document.getElementById('rate-explainer').scrollIntoView();return false;">How it is calculated and what it does and doesn't show</a>.</dd>
+      <dt>Homelessness duties per 100 people in asylum support</dt><dd>Households owed a homelessness duty after leaving asylum accommodation, per 100 people in asylum support in the same area. <a href="#rate-explainer" onclick="document.getElementById('rate-explainer').scrollIntoView();return false;">How it is calculated and what it does and doesn't show</a>.</dd>
       <dt>Rough sleeping after leaving asylum support</dt><dd>People seen sleeping rough during the month who had left asylum support in the previous 85 days. These are estimates from councils' management information, collected through the Rough Sleeping Data Framework, and are not directly comparable with the statutory homelessness figures.</dd>
       <dt>People in asylum support</dt><dd>People receiving Home Office asylum support (Section 95, Section 4 and Section 98) on the last day of the quarter, by the local authority where they live. Areas with large numbers in support are where future move-on need is likely to arise.</dd>
       <dt>Grants of protection</dt><dd>Initial asylum decisions granting refugee status or humanitarian protection to main applicants (UK-wide). Shown to compare timing with homelessness duties.</dd>
     </dl>
 
-    <h3 id="rate-explainer">How the rate per 100 is calculated</h3>
+    <h3 id="rate-explainer">How homelessness duties per 100 people in asylum support are calculated</h3>
     <p>The rate is the number of households owed a homelessness duty after leaving Home Office asylum accommodation in a quarter, divided by the number of people in asylum support in the same council area at the start of that quarter, multiplied by 100.</p>
     ${ex ? `<div class="card" style="margin:10px 0">
       <p style="margin:0 0 6px"><b>Worked example: ${esc(ex.name)}, ${qLong(lq)}</b></p>

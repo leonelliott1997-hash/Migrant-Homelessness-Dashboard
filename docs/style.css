@@ -251,3 +251,4 @@ body.embed .embed-source { display: block; }
 .region-table tbody tr:hover td.dyn { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
 .region-table .edge { border-left: 2px solid var(--axis); }
 .region-table .seg button { padding: 5px 10px; font-size: 13px; }
+.region-table thead tr:nth-child(2) th { white-space: normal; min-width: 90px; max-width: 170px; }
