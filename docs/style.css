@@ -100,7 +100,8 @@ h3 { font-size: 16px; margin: 0 0 2px; }
 .headline { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; box-shadow: var(--shadow); }
 .headline .hero { font-size: 52px; font-weight: 650; line-height: 1; letter-spacing: -0.02em; margin: 6px 0 8px; }
 .headline .hero-label { color: var(--ink-2); font-size: 14px; }
-.headline p.summary { margin: 12px 0 0; max-width: 80ch; color: var(--ink); }
+.summary-card { margin-top: 16px; }
+.summary-card p.summary { margin: 6px 0 0; color: var(--ink); font-size: 15.5px; line-height: 1.6; }
 .headline-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr); gap: 24px; align-items: start; }
 @media (max-width: 860px) { .headline-grid { grid-template-columns: minmax(0, 1fr); } }
 

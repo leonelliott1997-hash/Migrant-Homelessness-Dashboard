@@ -426,6 +426,9 @@ VIEWS.overview = ({ params }) => {
         ${tile("Grants of protection (UK)", fmt(gVal), `${Y ? yearLabel(G.quarters[gi]) : qLong(G.quarters[gi])}, main applicants · ${deltaSpan(gVal, gCmp, { abs: false })} ${Y ? "on the year before" : "vs last quarter"}`)}
       </div>
     </div>
+  </div>
+  <div class="card summary-card">
+    <h3>Summary</h3>
     <p class="summary">In the ${Y ? yearLabel(q) : `quarter ${qLong(q)}`}, councils in England owed a homelessness duty to <b>${fmt(tot)}</b> households because they had to leave Home Office asylum accommodation: ${fmt(pre)} prevention duties and ${fmt(rel)} relief duties.
     ${Y ? `That is ${dirWord(tot, V("total", ENGLAND, yq)) || "–"} on the previous 12 months.`
         : `That is ${dirWord(tot, hv("total", ENGLAND, pq)) || "–"} on the previous quarter and ${dirWord(tot, hv("total", ENGLAND, yq)) || "–"} on the same quarter last year.`}
