@@ -593,12 +593,12 @@ VIEWS.regions = ({ params }) => {
       <thead>
         <tr>
           <th class="l" rowspan="2">Area</th>
-          <th class="grp dyn-head" colspan="4"><div class="grp-label">Choose a measure: these four columns change</div>${seg("m", MEASURE_BUTTONS, measure)}</th>
-          <th class="grp static-head edge" colspan="${measure === "rate" ? 3 : 4}"><div class="grp-label">Other indicators, ${qShort(q)}</div><div class="grp-sub">Always shown: not affected by the measure buttons</div></th>
+          <th class="grp dyn-head" colspan="4">${seg("m", MEASURE_BUTTONS, measure)}</th>
+          <th class="grp static-head edge" colspan="4"><div class="grp-label">Other indicators, ${qShort(q)}</div><div class="grp-sub">Always shown: not affected by the measure buttons</div></th>
         </tr>
         <tr>
           <th class="dyn">${esc(MEASURES[measure].short)}, ${qShort(q)}</th><th class="dyn">vs previous quarter</th><th class="dyn">vs ${qShort(yq)}</th><th class="dyn l">Last 12 quarters</th>
-          <th class="edge">Asylum leavers as % of all prevention duties</th><th>Asylum leavers as % of all relief duties</th><th>Relief share</th>${measure === "rate" ? "" : "<th>Homelessness duties per 100 people in asylum support</th>"}
+          <th class="edge">Asylum leavers as % of all prevention duties</th><th>Asylum leavers as % of all relief duties</th><th>Relief share</th><th>Sleeping rough after leaving asylum support (average per month)</th>
         </tr>
       </thead>
       <tbody>${rows.map((c) => {
@@ -607,9 +607,9 @@ VIEWS.regions = ({ params }) => {
         return `<tr${sep}><td class="l"><a href="#/overview?area=${c}">${c === ENGLAND ? "<b>England</b>" : esc(areaName(c))}</a></td>
           <td class="dyn"><b>${mf(v)}</b></td><td class="dyn delta">${md(v, mv(c, pq))}</td><td class="dyn delta">${md(v, mv(c, yq))}</td>
           <td class="dyn l">${sparkline(spanQ.map((x) => mv(c, x)), { color: MEASURES[measure].color })}</td>
-          <td class="edge">${fmtPct(shareOf("prevention", c, q))}</td><td>${fmtPct(shareOf("relief", c, q))}</td><td>${fmtPct(reliefShare(c, q), 0)}</td>${measure === "rate" ? "" : `<td>${fmtRate(rate(c, q))}</td>`}</tr>`;
+          <td class="edge">${fmtPct(shareOf("prevention", c, q))}</td><td>${fmtPct(shareOf("relief", c, q))}</td><td>${fmtPct(reliefShare(c, q), 0)}</td><td>${fmtDec(rsAverage(c, q, false) ?? null)}</td></tr>`;
       }).join("")}</tbody></table></div>
-    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Asylum leavers as % of all prevention / relief duties" = of all households owed that duty in the area, for any reason, the percentage who were leaving Home Office asylum accommodation. "Relief share" = % of asylum leaver duties that were relief duties (already homeless) rather than prevention. "Homelessness duties per 100 people in asylum support" = households owed a duty after leaving asylum accommodation per 100 people in asylum support in the area at the start of the quarter.</p>
+    <p class="note">London and Rest of England are shown separately as well as within the regional list. Regional figures are rounded to the nearest 10; local authority figures are not rounded, so they may not add up to regional totals. "Asylum leavers as % of all prevention / relief duties" = of all households owed that duty in the area, for any reason, the percentage who were leaving Home Office asylum accommodation. "Relief share" = % of asylum leaver duties that were relief duties (already homeless) rather than prevention. "Sleeping rough after leaving asylum support" = average number of people seen sleeping rough each month of the quarter who had left asylum support in the previous 85 days (Rough Sleeping Data Framework, councils' management information; not available before May 2023). "Homelessness duties per 100 people in asylum support" is available with the measure buttons.</p>
 
     <div class="section">
       <div class="section-head"><h2>Top 5 local authorities in each region, ${qLong(q)}</h2>
