@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -105,5 +105,15 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: docs
+      # GitHub's publish step intermittently fails with "No artifacts named github-pages
+      # were found" even though the upload worked. Wait and retry once before giving up.
       - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait before retrying the publish
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 45
+      - id: deployment_retry
+        name: Retry publish
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
