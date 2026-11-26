@@ -2,11 +2,13 @@ name: Update data and publish dashboard
 
 on:
   schedule:
-    # A quick look at GOV.UK's release calendar each weekday at 10:00 UTC (after the
-    # 09:30 UK release time). The full update only runs on release days, the day after,
-    # when a source page has changed, and on Mondays (weekly sweep).
-    # See pipeline/release_check.py.
-    - cron: "0 10 * * 1-5"
+    # A quick look at GOV.UK's release calendar several times each weekday (releases are
+    # at 09:30 UK). GitHub often starts scheduled runs hours late, so checking more than
+    # once means a release is picked up the same day. The full update only runs on release
+    # days, the day after, when a source page has changed, and on Mondays (weekly sweep);
+    # repeat runs on the same day find nothing new and change nothing.
+    # Odd minutes avoid GitHub's busiest (most delayed) times. See pipeline/release_check.py.
+    - cron: "17 10,13,16 * * 1-5"
   workflow_dispatch:
     inputs:
       force:

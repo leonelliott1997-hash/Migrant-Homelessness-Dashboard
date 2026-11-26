@@ -283,12 +283,18 @@ def load_homelessness(force=False) -> tuple[dict, dict]:
     files, meta = discover_homelessness()
     log(f"Homelessness: {len(files)} quarterly files on GOV.UK ({min(files)} to {max(files)})")
     parsed = {}
+    failures = []
     for q, f in files.items():
         hit = None if force else cache_get("homelessness", f["url"])
         if hit is None:
             log(f"  parsing {q}: {f['title']}")
             path = download(f["url"])
-            norm = lambda n: n.strip().upper().rstrip("_")
+            # Sheet names have changed over time: "A2" (combined, to March 2020), "A2P"/"A2R",
+            # "A2R_" (2020-21), and from the April-June 2026 release "A2P_TOTAL"/"A2R_TOTAL"
+            # (A2P/A2R split into a summary sheet plus breakdowns by reason).
+            def norm(n):
+                n = n.strip().upper().rstrip("_")
+                return n[:-len("_TOTAL")] if n.endswith("_TOTAL") else n
             try:
                 sheets = {norm(k): v for k, v in read_sheets(path, lambda n: norm(n) in ("A2", "A2P", "A2R")).items()}
                 hit = {"period": q, "url": f["url"], "title": f["title"]}
@@ -303,9 +309,14 @@ def load_homelessness(force=False) -> tuple[dict, dict]:
                 cache_put("homelessness", f["url"], hit)
             except Exception as e:
                 log(f"  !! could not parse {q}: {e}")
+                failures.append(f"{f['title']}: {e}")
                 hit = None
         if hit:
             parsed[q] = hit
+    if failures:
+        # Never publish with a quarter silently missing: usually means MHCLG changed the layout.
+        raise RuntimeError("Could not read these MHCLG files (has the table layout changed?): "
+                           + "; ".join(failures))
     meta["files"] = [{"period": q, "title": f["title"], "url": f["url"]} for q, f in files.items()]
     return parsed, meta
 
@@ -716,6 +727,8 @@ def build(force=False):
     new_releases = []
     if old_path.exists():
         old = json.loads(old_path.read_text(encoding="utf-8"))
+        if old["meta"]["latest_quarter"] > latest_q:
+            raise RuntimeError(f"Latest quarter would go backwards ({old['meta']['latest_quarter']} -> {latest_q}); not publishing")
         old_src = old["meta"].get("sources", {})
         checks = [("homelessness", lambda s: s["latest_file"]["title"]),
                   ("rough_sleeping", lambda s: s["title"]),
