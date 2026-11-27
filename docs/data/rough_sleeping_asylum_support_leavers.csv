@@ -19,13 +19,13 @@ E92000001,England,country,,2024-09,137,8993
 E92000001,England,country,,2024-10,329,8893
 E92000001,England,country,,2024-11,319,9256
 E92000001,England,country,,2024-12,251,7507
-E92000001,England,country,,2025-01,257,7657
+E92000001,England,country,,2025-01,263,7657
 E92000001,England,country,,2025-02,242,7029
 E92000001,England,country,,2025-03,321,7718
 E92000001,England,country,,2025-04,460,7971
 E92000001,England,country,,2025-05,474,8638
 E92000001,England,country,,2025-06,321,8732
-E92000001,England,country,,2025-07,193,9574
+E92000001,England,country,,2025-07,193,9577
 E92000001,England,country,,2025-08,173,9158
 E92000001,England,country,,2025-09,163,9292
 E92000001,England,country,,2025-10,333,9171
@@ -36,7 +36,10 @@ E92000001,England,country,,2026-02,136,7262
 E92000001,England,country,,2026-03,164,7538
 E92000001,England,country,,2026-04,146,7808
 E92000001,England,country,,2026-05,91,8149
-E92000001,England,country,,2026-06,99,8748
+E92000001,England,country,,2026-06,99,8751
+E92000001,England,country,,2026-07,72,9798
+E92000001,England,country,,2026-08,62,9268
+E92000001,England,country,,2026-09,51,9369
 E12000007,London,region,,2023-05,22,1609
 E12000007,London,region,,2023-06,14,1623
 E12000007,London,region,,2023-07,7,1693
@@ -75,6 +78,9 @@ E12000007,London,region,,2026-03,44,1778
 E12000007,London,region,,2026-04,36,1866
 E12000007,London,region,,2026-05,29,1885
 E12000007,London,region,,2026-06,26,2101
+E12000007,London,region,,2026-07,20,2369
+E12000007,London,region,,2026-08,22,2229
+E12000007,London,region,,2026-09,10,2277
 REST,Rest of England,aggregate,,2023-05,26,4997
 REST,Rest of England,aggregate,,2023-06,44,5613
 REST,Rest of England,aggregate,,2023-07,37,5725
@@ -95,13 +101,13 @@ REST,Rest of England,aggregate,,2024-09,94,6692
 REST,Rest of England,aggregate,,2024-10,231,6626
 REST,Rest of England,aggregate,,2024-11,217,6705
 REST,Rest of England,aggregate,,2024-12,185,5561
-REST,Rest of England,aggregate,,2025-01,205,5462
+REST,Rest of England,aggregate,,2025-01,211,5462
 REST,Rest of England,aggregate,,2025-02,168,5151
 REST,Rest of England,aggregate,,2025-03,170,5639
 REST,Rest of England,aggregate,,2025-04,274,5899
 REST,Rest of England,aggregate,,2025-05,272,6361
 REST,Rest of England,aggregate,,2025-06,177,6515
-REST,Rest of England,aggregate,,2025-07,125,7226
+REST,Rest of England,aggregate,,2025-07,125,7229
 REST,Rest of England,aggregate,,2025-08,120,7005
 REST,Rest of England,aggregate,,2025-09,111,7097
 REST,Rest of England,aggregate,,2025-10,180,6904
@@ -112,7 +118,10 @@ REST,Rest of England,aggregate,,2026-02,86,5435
 REST,Rest of England,aggregate,,2026-03,120,5760
 REST,Rest of England,aggregate,,2026-04,110,5942
 REST,Rest of England,aggregate,,2026-05,62,6264
-REST,Rest of England,aggregate,,2026-06,73,6647
+REST,Rest of England,aggregate,,2026-06,73,6650
+REST,Rest of England,aggregate,,2026-07,52,7429
+REST,Rest of England,aggregate,,2026-08,40,7039
+REST,Rest of England,aggregate,,2026-09,41,7092
 E12000001,North East,region,,2023-05,0,239
 E12000001,North East,region,,2023-06,0,229
 E12000001,North East,region,,2023-07,0,221
@@ -151,6 +160,9 @@ E12000001,North East,region,,2026-03,0,301
 E12000001,North East,region,,2026-04,0,260
 E12000001,North East,region,,2026-05,0,299
 E12000001,North East,region,,2026-06,1,275
+E12000001,North East,region,,2026-07,0,345
+E12000001,North East,region,,2026-08,0,304
+E12000001,North East,region,,2026-09,1,318
 E12000002,North West,region,,2023-05,15,709
 E12000002,North West,region,,2023-06,13,830
 E12000002,North West,region,,2023-07,19,858
@@ -171,7 +183,7 @@ E12000002,North West,region,,2024-09,44,976
 E12000002,North West,region,,2024-10,76,919
 E12000002,North West,region,,2024-11,73,992
 E12000002,North West,region,,2024-12,80,858
-E12000002,North West,region,,2025-01,69,792
+E12000002,North West,region,,2025-01,75,792
 E12000002,North West,region,,2025-02,60,738
 E12000002,North West,region,,2025-03,68,836
 E12000002,North West,region,,2025-04,123,916
@@ -188,7 +200,10 @@ E12000002,North West,region,,2026-02,39,899
 E12000002,North West,region,,2026-03,71,932
 E12000002,North West,region,,2026-04,66,1000
 E12000002,North West,region,,2026-05,37,1004
-E12000002,North West,region,,2026-06,45,1080
+E12000002,North West,region,,2026-06,45,1082
+E12000002,North West,region,,2026-07,29,1019
+E12000002,North West,region,,2026-08,23,1048
+E12000002,North West,region,,2026-09,22,989
 E12000003,Yorkshire and The Humber,region,,2023-05,1,544
 E12000003,Yorkshire and The Humber,region,,2023-06,0,582
 E12000003,Yorkshire and The Humber,region,,2023-07,0,560
@@ -227,6 +242,9 @@ E12000003,Yorkshire and The Humber,region,,2026-03,12,672
 E12000003,Yorkshire and The Humber,region,,2026-04,15,673
 E12000003,Yorkshire and The Humber,region,,2026-05,5,729
 E12000003,Yorkshire and The Humber,region,,2026-06,5,741
+E12000003,Yorkshire and The Humber,region,,2026-07,3,823
+E12000003,Yorkshire and The Humber,region,,2026-08,4,766
+E12000003,Yorkshire and The Humber,region,,2026-09,4,816
 E12000004,East Midlands,region,,2023-05,5,562
 E12000004,East Midlands,region,,2023-06,15,634
 E12000004,East Midlands,region,,2023-07,4,687
@@ -265,6 +283,9 @@ E12000004,East Midlands,region,,2026-03,17,601
 E12000004,East Midlands,region,,2026-04,14,650
 E12000004,East Midlands,region,,2026-05,9,662
 E12000004,East Midlands,region,,2026-06,15,713
+E12000004,East Midlands,region,,2026-07,4,819
+E12000004,East Midlands,region,,2026-08,3,705
+E12000004,East Midlands,region,,2026-09,6,717
 E12000005,West Midlands,region,,2023-05,0,501
 E12000005,West Midlands,region,,2023-06,0,493
 E12000005,West Midlands,region,,2023-07,1,510
@@ -291,7 +312,7 @@ E12000005,West Midlands,region,,2025-03,0,602
 E12000005,West Midlands,region,,2025-04,8,590
 E12000005,West Midlands,region,,2025-05,5,624
 E12000005,West Midlands,region,,2025-06,6,682
-E12000005,West Midlands,region,,2025-07,6,743
+E12000005,West Midlands,region,,2025-07,6,746
 E12000005,West Midlands,region,,2025-08,5,728
 E12000005,West Midlands,region,,2025-09,4,689
 E12000005,West Midlands,region,,2025-10,4,778
@@ -303,6 +324,9 @@ E12000005,West Midlands,region,,2026-03,5,614
 E12000005,West Midlands,region,,2026-04,4,579
 E12000005,West Midlands,region,,2026-05,2,578
 E12000005,West Midlands,region,,2026-06,0,614
+E12000005,West Midlands,region,,2026-07,3,730
+E12000005,West Midlands,region,,2026-08,0,713
+E12000005,West Midlands,region,,2026-09,2,664
 E12000006,East of England,region,,2023-05,0,551
 E12000006,East of England,region,,2023-06,10,658
 E12000006,East of England,region,,2023-07,5,636
@@ -341,6 +365,9 @@ E12000006,East of England,region,,2026-03,8,656
 E12000006,East of England,region,,2026-04,3,701
 E12000006,East of England,region,,2026-05,4,779
 E12000006,East of England,region,,2026-06,3,841
+E12000006,East of England,region,,2026-07,4,913
+E12000006,East of England,region,,2026-08,2,856
+E12000006,East of England,region,,2026-09,1,915
 E12000008,South East,region,,2023-05,2,1072
 E12000008,South East,region,,2023-06,5,1213
 E12000008,South East,region,,2023-07,7,1266
@@ -378,7 +405,10 @@ E12000008,South East,region,,2026-02,6,1084
 E12000008,South East,region,,2026-03,6,1101
 E12000008,South East,region,,2026-04,6,1179
 E12000008,South East,region,,2026-05,4,1225
-E12000008,South East,region,,2026-06,3,1294
+E12000008,South East,region,,2026-06,3,1292
+E12000008,South East,region,,2026-07,7,1517
+E12000008,South East,region,,2026-08,8,1471
+E12000008,South East,region,,2026-09,5,1427
 E12000009,South West,region,,2023-05,3,819
 E12000009,South West,region,,2023-06,1,974
 E12000009,South West,region,,2023-07,1,987
@@ -416,7 +446,10 @@ E12000009,South West,region,,2026-02,2,827
 E12000009,South West,region,,2026-03,1,883
 E12000009,South West,region,,2026-04,2,900
 E12000009,South West,region,,2026-05,1,988
-E12000009,South West,region,,2026-06,1,1089
+E12000009,South West,region,,2026-06,1,1092
+E12000009,South West,region,,2026-07,2,1263
+E12000009,South West,region,,2026-08,0,1176
+E12000009,South West,region,,2026-09,0,1246
 E07000223,Adur,la,South East,2023-05,0,2
 E07000223,Adur,la,South East,2023-06,0,7
 E07000223,Adur,la,South East,2023-07,0,6
@@ -455,6 +488,9 @@ E07000223,Adur,la,South East,2026-03,0,4
 E07000223,Adur,la,South East,2026-04,0,7
 E07000223,Adur,la,South East,2026-05,0,7
 E07000223,Adur,la,South East,2026-06,0,5
+E07000223,Adur,la,South East,2026-07,0,10
+E07000223,Adur,la,South East,2026-08,0,5
+E07000223,Adur,la,South East,2026-09,0,5
 E07000032,Amber Valley,la,East Midlands,2023-05,0,1
 E07000032,Amber Valley,la,East Midlands,2023-06,0,3
 E07000032,Amber Valley,la,East Midlands,2023-07,0,4
@@ -493,6 +529,9 @@ E07000032,Amber Valley,la,East Midlands,2026-03,0,5
 E07000032,Amber Valley,la,East Midlands,2026-04,0,2
 E07000032,Amber Valley,la,East Midlands,2026-05,0,3
 E07000032,Amber Valley,la,East Midlands,2026-06,0,1
+E07000032,Amber Valley,la,East Midlands,2026-07,0,0
+E07000032,Amber Valley,la,East Midlands,2026-08,0,3
+E07000032,Amber Valley,la,East Midlands,2026-09,0,4
 E07000224,Arun,la,South East,2023-05,0,20
 E07000224,Arun,la,South East,2023-06,0,31
 E07000224,Arun,la,South East,2023-07,0,23
@@ -531,6 +570,9 @@ E07000224,Arun,la,South East,2026-03,0,16
 E07000224,Arun,la,South East,2026-04,0,26
 E07000224,Arun,la,South East,2026-05,0,25
 E07000224,Arun,la,South East,2026-06,0,39
+E07000224,Arun,la,South East,2026-07,0,34
+E07000224,Arun,la,South East,2026-08,0,43
+E07000224,Arun,la,South East,2026-09,0,48
 E07000170,Ashfield,la,East Midlands,2023-05,0,9
 E07000170,Ashfield,la,East Midlands,2023-06,0,8
 E07000170,Ashfield,la,East Midlands,2023-07,0,11
@@ -569,6 +611,9 @@ E07000170,Ashfield,la,East Midlands,2026-03,0,15
 E07000170,Ashfield,la,East Midlands,2026-04,0,11
 E07000170,Ashfield,la,East Midlands,2026-05,0,7
 E07000170,Ashfield,la,East Midlands,2026-06,0,9
+E07000170,Ashfield,la,East Midlands,2026-07,0,24
+E07000170,Ashfield,la,East Midlands,2026-08,0,27
+E07000170,Ashfield,la,East Midlands,2026-09,0,23
 E07000105,Ashford,la,South East,2023-05,0,7
 E07000105,Ashford,la,South East,2023-06,0,10
 E07000105,Ashford,la,South East,2023-07,0,8
@@ -607,6 +652,9 @@ E07000105,Ashford,la,South East,2026-03,0,8
 E07000105,Ashford,la,South East,2026-04,0,11
 E07000105,Ashford,la,South East,2026-05,0,8
 E07000105,Ashford,la,South East,2026-06,0,9
+E07000105,Ashford,la,South East,2026-07,0,7
+E07000105,Ashford,la,South East,2026-08,0,5
+E07000105,Ashford,la,South East,2026-09,0,2
 E07000200,Babergh,la,East of England,2023-05,0,1
 E07000200,Babergh,la,East of England,2023-06,0,0
 E07000200,Babergh,la,East of England,2023-07,0,1
@@ -645,6 +693,9 @@ E07000200,Babergh,la,East of England,2026-03,0,14
 E07000200,Babergh,la,East of England,2026-04,0,12
 E07000200,Babergh,la,East of England,2026-05,0,10
 E07000200,Babergh,la,East of England,2026-06,0,10
+E07000200,Babergh,la,East of England,2026-07,0,11
+E07000200,Babergh,la,East of England,2026-08,0,9
+E07000200,Babergh,la,East of England,2026-09,0,9
 E09000002,Barking and Dagenham,la,London,2023-05,0,22
 E09000002,Barking and Dagenham,la,London,2023-06,2,22
 E09000002,Barking and Dagenham,la,London,2023-07,0,16
@@ -683,6 +734,9 @@ E09000002,Barking and Dagenham,la,London,2026-03,0,13
 E09000002,Barking and Dagenham,la,London,2026-04,0,15
 E09000002,Barking and Dagenham,la,London,2026-05,0,16
 E09000002,Barking and Dagenham,la,London,2026-06,0,16
+E09000002,Barking and Dagenham,la,London,2026-07,0,22
+E09000002,Barking and Dagenham,la,London,2026-08,0,16
+E09000002,Barking and Dagenham,la,London,2026-09,0,22
 E09000003,Barnet,la,London,2023-05,1,26
 E09000003,Barnet,la,London,2023-06,0,26
 E09000003,Barnet,la,London,2023-07,0,53
@@ -721,6 +775,9 @@ E09000003,Barnet,la,London,2026-03,0,19
 E09000003,Barnet,la,London,2026-04,0,22
 E09000003,Barnet,la,London,2026-05,0,22
 E09000003,Barnet,la,London,2026-06,0,21
+E09000003,Barnet,la,London,2026-07,1,22
+E09000003,Barnet,la,London,2026-08,1,28
+E09000003,Barnet,la,London,2026-09,0,25
 E08000038,Barnsley,la,Yorkshire and The Humber,2023-05,0,20
 E08000038,Barnsley,la,Yorkshire and The Humber,2023-06,0,25
 E08000038,Barnsley,la,Yorkshire and The Humber,2023-07,0,22
@@ -759,6 +816,9 @@ E08000038,Barnsley,la,Yorkshire and The Humber,2026-03,0,21
 E08000038,Barnsley,la,Yorkshire and The Humber,2026-04,0,21
 E08000038,Barnsley,la,Yorkshire and The Humber,2026-05,0,19
 E08000038,Barnsley,la,Yorkshire and The Humber,2026-06,0,14
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-07,0,32
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-08,0,21
+E08000038,Barnsley,la,Yorkshire and The Humber,2026-09,0,24
 E07000066,Basildon,la,East of England,2023-05,0,8
 E07000066,Basildon,la,East of England,2023-06,0,5
 E07000066,Basildon,la,East of England,2023-07,0,4
@@ -797,6 +857,9 @@ E07000066,Basildon,la,East of England,2026-03,1,9
 E07000066,Basildon,la,East of England,2026-04,0,9
 E07000066,Basildon,la,East of England,2026-05,0,13
 E07000066,Basildon,la,East of England,2026-06,0,10
+E07000066,Basildon,la,East of England,2026-07,0,12
+E07000066,Basildon,la,East of England,2026-08,0,14
+E07000066,Basildon,la,East of England,2026-09,0,11
 E07000084,Basingstoke and Deane,la,South East,2023-05,0,3
 E07000084,Basingstoke and Deane,la,South East,2023-06,0,7
 E07000084,Basingstoke and Deane,la,South East,2023-07,0,9
@@ -835,6 +898,9 @@ E07000084,Basingstoke and Deane,la,South East,2026-03,0,19
 E07000084,Basingstoke and Deane,la,South East,2026-04,0,15
 E07000084,Basingstoke and Deane,la,South East,2026-05,0,23
 E07000084,Basingstoke and Deane,la,South East,2026-06,0,23
+E07000084,Basingstoke and Deane,la,South East,2026-07,0,32
+E07000084,Basingstoke and Deane,la,South East,2026-08,0,36
+E07000084,Basingstoke and Deane,la,South East,2026-09,0,28
 E07000171,Bassetlaw,la,East Midlands,2023-05,0,4
 E07000171,Bassetlaw,la,East Midlands,2023-06,0,12
 E07000171,Bassetlaw,la,East Midlands,2023-07,0,13
@@ -873,6 +939,9 @@ E07000171,Bassetlaw,la,East Midlands,2026-03,0,16
 E07000171,Bassetlaw,la,East Midlands,2026-04,0,21
 E07000171,Bassetlaw,la,East Midlands,2026-05,0,28
 E07000171,Bassetlaw,la,East Midlands,2026-06,0,25
+E07000171,Bassetlaw,la,East Midlands,2026-07,0,29
+E07000171,Bassetlaw,la,East Midlands,2026-08,0,22
+E07000171,Bassetlaw,la,East Midlands,2026-09,0,13
 E06000022,Bath and North East Somerset,la,South West,2023-05,0,34
 E06000022,Bath and North East Somerset,la,South West,2023-06,0,37
 E06000022,Bath and North East Somerset,la,South West,2023-07,0,38
@@ -911,6 +980,9 @@ E06000022,Bath and North East Somerset,la,South West,2026-03,0,18
 E06000022,Bath and North East Somerset,la,South West,2026-04,0,20
 E06000022,Bath and North East Somerset,la,South West,2026-05,0,25
 E06000022,Bath and North East Somerset,la,South West,2026-06,0,26
+E06000022,Bath and North East Somerset,la,South West,2026-07,0,28
+E06000022,Bath and North East Somerset,la,South West,2026-08,0,49
+E06000022,Bath and North East Somerset,la,South West,2026-09,0,38
 E06000055,Bedford,la,East of England,2023-05,0,35
 E06000055,Bedford,la,East of England,2023-06,0,45
 E06000055,Bedford,la,East of England,2023-07,0,50
@@ -949,6 +1021,9 @@ E06000055,Bedford,la,East of England,2026-03,0,29
 E06000055,Bedford,la,East of England,2026-04,0,33
 E06000055,Bedford,la,East of England,2026-05,0,28
 E06000055,Bedford,la,East of England,2026-06,0,33
+E06000055,Bedford,la,East of England,2026-07,0,39
+E06000055,Bedford,la,East of England,2026-08,0,32
+E06000055,Bedford,la,East of England,2026-09,0,36
 E09000004,Bexley,la,London,2023-05,0,14
 E09000004,Bexley,la,London,2023-06,0,13
 E09000004,Bexley,la,London,2023-07,0,13
@@ -987,6 +1062,9 @@ E09000004,Bexley,la,London,2026-03,0,10
 E09000004,Bexley,la,London,2026-04,0,11
 E09000004,Bexley,la,London,2026-05,0,13
 E09000004,Bexley,la,London,2026-06,0,17
+E09000004,Bexley,la,London,2026-07,0,20
+E09000004,Bexley,la,London,2026-08,0,19
+E09000004,Bexley,la,London,2026-09,0,21
 E08000025,Birmingham,la,West Midlands,2023-05,0,78
 E08000025,Birmingham,la,West Midlands,2023-06,0,64
 E08000025,Birmingham,la,West Midlands,2023-07,1,59
@@ -1013,7 +1091,7 @@ E08000025,Birmingham,la,West Midlands,2025-03,0,83
 E08000025,Birmingham,la,West Midlands,2025-04,0,84
 E08000025,Birmingham,la,West Midlands,2025-05,0,62
 E08000025,Birmingham,la,West Midlands,2025-06,0,104
-E08000025,Birmingham,la,West Midlands,2025-07,0,104
+E08000025,Birmingham,la,West Midlands,2025-07,0,107
 E08000025,Birmingham,la,West Midlands,2025-08,0,112
 E08000025,Birmingham,la,West Midlands,2025-09,0,106
 E08000025,Birmingham,la,West Midlands,2025-10,0,135
@@ -1025,6 +1103,9 @@ E08000025,Birmingham,la,West Midlands,2026-03,0,115
 E08000025,Birmingham,la,West Midlands,2026-04,0,79
 E08000025,Birmingham,la,West Midlands,2026-05,0,87
 E08000025,Birmingham,la,West Midlands,2026-06,0,90
+E08000025,Birmingham,la,West Midlands,2026-07,0,99
+E08000025,Birmingham,la,West Midlands,2026-08,0,99
+E08000025,Birmingham,la,West Midlands,2026-09,0,89
 E07000129,Blaby,la,East Midlands,2023-05,0,0
 E07000129,Blaby,la,East Midlands,2023-06,0,2
 E07000129,Blaby,la,East Midlands,2023-07,0,1
@@ -1063,6 +1144,9 @@ E07000129,Blaby,la,East Midlands,2026-03,0,1
 E07000129,Blaby,la,East Midlands,2026-04,0,1
 E07000129,Blaby,la,East Midlands,2026-05,0,1
 E07000129,Blaby,la,East Midlands,2026-06,0,1
+E07000129,Blaby,la,East Midlands,2026-07,0,0
+E07000129,Blaby,la,East Midlands,2026-08,0,0
+E07000129,Blaby,la,East Midlands,2026-09,0,0
 E06000008,Blackburn with Darwen,la,North West,2023-05,0,29
 E06000008,Blackburn with Darwen,la,North West,2023-06,0,33
 E06000008,Blackburn with Darwen,la,North West,2023-07,0,29
@@ -1101,6 +1185,9 @@ E06000008,Blackburn with Darwen,la,North West,2026-03,0,37
 E06000008,Blackburn with Darwen,la,North West,2026-04,0,28
 E06000008,Blackburn with Darwen,la,North West,2026-05,0,22
 E06000008,Blackburn with Darwen,la,North West,2026-06,0,27
+E06000008,Blackburn with Darwen,la,North West,2026-07,0,33
+E06000008,Blackburn with Darwen,la,North West,2026-08,0,33
+E06000008,Blackburn with Darwen,la,North West,2026-09,0,35
 E06000009,Blackpool,la,North West,2023-05,0,20
 E06000009,Blackpool,la,North West,2023-06,0,26
 E06000009,Blackpool,la,North West,2023-07,0,17
@@ -1139,6 +1226,9 @@ E06000009,Blackpool,la,North West,2026-03,0,27
 E06000009,Blackpool,la,North West,2026-04,0,35
 E06000009,Blackpool,la,North West,2026-05,0,34
 E06000009,Blackpool,la,North West,2026-06,0,28
+E06000009,Blackpool,la,North West,2026-07,0,29
+E06000009,Blackpool,la,North West,2026-08,0,42
+E06000009,Blackpool,la,North West,2026-09,0,39
 E07000033,Bolsover,la,East Midlands,2023-05,0,1
 E07000033,Bolsover,la,East Midlands,2023-06,0,0
 E07000033,Bolsover,la,East Midlands,2023-07,0,0
@@ -1177,6 +1267,9 @@ E07000033,Bolsover,la,East Midlands,2026-03,0,1
 E07000033,Bolsover,la,East Midlands,2026-04,0,2
 E07000033,Bolsover,la,East Midlands,2026-05,0,2
 E07000033,Bolsover,la,East Midlands,2026-06,0,3
+E07000033,Bolsover,la,East Midlands,2026-07,0,4
+E07000033,Bolsover,la,East Midlands,2026-08,0,5
+E07000033,Bolsover,la,East Midlands,2026-09,0,7
 E08000001,Bolton,la,North West,2023-05,0,13
 E08000001,Bolton,la,North West,2023-06,0,23
 E08000001,Bolton,la,North West,2023-07,0,15
@@ -1215,6 +1308,9 @@ E08000001,Bolton,la,North West,2026-03,1,28
 E08000001,Bolton,la,North West,2026-04,0,11
 E08000001,Bolton,la,North West,2026-05,0,29
 E08000001,Bolton,la,North West,2026-06,0,36
+E08000001,Bolton,la,North West,2026-07,1,24
+E08000001,Bolton,la,North West,2026-08,0,22
+E08000001,Bolton,la,North West,2026-09,0,33
 E07000136,Boston,la,East Midlands,2023-05,0,36
 E07000136,Boston,la,East Midlands,2023-06,0,40
 E07000136,Boston,la,East Midlands,2023-07,0,41
@@ -1253,6 +1349,9 @@ E07000136,Boston,la,East Midlands,2026-03,0,25
 E07000136,Boston,la,East Midlands,2026-04,0,23
 E07000136,Boston,la,East Midlands,2026-05,0,22
 E07000136,Boston,la,East Midlands,2026-06,0,25
+E07000136,Boston,la,East Midlands,2026-07,0,29
+E07000136,Boston,la,East Midlands,2026-08,0,27
+E07000136,Boston,la,East Midlands,2026-09,0,35
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2023-05,0,94
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2023-06,0,122
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2023-07,0,146
@@ -1291,6 +1390,9 @@ E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-03,0,76
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-04,0,68
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-05,1,78
 E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-06,0,90
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-07,0,99
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-08,0,95
+E06000058,"Bournemouth, Christchurch and Poole",la,South West,2026-09,0,107
 E06000036,Bracknell Forest,la,South East,2023-05,0,6
 E06000036,Bracknell Forest,la,South East,2023-06,0,13
 E06000036,Bracknell Forest,la,South East,2023-07,0,7
@@ -1329,6 +1431,9 @@ E06000036,Bracknell Forest,la,South East,2026-03,0,8
 E06000036,Bracknell Forest,la,South East,2026-04,0,11
 E06000036,Bracknell Forest,la,South East,2026-05,0,7
 E06000036,Bracknell Forest,la,South East,2026-06,0,8
+E06000036,Bracknell Forest,la,South East,2026-07,0,13
+E06000036,Bracknell Forest,la,South East,2026-08,0,15
+E06000036,Bracknell Forest,la,South East,2026-09,0,15
 E08000032,Bradford,la,Yorkshire and The Humber,2023-05,0,38
 E08000032,Bradford,la,Yorkshire and The Humber,2023-06,0,26
 E08000032,Bradford,la,Yorkshire and The Humber,2023-07,0,26
@@ -1367,6 +1472,9 @@ E08000032,Bradford,la,Yorkshire and The Humber,2026-03,2,38
 E08000032,Bradford,la,Yorkshire and The Humber,2026-04,2,32
 E08000032,Bradford,la,Yorkshire and The Humber,2026-05,3,37
 E08000032,Bradford,la,Yorkshire and The Humber,2026-06,3,39
+E08000032,Bradford,la,Yorkshire and The Humber,2026-07,1,38
+E08000032,Bradford,la,Yorkshire and The Humber,2026-08,1,35
+E08000032,Bradford,la,Yorkshire and The Humber,2026-09,3,36
 E07000067,Braintree,la,East of England,2023-05,0,4
 E07000067,Braintree,la,East of England,2023-06,0,9
 E07000067,Braintree,la,East of England,2023-07,0,3
@@ -1405,6 +1513,9 @@ E07000067,Braintree,la,East of England,2026-03,0,7
 E07000067,Braintree,la,East of England,2026-04,0,8
 E07000067,Braintree,la,East of England,2026-05,0,9
 E07000067,Braintree,la,East of England,2026-06,0,8
+E07000067,Braintree,la,East of England,2026-07,0,11
+E07000067,Braintree,la,East of England,2026-08,0,9
+E07000067,Braintree,la,East of England,2026-09,0,9
 E07000143,Breckland,la,East of England,2023-05,0,7
 E07000143,Breckland,la,East of England,2023-06,0,6
 E07000143,Breckland,la,East of England,2023-07,0,12
@@ -1443,6 +1554,9 @@ E07000143,Breckland,la,East of England,2026-03,0,23
 E07000143,Breckland,la,East of England,2026-04,0,27
 E07000143,Breckland,la,East of England,2026-05,0,30
 E07000143,Breckland,la,East of England,2026-06,0,24
+E07000143,Breckland,la,East of England,2026-07,0,26
+E07000143,Breckland,la,East of England,2026-08,0,30
+E07000143,Breckland,la,East of England,2026-09,0,33
 E09000005,Brent,la,London,2023-05,0,47
 E09000005,Brent,la,London,2023-06,1,67
 E09000005,Brent,la,London,2023-07,1,52
@@ -1481,6 +1595,9 @@ E09000005,Brent,la,London,2026-03,0,74
 E09000005,Brent,la,London,2026-04,0,67
 E09000005,Brent,la,London,2026-05,0,81
 E09000005,Brent,la,London,2026-06,1,87
+E09000005,Brent,la,London,2026-07,0,98
+E09000005,Brent,la,London,2026-08,1,79
+E09000005,Brent,la,London,2026-09,0,74
 E07000068,Brentwood,la,East of England,2023-05,0,1
 E07000068,Brentwood,la,East of England,2023-06,0,1
 E07000068,Brentwood,la,East of England,2023-07,0,4
@@ -1519,6 +1636,9 @@ E07000068,Brentwood,la,East of England,2026-03,0,1
 E07000068,Brentwood,la,East of England,2026-04,0,1
 E07000068,Brentwood,la,East of England,2026-05,0,2
 E07000068,Brentwood,la,East of England,2026-06,0,5
+E07000068,Brentwood,la,East of England,2026-07,0,7
+E07000068,Brentwood,la,East of England,2026-08,0,5
+E07000068,Brentwood,la,East of England,2026-09,0,2
 E06000043,Brighton and Hove,la,South East,2023-05,0,117
 E06000043,Brighton and Hove,la,South East,2023-06,0,109
 E06000043,Brighton and Hove,la,South East,2023-07,0,154
@@ -1557,6 +1677,9 @@ E06000043,Brighton and Hove,la,South East,2026-03,1,89
 E06000043,Brighton and Hove,la,South East,2026-04,0,96
 E06000043,Brighton and Hove,la,South East,2026-05,1,120
 E06000043,Brighton and Hove,la,South East,2026-06,2,120
+E06000043,Brighton and Hove,la,South East,2026-07,1,181
+E06000043,Brighton and Hove,la,South East,2026-08,0,129
+E06000043,Brighton and Hove,la,South East,2026-09,0,129
 E06000023,"Bristol, City of",la,South West,2023-05,0,144
 E06000023,"Bristol, City of",la,South West,2023-06,1,155
 E06000023,"Bristol, City of",la,South West,2023-07,0,135
@@ -1595,6 +1718,9 @@ E06000023,"Bristol, City of",la,South West,2026-03,0,146
 E06000023,"Bristol, City of",la,South West,2026-04,0,123
 E06000023,"Bristol, City of",la,South West,2026-05,0,138
 E06000023,"Bristol, City of",la,South West,2026-06,0,224
+E06000023,"Bristol, City of",la,South West,2026-07,2,200
+E06000023,"Bristol, City of",la,South West,2026-08,0,218
+E06000023,"Bristol, City of",la,South West,2026-09,0,237
 E07000144,Broadland,la,East of England,2023-05,0,4
 E07000144,Broadland,la,East of England,2023-06,0,7
 E07000144,Broadland,la,East of England,2023-07,0,7
@@ -1633,6 +1759,9 @@ E07000144,Broadland,la,East of England,2026-03,0,5
 E07000144,Broadland,la,East of England,2026-04,0,2
 E07000144,Broadland,la,East of England,2026-05,0,1
 E07000144,Broadland,la,East of England,2026-06,0,4
+E07000144,Broadland,la,East of England,2026-07,0,4
+E07000144,Broadland,la,East of England,2026-08,0,4
+E07000144,Broadland,la,East of England,2026-09,0,3
 E09000006,Bromley,la,London,2023-05,0,8
 E09000006,Bromley,la,London,2023-06,0,8
 E09000006,Bromley,la,London,2023-07,1,9
@@ -1671,6 +1800,9 @@ E09000006,Bromley,la,London,2026-03,0,23
 E09000006,Bromley,la,London,2026-04,0,26
 E09000006,Bromley,la,London,2026-05,0,26
 E09000006,Bromley,la,London,2026-06,0,26
+E09000006,Bromley,la,London,2026-07,0,10
+E09000006,Bromley,la,London,2026-08,1,5
+E09000006,Bromley,la,London,2026-09,0,10
 E07000234,Bromsgrove,la,West Midlands,2023-05,0,3
 E07000234,Bromsgrove,la,West Midlands,2023-06,0,2
 E07000234,Bromsgrove,la,West Midlands,2023-07,0,2
@@ -1709,6 +1841,9 @@ E07000234,Bromsgrove,la,West Midlands,2026-03,0,1
 E07000234,Bromsgrove,la,West Midlands,2026-04,0,2
 E07000234,Bromsgrove,la,West Midlands,2026-05,0,2
 E07000234,Bromsgrove,la,West Midlands,2026-06,0,5
+E07000234,Bromsgrove,la,West Midlands,2026-07,0,3
+E07000234,Bromsgrove,la,West Midlands,2026-08,0,4
+E07000234,Bromsgrove,la,West Midlands,2026-09,0,2
 E07000095,Broxbourne,la,East of England,2023-05,,0
 E07000095,Broxbourne,la,East of England,2023-06,0,3
 E07000095,Broxbourne,la,East of England,2023-07,0,5
@@ -1747,6 +1882,9 @@ E07000095,Broxbourne,la,East of England,2026-03,0,1
 E07000095,Broxbourne,la,East of England,2026-04,0,0
 E07000095,Broxbourne,la,East of England,2026-05,0,2
 E07000095,Broxbourne,la,East of England,2026-06,0,2
+E07000095,Broxbourne,la,East of England,2026-07,0,1
+E07000095,Broxbourne,la,East of England,2026-08,0,4
+E07000095,Broxbourne,la,East of England,2026-09,0,4
 E07000172,Broxtowe,la,East Midlands,2023-05,0,4
 E07000172,Broxtowe,la,East Midlands,2023-06,0,4
 E07000172,Broxtowe,la,East Midlands,2023-07,0,3
@@ -1785,6 +1923,9 @@ E07000172,Broxtowe,la,East Midlands,2026-03,0,6
 E07000172,Broxtowe,la,East Midlands,2026-04,1,8
 E07000172,Broxtowe,la,East Midlands,2026-05,1,8
 E07000172,Broxtowe,la,East Midlands,2026-06,1,8
+E07000172,Broxtowe,la,East Midlands,2026-07,0,3
+E07000172,Broxtowe,la,East Midlands,2026-08,0,5
+E07000172,Broxtowe,la,East Midlands,2026-09,0,7
 E06000060,Buckinghamshire,la,South East,2023-05,0,26
 E06000060,Buckinghamshire,la,South East,2023-06,0,35
 E06000060,Buckinghamshire,la,South East,2023-07,0,44
@@ -1823,6 +1964,9 @@ E06000060,Buckinghamshire,la,South East,2026-03,0,34
 E06000060,Buckinghamshire,la,South East,2026-04,0,33
 E06000060,Buckinghamshire,la,South East,2026-05,0,36
 E06000060,Buckinghamshire,la,South East,2026-06,0,41
+E06000060,Buckinghamshire,la,South East,2026-07,0,42
+E06000060,Buckinghamshire,la,South East,2026-08,0,36
+E06000060,Buckinghamshire,la,South East,2026-09,0,42
 E07000117,Burnley,la,North West,2023-05,2,6
 E07000117,Burnley,la,North West,2023-06,0,12
 E07000117,Burnley,la,North West,2023-07,0,14
@@ -1861,6 +2005,9 @@ E07000117,Burnley,la,North West,2026-03,0,18
 E07000117,Burnley,la,North West,2026-04,0,17
 E07000117,Burnley,la,North West,2026-05,0,17
 E07000117,Burnley,la,North West,2026-06,0,17
+E07000117,Burnley,la,North West,2026-07,0,26
+E07000117,Burnley,la,North West,2026-08,0,22
+E07000117,Burnley,la,North West,2026-09,0,15
 E08000002,Bury,la,North West,2023-05,5,16
 E08000002,Bury,la,North West,2023-06,7,23
 E08000002,Bury,la,North West,2023-07,7,23
@@ -1899,6 +2046,9 @@ E08000002,Bury,la,North West,2026-03,11,34
 E08000002,Bury,la,North West,2026-04,13,35
 E08000002,Bury,la,North West,2026-05,2,28
 E08000002,Bury,la,North West,2026-06,5,31
+E08000002,Bury,la,North West,2026-07,7,29
+E08000002,Bury,la,North West,2026-08,5,38
+E08000002,Bury,la,North West,2026-09,4,22
 E08000033,Calderdale,la,Yorkshire and The Humber,2023-05,0,8
 E08000033,Calderdale,la,Yorkshire and The Humber,2023-06,0,7
 E08000033,Calderdale,la,Yorkshire and The Humber,2023-07,0,5
@@ -1937,6 +2087,9 @@ E08000033,Calderdale,la,Yorkshire and The Humber,2026-03,0,5
 E08000033,Calderdale,la,Yorkshire and The Humber,2026-04,0,5
 E08000033,Calderdale,la,Yorkshire and The Humber,2026-05,0,6
 E08000033,Calderdale,la,Yorkshire and The Humber,2026-06,0,9
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-07,0,6
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-08,0,5
+E08000033,Calderdale,la,Yorkshire and The Humber,2026-09,0,14
 E07000008,Cambridge,la,East of England,2023-05,0,48
 E07000008,Cambridge,la,East of England,2023-06,2,32
 E07000008,Cambridge,la,East of England,2023-07,2,32
@@ -1975,6 +2128,9 @@ E07000008,Cambridge,la,East of England,2026-03,0,42
 E07000008,Cambridge,la,East of England,2026-04,0,40
 E07000008,Cambridge,la,East of England,2026-05,0,52
 E07000008,Cambridge,la,East of England,2026-06,0,41
+E07000008,Cambridge,la,East of England,2026-07,0,54
+E07000008,Cambridge,la,East of England,2026-08,1,45
+E07000008,Cambridge,la,East of England,2026-09,0,59
 E09000007,Camden,la,London,2023-05,2,98
 E09000007,Camden,la,London,2023-06,0,108
 E09000007,Camden,la,London,2023-07,1,132
@@ -2013,6 +2169,9 @@ E09000007,Camden,la,London,2026-03,3,97
 E09000007,Camden,la,London,2026-04,4,110
 E09000007,Camden,la,London,2026-05,0,103
 E09000007,Camden,la,London,2026-06,2,240
+E09000007,Camden,la,London,2026-07,1,166
+E09000007,Camden,la,London,2026-08,0,169
+E09000007,Camden,la,London,2026-09,1,237
 E07000192,Cannock Chase,la,West Midlands,2023-05,0,6
 E07000192,Cannock Chase,la,West Midlands,2023-06,0,4
 E07000192,Cannock Chase,la,West Midlands,2023-07,0,3
@@ -2051,6 +2210,9 @@ E07000192,Cannock Chase,la,West Midlands,2026-03,0,3
 E07000192,Cannock Chase,la,West Midlands,2026-04,0,3
 E07000192,Cannock Chase,la,West Midlands,2026-05,0,4
 E07000192,Cannock Chase,la,West Midlands,2026-06,0,2
+E07000192,Cannock Chase,la,West Midlands,2026-07,0,4
+E07000192,Cannock Chase,la,West Midlands,2026-08,0,5
+E07000192,Cannock Chase,la,West Midlands,2026-09,0,4
 E07000106,Canterbury,la,South East,2023-05,0,33
 E07000106,Canterbury,la,South East,2023-06,0,36
 E07000106,Canterbury,la,South East,2023-07,0,29
@@ -2089,6 +2251,9 @@ E07000106,Canterbury,la,South East,2026-03,0,34
 E07000106,Canterbury,la,South East,2026-04,0,44
 E07000106,Canterbury,la,South East,2026-05,0,46
 E07000106,Canterbury,la,South East,2026-06,0,32
+E07000106,Canterbury,la,South East,2026-07,0,35
+E07000106,Canterbury,la,South East,2026-08,0,37
+E07000106,Canterbury,la,South East,2026-09,0,36
 E07000069,Castle Point,la,East of England,2023-05,0,3
 E07000069,Castle Point,la,East of England,2023-06,0,1
 E07000069,Castle Point,la,East of England,2023-07,0,3
@@ -2127,6 +2292,9 @@ E07000069,Castle Point,la,East of England,2026-03,0,3
 E07000069,Castle Point,la,East of England,2026-04,0,3
 E07000069,Castle Point,la,East of England,2026-05,0,2
 E07000069,Castle Point,la,East of England,2026-06,0,4
+E07000069,Castle Point,la,East of England,2026-07,0,4
+E07000069,Castle Point,la,East of England,2026-08,0,4
+E07000069,Castle Point,la,East of England,2026-09,0,4
 E06000056,Central Bedfordshire,la,East of England,2023-05,0,13
 E06000056,Central Bedfordshire,la,East of England,2023-06,0,21
 E06000056,Central Bedfordshire,la,East of England,2023-07,0,15
@@ -2165,6 +2333,9 @@ E06000056,Central Bedfordshire,la,East of England,2026-03,0,13
 E06000056,Central Bedfordshire,la,East of England,2026-04,0,13
 E06000056,Central Bedfordshire,la,East of England,2026-05,0,17
 E06000056,Central Bedfordshire,la,East of England,2026-06,0,18
+E06000056,Central Bedfordshire,la,East of England,2026-07,0,29
+E06000056,Central Bedfordshire,la,East of England,2026-08,0,13
+E06000056,Central Bedfordshire,la,East of England,2026-09,0,18
 E07000130,Charnwood,la,East Midlands,2023-05,0,9
 E07000130,Charnwood,la,East Midlands,2023-06,0,13
 E07000130,Charnwood,la,East Midlands,2023-07,0,17
@@ -2203,6 +2374,9 @@ E07000130,Charnwood,la,East Midlands,2026-03,0,18
 E07000130,Charnwood,la,East Midlands,2026-04,0,36
 E07000130,Charnwood,la,East Midlands,2026-05,0,33
 E07000130,Charnwood,la,East Midlands,2026-06,0,42
+E07000130,Charnwood,la,East Midlands,2026-07,0,43
+E07000130,Charnwood,la,East Midlands,2026-08,1,38
+E07000130,Charnwood,la,East Midlands,2026-09,0,34
 E07000070,Chelmsford,la,East of England,2023-05,0,16
 E07000070,Chelmsford,la,East of England,2023-06,0,15
 E07000070,Chelmsford,la,East of England,2023-07,0,11
@@ -2241,6 +2415,9 @@ E07000070,Chelmsford,la,East of England,2026-03,0,31
 E07000070,Chelmsford,la,East of England,2026-04,0,28
 E07000070,Chelmsford,la,East of England,2026-05,0,33
 E07000070,Chelmsford,la,East of England,2026-06,0,38
+E07000070,Chelmsford,la,East of England,2026-07,0,40
+E07000070,Chelmsford,la,East of England,2026-08,0,33
+E07000070,Chelmsford,la,East of England,2026-09,0,43
 E07000078,Cheltenham,la,South West,2023-05,0,15
 E07000078,Cheltenham,la,South West,2023-06,0,23
 E07000078,Cheltenham,la,South West,2023-07,0,18
@@ -2279,6 +2456,9 @@ E07000078,Cheltenham,la,South West,2026-03,0,31
 E07000078,Cheltenham,la,South West,2026-04,0,21
 E07000078,Cheltenham,la,South West,2026-05,0,17
 E07000078,Cheltenham,la,South West,2026-06,0,27
+E07000078,Cheltenham,la,South West,2026-07,0,41
+E07000078,Cheltenham,la,South West,2026-08,0,35
+E07000078,Cheltenham,la,South West,2026-09,0,25
 E07000177,Cherwell,la,South East,2023-05,0,16
 E07000177,Cherwell,la,South East,2023-06,0,17
 E07000177,Cherwell,la,South East,2023-07,0,25
@@ -2317,6 +2497,9 @@ E07000177,Cherwell,la,South East,2026-03,0,18
 E07000177,Cherwell,la,South East,2026-04,0,21
 E07000177,Cherwell,la,South East,2026-05,0,25
 E07000177,Cherwell,la,South East,2026-06,0,23
+E07000177,Cherwell,la,South East,2026-07,0,24
+E07000177,Cherwell,la,South East,2026-08,0,23
+E07000177,Cherwell,la,South East,2026-09,0,28
 E06000049,Cheshire East,la,North West,2023-05,0,26
 E06000049,Cheshire East,la,North West,2023-06,0,22
 E06000049,Cheshire East,la,North West,2023-07,0,25
@@ -2355,6 +2538,9 @@ E06000049,Cheshire East,la,North West,2026-03,2,18
 E06000049,Cheshire East,la,North West,2026-04,0,24
 E06000049,Cheshire East,la,North West,2026-05,0,34
 E06000049,Cheshire East,la,North West,2026-06,0,33
+E06000049,Cheshire East,la,North West,2026-07,0,19
+E06000049,Cheshire East,la,North West,2026-08,1,33
+E06000049,Cheshire East,la,North West,2026-09,1,36
 E06000050,Cheshire West and Chester,la,North West,2023-05,0,66
 E06000050,Cheshire West and Chester,la,North West,2023-06,0,65
 E06000050,Cheshire West and Chester,la,North West,2023-07,0,59
@@ -2393,6 +2579,9 @@ E06000050,Cheshire West and Chester,la,North West,2026-03,7,54
 E06000050,Cheshire West and Chester,la,North West,2026-04,1,54
 E06000050,Cheshire West and Chester,la,North West,2026-05,6,60
 E06000050,Cheshire West and Chester,la,North West,2026-06,9,89
+E06000050,Cheshire West and Chester,la,North West,2026-07,5,79
+E06000050,Cheshire West and Chester,la,North West,2026-08,3,91
+E06000050,Cheshire West and Chester,la,North West,2026-09,5,88
 E07000034,Chesterfield,la,East Midlands,2023-05,0,5
 E07000034,Chesterfield,la,East Midlands,2023-06,0,2
 E07000034,Chesterfield,la,East Midlands,2023-07,0,7
@@ -2431,6 +2620,9 @@ E07000034,Chesterfield,la,East Midlands,2026-03,0,22
 E07000034,Chesterfield,la,East Midlands,2026-04,0,23
 E07000034,Chesterfield,la,East Midlands,2026-05,0,15
 E07000034,Chesterfield,la,East Midlands,2026-06,0,11
+E07000034,Chesterfield,la,East Midlands,2026-07,0,20
+E07000034,Chesterfield,la,East Midlands,2026-08,0,18
+E07000034,Chesterfield,la,East Midlands,2026-09,0,15
 E07000225,Chichester,la,South East,2023-05,0,9
 E07000225,Chichester,la,South East,2023-06,0,13
 E07000225,Chichester,la,South East,2023-07,0,13
@@ -2469,6 +2661,9 @@ E07000225,Chichester,la,South East,2026-03,0,7
 E07000225,Chichester,la,South East,2026-04,0,9
 E07000225,Chichester,la,South East,2026-05,0,7
 E07000225,Chichester,la,South East,2026-06,0,6
+E07000225,Chichester,la,South East,2026-07,0,6
+E07000225,Chichester,la,South East,2026-08,0,6
+E07000225,Chichester,la,South East,2026-09,0,4
 E07000118,Chorley,la,North West,2023-05,,7
 E07000118,Chorley,la,North West,2023-06,0,6
 E07000118,Chorley,la,North West,2023-07,0,3
@@ -2507,6 +2702,9 @@ E07000118,Chorley,la,North West,2026-03,0,0
 E07000118,Chorley,la,North West,2026-04,0,0
 E07000118,Chorley,la,North West,2026-05,0,0
 E07000118,Chorley,la,North West,2026-06,0,0
+E07000118,Chorley,la,North West,2026-07,0,1
+E07000118,Chorley,la,North West,2026-08,0,1
+E07000118,Chorley,la,North West,2026-09,0,0
 E09000001,City of London,la,London,2023-05,0,104
 E09000001,City of London,la,London,2023-06,0,96
 E09000001,City of London,la,London,2023-07,0,96
@@ -2545,6 +2743,9 @@ E09000001,City of London,la,London,2026-03,0,89
 E09000001,City of London,la,London,2026-04,0,117
 E09000001,City of London,la,London,2026-05,0,81
 E09000001,City of London,la,London,2026-06,0,114
+E09000001,City of London,la,London,2026-07,0,142
+E09000001,City of London,la,London,2026-08,0,139
+E09000001,City of London,la,London,2026-09,0,120
 E07000071,Colchester,la,East of England,2023-05,0,7
 E07000071,Colchester,la,East of England,2023-06,0,14
 E07000071,Colchester,la,East of England,2023-07,0,12
@@ -2583,6 +2784,9 @@ E07000071,Colchester,la,East of England,2026-03,0,26
 E07000071,Colchester,la,East of England,2026-04,0,26
 E07000071,Colchester,la,East of England,2026-05,0,30
 E07000071,Colchester,la,East of England,2026-06,0,35
+E07000071,Colchester,la,East of England,2026-07,0,40
+E07000071,Colchester,la,East of England,2026-08,0,43
+E07000071,Colchester,la,East of England,2026-09,0,33
 E06000052,Cornwall,la,South West,2023-05,0,76
 E06000052,Cornwall,la,South West,2023-06,0,75
 E06000052,Cornwall,la,South West,2023-07,0,75
@@ -2621,6 +2825,9 @@ E06000052,Cornwall,la,South West,2026-03,0,93
 E06000052,Cornwall,la,South West,2026-04,0,88
 E06000052,Cornwall,la,South West,2026-05,0,108
 E06000052,Cornwall,la,South West,2026-06,0,92
+E06000052,Cornwall,la,South West,2026-07,0,123
+E06000052,Cornwall,la,South West,2026-08,0,93
+E06000052,Cornwall,la,South West,2026-09,0,117
 E07000079,Cotswold,la,South West,2023-05,0,0
 E07000079,Cotswold,la,South West,2023-06,0,0
 E07000079,Cotswold,la,South West,2023-07,0,0
@@ -2659,6 +2866,9 @@ E07000079,Cotswold,la,South West,2026-03,0,0
 E07000079,Cotswold,la,South West,2026-04,0,1
 E07000079,Cotswold,la,South West,2026-05,0,1
 E07000079,Cotswold,la,South West,2026-06,0,2
+E07000079,Cotswold,la,South West,2026-07,0,1
+E07000079,Cotswold,la,South West,2026-08,0,4
+E07000079,Cotswold,la,South West,2026-09,0,2
 E06000047,County Durham,la,North East,2023-05,0,21
 E06000047,County Durham,la,North East,2023-06,0,17
 E06000047,County Durham,la,North East,2023-07,0,13
@@ -2697,6 +2907,9 @@ E06000047,County Durham,la,North East,2026-03,0,23
 E06000047,County Durham,la,North East,2026-04,0,21
 E06000047,County Durham,la,North East,2026-05,0,25
 E06000047,County Durham,la,North East,2026-06,0,34
+E06000047,County Durham,la,North East,2026-07,0,39
+E06000047,County Durham,la,North East,2026-08,0,36
+E06000047,County Durham,la,North East,2026-09,0,34
 E08000026,Coventry,la,West Midlands,2023-05,0,72
 E08000026,Coventry,la,West Midlands,2023-06,0,66
 E08000026,Coventry,la,West Midlands,2023-07,0,85
@@ -2735,6 +2948,9 @@ E08000026,Coventry,la,West Midlands,2026-03,0,64
 E08000026,Coventry,la,West Midlands,2026-04,1,54
 E08000026,Coventry,la,West Midlands,2026-05,1,47
 E08000026,Coventry,la,West Midlands,2026-06,0,67
+E08000026,Coventry,la,West Midlands,2026-07,1,64
+E08000026,Coventry,la,West Midlands,2026-08,0,59
+E08000026,Coventry,la,West Midlands,2026-09,0,66
 E07000226,Crawley,la,South East,2023-05,0,13
 E07000226,Crawley,la,South East,2023-06,0,26
 E07000226,Crawley,la,South East,2023-07,0,22
@@ -2773,6 +2989,9 @@ E07000226,Crawley,la,South East,2026-03,0,28
 E07000226,Crawley,la,South East,2026-04,0,20
 E07000226,Crawley,la,South East,2026-05,0,20
 E07000226,Crawley,la,South East,2026-06,1,21
+E07000226,Crawley,la,South East,2026-07,0,32
+E07000226,Crawley,la,South East,2026-08,0,38
+E07000226,Crawley,la,South East,2026-09,0,33
 E09000008,Croydon,la,London,2023-05,0,49
 E09000008,Croydon,la,London,2023-06,1,57
 E09000008,Croydon,la,London,2023-07,0,51
@@ -2811,6 +3030,9 @@ E09000008,Croydon,la,London,2026-03,0,52
 E09000008,Croydon,la,London,2026-04,1,50
 E09000008,Croydon,la,London,2026-05,3,72
 E09000008,Croydon,la,London,2026-06,2,53
+E09000008,Croydon,la,London,2026-07,3,106
+E09000008,Croydon,la,London,2026-08,0,77
+E09000008,Croydon,la,London,2026-09,0,91
 E06000063,Cumberland,la,North West,2023-05,0,5
 E06000063,Cumberland,la,North West,2023-06,0,3
 E06000063,Cumberland,la,North West,2023-07,0,1
@@ -2849,6 +3071,9 @@ E06000063,Cumberland,la,North West,2026-03,0,4
 E06000063,Cumberland,la,North West,2026-04,0,4
 E06000063,Cumberland,la,North West,2026-05,0,2
 E06000063,Cumberland,la,North West,2026-06,0,4
+E06000063,Cumberland,la,North West,2026-07,0,4
+E06000063,Cumberland,la,North West,2026-08,0,9
+E06000063,Cumberland,la,North West,2026-09,0,6
 E07000096,Dacorum,la,East of England,2023-05,0,7
 E07000096,Dacorum,la,East of England,2023-06,0,7
 E07000096,Dacorum,la,East of England,2023-07,0,7
@@ -2887,6 +3112,9 @@ E07000096,Dacorum,la,East of England,2026-03,0,5
 E07000096,Dacorum,la,East of England,2026-04,0,6
 E07000096,Dacorum,la,East of England,2026-05,0,7
 E07000096,Dacorum,la,East of England,2026-06,0,5
+E07000096,Dacorum,la,East of England,2026-07,0,10
+E07000096,Dacorum,la,East of England,2026-08,0,7
+E07000096,Dacorum,la,East of England,2026-09,0,6
 E06000005,Darlington,la,North East,2023-05,0,7
 E06000005,Darlington,la,North East,2023-06,0,6
 E06000005,Darlington,la,North East,2023-07,0,5
@@ -2925,6 +3153,9 @@ E06000005,Darlington,la,North East,2026-03,0,10
 E06000005,Darlington,la,North East,2026-04,0,9
 E06000005,Darlington,la,North East,2026-05,0,12
 E06000005,Darlington,la,North East,2026-06,0,6
+E06000005,Darlington,la,North East,2026-07,0,26
+E06000005,Darlington,la,North East,2026-08,0,13
+E06000005,Darlington,la,North East,2026-09,0,16
 E07000107,Dartford,la,South East,2023-05,,2
 E07000107,Dartford,la,South East,2023-06,0,2
 E07000107,Dartford,la,South East,2023-07,0,2
@@ -2963,6 +3194,9 @@ E07000107,Dartford,la,South East,2026-03,0,8
 E07000107,Dartford,la,South East,2026-04,0,10
 E07000107,Dartford,la,South East,2026-05,0,10
 E07000107,Dartford,la,South East,2026-06,0,20
+E07000107,Dartford,la,South East,2026-07,0,27
+E07000107,Dartford,la,South East,2026-08,0,20
+E07000107,Dartford,la,South East,2026-09,0,14
 E06000015,Derby,la,East Midlands,2023-05,1,45
 E06000015,Derby,la,East Midlands,2023-06,0,62
 E06000015,Derby,la,East Midlands,2023-07,0,60
@@ -3001,6 +3235,9 @@ E06000015,Derby,la,East Midlands,2026-03,14,66
 E06000015,Derby,la,East Midlands,2026-04,11,75
 E06000015,Derby,la,East Midlands,2026-05,7,73
 E06000015,Derby,la,East Midlands,2026-06,12,100
+E06000015,Derby,la,East Midlands,2026-07,3,97
+E06000015,Derby,la,East Midlands,2026-08,2,76
+E06000015,Derby,la,East Midlands,2026-09,6,104
 E07000035,Derbyshire Dales,la,East Midlands,2023-05,,2
 E07000035,Derbyshire Dales,la,East Midlands,2023-06,,2
 E07000035,Derbyshire Dales,la,East Midlands,2023-07,,2
@@ -3039,6 +3276,9 @@ E07000035,Derbyshire Dales,la,East Midlands,2026-03,0,0
 E07000035,Derbyshire Dales,la,East Midlands,2026-04,0,1
 E07000035,Derbyshire Dales,la,East Midlands,2026-05,0,2
 E07000035,Derbyshire Dales,la,East Midlands,2026-06,0,4
+E07000035,Derbyshire Dales,la,East Midlands,2026-07,0,1
+E07000035,Derbyshire Dales,la,East Midlands,2026-08,0,0
+E07000035,Derbyshire Dales,la,East Midlands,2026-09,0,2
 E08000017,Doncaster,la,Yorkshire and The Humber,2023-05,0,34
 E08000017,Doncaster,la,Yorkshire and The Humber,2023-06,0,34
 E08000017,Doncaster,la,Yorkshire and The Humber,2023-07,0,36
@@ -3077,6 +3317,9 @@ E08000017,Doncaster,la,Yorkshire and The Humber,2026-03,0,41
 E08000017,Doncaster,la,Yorkshire and The Humber,2026-04,0,32
 E08000017,Doncaster,la,Yorkshire and The Humber,2026-05,2,51
 E08000017,Doncaster,la,Yorkshire and The Humber,2026-06,2,51
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-07,0,53
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-08,1,38
+E08000017,Doncaster,la,Yorkshire and The Humber,2026-09,0,44
 E06000059,Dorset,la,South West,2023-05,0,29
 E06000059,Dorset,la,South West,2023-06,0,38
 E06000059,Dorset,la,South West,2023-07,0,47
@@ -3115,6 +3358,9 @@ E06000059,Dorset,la,South West,2026-03,0,24
 E06000059,Dorset,la,South West,2026-04,0,25
 E06000059,Dorset,la,South West,2026-05,0,27
 E06000059,Dorset,la,South West,2026-06,0,30
+E06000059,Dorset,la,South West,2026-07,0,25
+E06000059,Dorset,la,South West,2026-08,0,21
+E06000059,Dorset,la,South West,2026-09,0,28
 E07000108,Dover,la,South East,2023-05,0,8
 E07000108,Dover,la,South East,2023-06,0,12
 E07000108,Dover,la,South East,2023-07,0,12
@@ -3153,6 +3399,9 @@ E07000108,Dover,la,South East,2026-03,0,6
 E07000108,Dover,la,South East,2026-04,0,12
 E07000108,Dover,la,South East,2026-05,0,8
 E07000108,Dover,la,South East,2026-06,0,20
+E07000108,Dover,la,South East,2026-07,2,20
+E07000108,Dover,la,South East,2026-08,4,22
+E07000108,Dover,la,South East,2026-09,0,25
 E08000027,Dudley,la,West Midlands,2023-05,,13
 E08000027,Dudley,la,West Midlands,2023-06,0,10
 E08000027,Dudley,la,West Midlands,2023-07,0,10
@@ -3191,6 +3440,9 @@ E08000027,Dudley,la,West Midlands,2026-03,0,5
 E08000027,Dudley,la,West Midlands,2026-04,0,4
 E08000027,Dudley,la,West Midlands,2026-05,0,12
 E08000027,Dudley,la,West Midlands,2026-06,0,6
+E08000027,Dudley,la,West Midlands,2026-07,0,9
+E08000027,Dudley,la,West Midlands,2026-08,0,7
+E08000027,Dudley,la,West Midlands,2026-09,0,7
 E09000009,Ealing,la,London,2023-05,0,103
 E09000009,Ealing,la,London,2023-06,0,78
 E09000009,Ealing,la,London,2023-07,1,93
@@ -3229,6 +3481,9 @@ E09000009,Ealing,la,London,2026-03,5,85
 E09000009,Ealing,la,London,2026-04,6,89
 E09000009,Ealing,la,London,2026-05,6,75
 E09000009,Ealing,la,London,2026-06,5,75
+E09000009,Ealing,la,London,2026-07,2,103
+E09000009,Ealing,la,London,2026-08,0,94
+E09000009,Ealing,la,London,2026-09,0,102
 E07000009,East Cambridgeshire,la,East of England,2023-05,0,0
 E07000009,East Cambridgeshire,la,East of England,2023-06,0,4
 E07000009,East Cambridgeshire,la,East of England,2023-07,0,0
@@ -3267,6 +3522,9 @@ E07000009,East Cambridgeshire,la,East of England,2026-03,0,1
 E07000009,East Cambridgeshire,la,East of England,2026-04,0,3
 E07000009,East Cambridgeshire,la,East of England,2026-05,0,1
 E07000009,East Cambridgeshire,la,East of England,2026-06,0,1
+E07000009,East Cambridgeshire,la,East of England,2026-07,0,1
+E07000009,East Cambridgeshire,la,East of England,2026-08,0,2
+E07000009,East Cambridgeshire,la,East of England,2026-09,0,3
 E07000040,East Devon,la,South West,2023-05,0,15
 E07000040,East Devon,la,South West,2023-06,0,17
 E07000040,East Devon,la,South West,2023-07,0,24
@@ -3305,6 +3563,9 @@ E07000040,East Devon,la,South West,2026-03,0,12
 E07000040,East Devon,la,South West,2026-04,0,14
 E07000040,East Devon,la,South West,2026-05,0,16
 E07000040,East Devon,la,South West,2026-06,0,13
+E07000040,East Devon,la,South West,2026-07,0,17
+E07000040,East Devon,la,South West,2026-08,0,12
+E07000040,East Devon,la,South West,2026-09,0,13
 E07000085,East Hampshire,la,South East,2023-05,0,7
 E07000085,East Hampshire,la,South East,2023-06,0,3
 E07000085,East Hampshire,la,South East,2023-07,0,3
@@ -3343,6 +3604,9 @@ E07000085,East Hampshire,la,South East,2026-03,0,3
 E07000085,East Hampshire,la,South East,2026-04,0,3
 E07000085,East Hampshire,la,South East,2026-05,0,0
 E07000085,East Hampshire,la,South East,2026-06,0,1
+E07000085,East Hampshire,la,South East,2026-07,0,2
+E07000085,East Hampshire,la,South East,2026-08,0,3
+E07000085,East Hampshire,la,South East,2026-09,0,2
 E07000242,East Hertfordshire,la,East of England,2023-05,0,7
 E07000242,East Hertfordshire,la,East of England,2023-06,0,11
 E07000242,East Hertfordshire,la,East of England,2023-07,0,9
@@ -3381,6 +3645,9 @@ E07000242,East Hertfordshire,la,East of England,2026-03,0,4
 E07000242,East Hertfordshire,la,East of England,2026-04,0,2
 E07000242,East Hertfordshire,la,East of England,2026-05,0,2
 E07000242,East Hertfordshire,la,East of England,2026-06,0,2
+E07000242,East Hertfordshire,la,East of England,2026-07,0,3
+E07000242,East Hertfordshire,la,East of England,2026-08,0,3
+E07000242,East Hertfordshire,la,East of England,2026-09,0,7
 E07000137,East Lindsey,la,East Midlands,2023-05,0,33
 E07000137,East Lindsey,la,East Midlands,2023-06,0,33
 E07000137,East Lindsey,la,East Midlands,2023-07,0,44
@@ -3419,6 +3686,9 @@ E07000137,East Lindsey,la,East Midlands,2026-03,0,15
 E07000137,East Lindsey,la,East Midlands,2026-04,0,19
 E07000137,East Lindsey,la,East Midlands,2026-05,0,22
 E07000137,East Lindsey,la,East Midlands,2026-06,0,25
+E07000137,East Lindsey,la,East Midlands,2026-07,0,39
+E07000137,East Lindsey,la,East Midlands,2026-08,0,36
+E07000137,East Lindsey,la,East Midlands,2026-09,0,33
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2023-05,0,14
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2023-06,0,16
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2023-07,0,14
@@ -3457,6 +3727,9 @@ E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-03,0,11
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-04,0,12
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-05,0,14
 E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-06,0,15
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-07,0,15
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-08,0,15
+E06000011,East Riding of Yorkshire,la,Yorkshire and The Humber,2026-09,0,14
 E07000193,East Staffordshire,la,West Midlands,2023-05,0,9
 E07000193,East Staffordshire,la,West Midlands,2023-06,0,3
 E07000193,East Staffordshire,la,West Midlands,2023-07,0,2
@@ -3495,6 +3768,9 @@ E07000193,East Staffordshire,la,West Midlands,2026-03,1,4
 E07000193,East Staffordshire,la,West Midlands,2026-04,0,3
 E07000193,East Staffordshire,la,West Midlands,2026-05,0,2
 E07000193,East Staffordshire,la,West Midlands,2026-06,0,4
+E07000193,East Staffordshire,la,West Midlands,2026-07,1,5
+E07000193,East Staffordshire,la,West Midlands,2026-08,0,5
+E07000193,East Staffordshire,la,West Midlands,2026-09,1,4
 E07000244,East Suffolk,la,East of England,2023-05,0,21
 E07000244,East Suffolk,la,East of England,2023-06,0,27
 E07000244,East Suffolk,la,East of England,2023-07,0,20
@@ -3533,6 +3809,9 @@ E07000244,East Suffolk,la,East of England,2026-03,0,16
 E07000244,East Suffolk,la,East of England,2026-04,0,24
 E07000244,East Suffolk,la,East of England,2026-05,1,28
 E07000244,East Suffolk,la,East of England,2026-06,1,37
+E07000244,East Suffolk,la,East of England,2026-07,0,35
+E07000244,East Suffolk,la,East of England,2026-08,0,39
+E07000244,East Suffolk,la,East of England,2026-09,0,39
 E07000061,Eastbourne,la,South East,2023-05,0,43
 E07000061,Eastbourne,la,South East,2023-06,0,63
 E07000061,Eastbourne,la,South East,2023-07,0,62
@@ -3571,6 +3850,9 @@ E07000061,Eastbourne,la,South East,2026-03,0,38
 E07000061,Eastbourne,la,South East,2026-04,0,30
 E07000061,Eastbourne,la,South East,2026-05,0,37
 E07000061,Eastbourne,la,South East,2026-06,0,40
+E07000061,Eastbourne,la,South East,2026-07,0,46
+E07000061,Eastbourne,la,South East,2026-08,0,48
+E07000061,Eastbourne,la,South East,2026-09,0,44
 E07000086,Eastleigh,la,South East,2023-05,0,4
 E07000086,Eastleigh,la,South East,2023-06,0,1
 E07000086,Eastleigh,la,South East,2023-07,0,0
@@ -3609,6 +3891,9 @@ E07000086,Eastleigh,la,South East,2026-03,0,10
 E07000086,Eastleigh,la,South East,2026-04,0,9
 E07000086,Eastleigh,la,South East,2026-05,0,6
 E07000086,Eastleigh,la,South East,2026-06,0,6
+E07000086,Eastleigh,la,South East,2026-07,0,9
+E07000086,Eastleigh,la,South East,2026-08,0,11
+E07000086,Eastleigh,la,South East,2026-09,0,8
 E07000207,Elmbridge,la,South East,2023-05,0,9
 E07000207,Elmbridge,la,South East,2023-06,0,11
 E07000207,Elmbridge,la,South East,2023-07,0,11
@@ -3647,6 +3932,9 @@ E07000207,Elmbridge,la,South East,2026-03,0,11
 E07000207,Elmbridge,la,South East,2026-04,0,12
 E07000207,Elmbridge,la,South East,2026-05,0,15
 E07000207,Elmbridge,la,South East,2026-06,0,19
+E07000207,Elmbridge,la,South East,2026-07,3,23
+E07000207,Elmbridge,la,South East,2026-08,0,17
+E07000207,Elmbridge,la,South East,2026-09,0,19
 E09000010,Enfield,la,London,2023-05,0,21
 E09000010,Enfield,la,London,2023-06,0,13
 E09000010,Enfield,la,London,2023-07,0,14
@@ -3685,6 +3973,9 @@ E09000010,Enfield,la,London,2026-03,0,23
 E09000010,Enfield,la,London,2026-04,0,33
 E09000010,Enfield,la,London,2026-05,0,31
 E09000010,Enfield,la,London,2026-06,0,29
+E09000010,Enfield,la,London,2026-07,0,34
+E09000010,Enfield,la,London,2026-08,0,40
+E09000010,Enfield,la,London,2026-09,0,36
 E07000072,Epping Forest,la,East of England,2023-05,0,3
 E07000072,Epping Forest,la,East of England,2023-06,0,3
 E07000072,Epping Forest,la,East of England,2023-07,0,3
@@ -3723,6 +4014,9 @@ E07000072,Epping Forest,la,East of England,2026-03,0,2
 E07000072,Epping Forest,la,East of England,2026-04,0,3
 E07000072,Epping Forest,la,East of England,2026-05,0,3
 E07000072,Epping Forest,la,East of England,2026-06,0,2
+E07000072,Epping Forest,la,East of England,2026-07,2,6
+E07000072,Epping Forest,la,East of England,2026-08,0,6
+E07000072,Epping Forest,la,East of England,2026-09,0,5
 E07000208,Epsom and Ewell,la,South East,2023-05,0,4
 E07000208,Epsom and Ewell,la,South East,2023-06,0,3
 E07000208,Epsom and Ewell,la,South East,2023-07,0,4
@@ -3761,6 +4055,9 @@ E07000208,Epsom and Ewell,la,South East,2026-03,0,3
 E07000208,Epsom and Ewell,la,South East,2026-04,0,3
 E07000208,Epsom and Ewell,la,South East,2026-05,0,3
 E07000208,Epsom and Ewell,la,South East,2026-06,0,0
+E07000208,Epsom and Ewell,la,South East,2026-07,0,3
+E07000208,Epsom and Ewell,la,South East,2026-08,0,3
+E07000208,Epsom and Ewell,la,South East,2026-09,0,2
 E07000036,Erewash,la,East Midlands,2023-05,,0
 E07000036,Erewash,la,East Midlands,2023-06,0,4
 E07000036,Erewash,la,East Midlands,2023-07,0,4
@@ -3799,6 +4096,9 @@ E07000036,Erewash,la,East Midlands,2026-03,0,1
 E07000036,Erewash,la,East Midlands,2026-04,0,5
 E07000036,Erewash,la,East Midlands,2026-05,0,1
 E07000036,Erewash,la,East Midlands,2026-06,0,3
+E07000036,Erewash,la,East Midlands,2026-07,0,2
+E07000036,Erewash,la,East Midlands,2026-08,0,3
+E07000036,Erewash,la,East Midlands,2026-09,0,5
 E07000041,Exeter,la,South West,2023-05,0,46
 E07000041,Exeter,la,South West,2023-06,0,56
 E07000041,Exeter,la,South West,2023-07,0,41
@@ -3837,6 +4137,9 @@ E07000041,Exeter,la,South West,2026-03,0,35
 E07000041,Exeter,la,South West,2026-04,0,59
 E07000041,Exeter,la,South West,2026-05,0,51
 E07000041,Exeter,la,South West,2026-06,0,61
+E07000041,Exeter,la,South West,2026-07,0,69
+E07000041,Exeter,la,South West,2026-08,0,69
+E07000041,Exeter,la,South West,2026-09,0,64
 E07000087,Fareham,la,South East,2023-05,0,10
 E07000087,Fareham,la,South East,2023-06,0,17
 E07000087,Fareham,la,South East,2023-07,0,17
@@ -3875,6 +4178,9 @@ E07000087,Fareham,la,South East,2026-03,0,7
 E07000087,Fareham,la,South East,2026-04,0,7
 E07000087,Fareham,la,South East,2026-05,0,7
 E07000087,Fareham,la,South East,2026-06,0,9
+E07000087,Fareham,la,South East,2026-07,0,20
+E07000087,Fareham,la,South East,2026-08,0,15
+E07000087,Fareham,la,South East,2026-09,0,13
 E07000010,Fenland,la,East of England,2023-05,0,17
 E07000010,Fenland,la,East of England,2023-06,0,20
 E07000010,Fenland,la,East of England,2023-07,0,20
@@ -3913,6 +4219,9 @@ E07000010,Fenland,la,East of England,2026-03,0,17
 E07000010,Fenland,la,East of England,2026-04,0,16
 E07000010,Fenland,la,East of England,2026-05,0,13
 E07000010,Fenland,la,East of England,2026-06,0,16
+E07000010,Fenland,la,East of England,2026-07,0,20
+E07000010,Fenland,la,East of England,2026-08,0,24
+E07000010,Fenland,la,East of England,2026-09,0,15
 E07000112,Folkestone and Hythe,la,South East,2023-05,0,18
 E07000112,Folkestone and Hythe,la,South East,2023-06,0,26
 E07000112,Folkestone and Hythe,la,South East,2023-07,0,27
@@ -3951,6 +4260,9 @@ E07000112,Folkestone and Hythe,la,South East,2026-03,0,16
 E07000112,Folkestone and Hythe,la,South East,2026-04,0,16
 E07000112,Folkestone and Hythe,la,South East,2026-05,0,25
 E07000112,Folkestone and Hythe,la,South East,2026-06,0,26
+E07000112,Folkestone and Hythe,la,South East,2026-07,0,27
+E07000112,Folkestone and Hythe,la,South East,2026-08,0,21
+E07000112,Folkestone and Hythe,la,South East,2026-09,0,21
 E07000080,Forest of Dean,la,South West,2023-05,0,0
 E07000080,Forest of Dean,la,South West,2023-06,0,0
 E07000080,Forest of Dean,la,South West,2023-07,0,9
@@ -3989,6 +4301,9 @@ E07000080,Forest of Dean,la,South West,2026-03,0,0
 E07000080,Forest of Dean,la,South West,2026-04,0,0
 E07000080,Forest of Dean,la,South West,2026-05,0,1
 E07000080,Forest of Dean,la,South West,2026-06,0,0
+E07000080,Forest of Dean,la,South West,2026-07,0,2
+E07000080,Forest of Dean,la,South West,2026-08,0,5
+E07000080,Forest of Dean,la,South West,2026-09,0,4
 E07000119,Fylde,la,North West,2023-05,,2
 E07000119,Fylde,la,North West,2023-06,0,7
 E07000119,Fylde,la,North West,2023-07,0,15
@@ -4027,6 +4342,9 @@ E07000119,Fylde,la,North West,2026-03,0,5
 E07000119,Fylde,la,North West,2026-04,0,4
 E07000119,Fylde,la,North West,2026-05,0,2
 E07000119,Fylde,la,North West,2026-06,0,3
+E07000119,Fylde,la,North West,2026-07,0,6
+E07000119,Fylde,la,North West,2026-08,0,3
+E07000119,Fylde,la,North West,2026-09,0,4
 E08000037,Gateshead,la,North East,2023-05,0,1
 E08000037,Gateshead,la,North East,2023-06,0,3
 E08000037,Gateshead,la,North East,2023-07,0,4
@@ -4065,6 +4383,9 @@ E08000037,Gateshead,la,North East,2026-03,0,16
 E08000037,Gateshead,la,North East,2026-04,0,22
 E08000037,Gateshead,la,North East,2026-05,0,22
 E08000037,Gateshead,la,North East,2026-06,0,28
+E08000037,Gateshead,la,North East,2026-07,0,29
+E08000037,Gateshead,la,North East,2026-08,0,21
+E08000037,Gateshead,la,North East,2026-09,0,29
 E07000173,Gedling,la,East Midlands,2023-05,0,1
 E07000173,Gedling,la,East Midlands,2023-06,0,3
 E07000173,Gedling,la,East Midlands,2023-07,0,0
@@ -4103,6 +4424,9 @@ E07000173,Gedling,la,East Midlands,2026-03,0,4
 E07000173,Gedling,la,East Midlands,2026-04,0,2
 E07000173,Gedling,la,East Midlands,2026-05,0,2
 E07000173,Gedling,la,East Midlands,2026-06,0,3
+E07000173,Gedling,la,East Midlands,2026-07,0,2
+E07000173,Gedling,la,East Midlands,2026-08,0,0
+E07000173,Gedling,la,East Midlands,2026-09,0,1
 E07000081,Gloucester,la,South West,2023-05,0,32
 E07000081,Gloucester,la,South West,2023-06,0,48
 E07000081,Gloucester,la,South West,2023-07,0,40
@@ -4141,6 +4465,9 @@ E07000081,Gloucester,la,South West,2026-03,0,65
 E07000081,Gloucester,la,South West,2026-04,1,58
 E07000081,Gloucester,la,South West,2026-05,0,66
 E07000081,Gloucester,la,South West,2026-06,1,63
+E07000081,Gloucester,la,South West,2026-07,0,93
+E07000081,Gloucester,la,South West,2026-08,0,66
+E07000081,Gloucester,la,South West,2026-09,0,70
 E07000088,Gosport,la,South East,2023-05,0,7
 E07000088,Gosport,la,South East,2023-06,0,10
 E07000088,Gosport,la,South East,2023-07,0,10
@@ -4179,6 +4506,9 @@ E07000088,Gosport,la,South East,2026-03,0,1
 E07000088,Gosport,la,South East,2026-04,0,2
 E07000088,Gosport,la,South East,2026-05,0,3
 E07000088,Gosport,la,South East,2026-06,0,5
+E07000088,Gosport,la,South East,2026-07,0,5
+E07000088,Gosport,la,South East,2026-08,0,5
+E07000088,Gosport,la,South East,2026-09,0,5
 E07000109,Gravesham,la,South East,2023-05,0,17
 E07000109,Gravesham,la,South East,2023-06,0,19
 E07000109,Gravesham,la,South East,2023-07,0,14
@@ -4217,6 +4547,9 @@ E07000109,Gravesham,la,South East,2026-03,0,17
 E07000109,Gravesham,la,South East,2026-04,1,8
 E07000109,Gravesham,la,South East,2026-05,0,14
 E07000109,Gravesham,la,South East,2026-06,0,27
+E07000109,Gravesham,la,South East,2026-07,0,27
+E07000109,Gravesham,la,South East,2026-08,0,19
+E07000109,Gravesham,la,South East,2026-09,1,25
 E07000145,Great Yarmouth,la,East of England,2023-05,0,16
 E07000145,Great Yarmouth,la,East of England,2023-06,0,16
 E07000145,Great Yarmouth,la,East of England,2023-07,0,36
@@ -4255,6 +4588,9 @@ E07000145,Great Yarmouth,la,East of England,2026-03,0,28
 E07000145,Great Yarmouth,la,East of England,2026-04,0,27
 E07000145,Great Yarmouth,la,East of England,2026-05,0,39
 E07000145,Great Yarmouth,la,East of England,2026-06,0,34
+E07000145,Great Yarmouth,la,East of England,2026-07,0,35
+E07000145,Great Yarmouth,la,East of England,2026-08,0,33
+E07000145,Great Yarmouth,la,East of England,2026-09,0,34
 E09000011,Greenwich,la,London,2023-05,1,29
 E09000011,Greenwich,la,London,2023-06,0,45
 E09000011,Greenwich,la,London,2023-07,0,47
@@ -4293,6 +4629,9 @@ E09000011,Greenwich,la,London,2026-03,1,60
 E09000011,Greenwich,la,London,2026-04,1,71
 E09000011,Greenwich,la,London,2026-05,0,81
 E09000011,Greenwich,la,London,2026-06,0,94
+E09000011,Greenwich,la,London,2026-07,0,92
+E09000011,Greenwich,la,London,2026-08,0,92
+E09000011,Greenwich,la,London,2026-09,0,76
 E07000209,Guildford,la,South East,2023-05,0,10
 E07000209,Guildford,la,South East,2023-06,0,21
 E07000209,Guildford,la,South East,2023-07,0,22
@@ -4331,6 +4670,9 @@ E07000209,Guildford,la,South East,2026-03,0,13
 E07000209,Guildford,la,South East,2026-04,0,16
 E07000209,Guildford,la,South East,2026-05,0,15
 E07000209,Guildford,la,South East,2026-06,0,16
+E07000209,Guildford,la,South East,2026-07,0,14
+E07000209,Guildford,la,South East,2026-08,0,14
+E07000209,Guildford,la,South East,2026-09,0,10
 E09000012,Hackney,la,London,2023-05,1,26
 E09000012,Hackney,la,London,2023-06,0,25
 E09000012,Hackney,la,London,2023-07,1,41
@@ -4369,6 +4711,9 @@ E09000012,Hackney,la,London,2026-03,1,48
 E09000012,Hackney,la,London,2026-04,0,44
 E09000012,Hackney,la,London,2026-05,1,54
 E09000012,Hackney,la,London,2026-06,0,58
+E09000012,Hackney,la,London,2026-07,0,52
+E09000012,Hackney,la,London,2026-08,0,53
+E09000012,Hackney,la,London,2026-09,1,39
 E06000006,Halton,la,North West,2023-05,1,6
 E06000006,Halton,la,North West,2023-06,1,6
 E06000006,Halton,la,North West,2023-07,0,6
@@ -4407,6 +4752,9 @@ E06000006,Halton,la,North West,2026-03,0,14
 E06000006,Halton,la,North West,2026-04,0,10
 E06000006,Halton,la,North West,2026-05,0,21
 E06000006,Halton,la,North West,2026-06,3,11
+E06000006,Halton,la,North West,2026-07,0,18
+E06000006,Halton,la,North West,2026-08,5,19
+E06000006,Halton,la,North West,2026-09,3,17
 E09000013,Hammersmith and Fulham,la,London,2023-05,1,38
 E09000013,Hammersmith and Fulham,la,London,2023-06,0,36
 E09000013,Hammersmith and Fulham,la,London,2023-07,0,47
@@ -4445,6 +4793,9 @@ E09000013,Hammersmith and Fulham,la,London,2026-03,2,53
 E09000013,Hammersmith and Fulham,la,London,2026-04,0,49
 E09000013,Hammersmith and Fulham,la,London,2026-05,0,53
 E09000013,Hammersmith and Fulham,la,London,2026-06,0,71
+E09000013,Hammersmith and Fulham,la,London,2026-07,0,78
+E09000013,Hammersmith and Fulham,la,London,2026-08,0,97
+E09000013,Hammersmith and Fulham,la,London,2026-09,0,77
 E07000131,Harborough,la,East Midlands,2023-05,0,0
 E07000131,Harborough,la,East Midlands,2023-06,0,4
 E07000131,Harborough,la,East Midlands,2023-07,0,3
@@ -4483,6 +4834,9 @@ E07000131,Harborough,la,East Midlands,2026-03,0,2
 E07000131,Harborough,la,East Midlands,2026-04,0,2
 E07000131,Harborough,la,East Midlands,2026-05,0,3
 E07000131,Harborough,la,East Midlands,2026-06,0,2
+E07000131,Harborough,la,East Midlands,2026-07,0,3
+E07000131,Harborough,la,East Midlands,2026-08,0,2
+E07000131,Harborough,la,East Midlands,2026-09,0,1
 E09000014,Haringey,la,London,2023-05,1,68
 E09000014,Haringey,la,London,2023-06,1,79
 E09000014,Haringey,la,London,2023-07,0,98
@@ -4521,6 +4875,9 @@ E09000014,Haringey,la,London,2026-03,1,39
 E09000014,Haringey,la,London,2026-04,1,61
 E09000014,Haringey,la,London,2026-05,1,44
 E09000014,Haringey,la,London,2026-06,1,49
+E09000014,Haringey,la,London,2026-07,1,82
+E09000014,Haringey,la,London,2026-08,1,71
+E09000014,Haringey,la,London,2026-09,0,60
 E07000073,Harlow,la,East of England,2023-05,0,19
 E07000073,Harlow,la,East of England,2023-06,0,21
 E07000073,Harlow,la,East of England,2023-07,0,10
@@ -4559,6 +4916,9 @@ E07000073,Harlow,la,East of England,2026-03,0,14
 E07000073,Harlow,la,East of England,2026-04,0,16
 E07000073,Harlow,la,East of England,2026-05,0,23
 E07000073,Harlow,la,East of England,2026-06,0,27
+E07000073,Harlow,la,East of England,2026-07,0,19
+E07000073,Harlow,la,East of England,2026-08,0,26
+E07000073,Harlow,la,East of England,2026-09,0,25
 E09000015,Harrow,la,London,2023-05,0,8
 E09000015,Harrow,la,London,2023-06,0,10
 E09000015,Harrow,la,London,2023-07,0,9
@@ -4597,6 +4957,9 @@ E09000015,Harrow,la,London,2026-03,1,4
 E09000015,Harrow,la,London,2026-04,0,4
 E09000015,Harrow,la,London,2026-05,0,4
 E09000015,Harrow,la,London,2026-06,0,4
+E09000015,Harrow,la,London,2026-07,0,8
+E09000015,Harrow,la,London,2026-08,0,8
+E09000015,Harrow,la,London,2026-09,0,8
 E07000089,Hart,la,South East,2023-05,0,1
 E07000089,Hart,la,South East,2023-06,0,1
 E07000089,Hart,la,South East,2023-07,0,0
@@ -4635,6 +4998,9 @@ E07000089,Hart,la,South East,2026-03,0,0
 E07000089,Hart,la,South East,2026-04,0,2
 E07000089,Hart,la,South East,2026-05,0,1
 E07000089,Hart,la,South East,2026-06,0,0
+E07000089,Hart,la,South East,2026-07,0,0
+E07000089,Hart,la,South East,2026-08,0,2
+E07000089,Hart,la,South East,2026-09,0,2
 E06000001,Hartlepool,la,North East,2023-05,0,9
 E06000001,Hartlepool,la,North East,2023-06,0,11
 E06000001,Hartlepool,la,North East,2023-07,0,5
@@ -4673,6 +5039,9 @@ E06000001,Hartlepool,la,North East,2026-03,0,7
 E06000001,Hartlepool,la,North East,2026-04,0,6
 E06000001,Hartlepool,la,North East,2026-05,0,6
 E06000001,Hartlepool,la,North East,2026-06,1,8
+E06000001,Hartlepool,la,North East,2026-07,0,8
+E06000001,Hartlepool,la,North East,2026-08,0,7
+E06000001,Hartlepool,la,North East,2026-09,0,14
 E07000062,Hastings,la,South East,2023-05,0,63
 E07000062,Hastings,la,South East,2023-06,0,65
 E07000062,Hastings,la,South East,2023-07,0,60
@@ -4711,6 +5080,9 @@ E07000062,Hastings,la,South East,2026-03,0,38
 E07000062,Hastings,la,South East,2026-04,0,43
 E07000062,Hastings,la,South East,2026-05,0,46
 E07000062,Hastings,la,South East,2026-06,0,44
+E07000062,Hastings,la,South East,2026-07,0,53
+E07000062,Hastings,la,South East,2026-08,0,48
+E07000062,Hastings,la,South East,2026-09,0,34
 E07000090,Havant,la,South East,2023-05,0,7
 E07000090,Havant,la,South East,2023-06,0,3
 E07000090,Havant,la,South East,2023-07,0,3
@@ -4749,6 +5121,9 @@ E07000090,Havant,la,South East,2026-03,0,5
 E07000090,Havant,la,South East,2026-04,0,5
 E07000090,Havant,la,South East,2026-05,0,5
 E07000090,Havant,la,South East,2026-06,0,6
+E07000090,Havant,la,South East,2026-07,0,8
+E07000090,Havant,la,South East,2026-08,0,3
+E07000090,Havant,la,South East,2026-09,0,5
 E09000016,Havering,la,London,2023-05,0,5
 E09000016,Havering,la,London,2023-06,0,2
 E09000016,Havering,la,London,2023-07,0,2
@@ -4787,6 +5162,9 @@ E09000016,Havering,la,London,2026-03,0,5
 E09000016,Havering,la,London,2026-04,0,5
 E09000016,Havering,la,London,2026-05,0,6
 E09000016,Havering,la,London,2026-06,0,10
+E09000016,Havering,la,London,2026-07,0,12
+E09000016,Havering,la,London,2026-08,0,8
+E09000016,Havering,la,London,2026-09,0,7
 E06000019,"Herefordshire, County of",la,West Midlands,2023-05,0,27
 E06000019,"Herefordshire, County of",la,West Midlands,2023-06,0,24
 E06000019,"Herefordshire, County of",la,West Midlands,2023-07,0,23
@@ -4825,6 +5203,9 @@ E06000019,"Herefordshire, County of",la,West Midlands,2026-03,0,20
 E06000019,"Herefordshire, County of",la,West Midlands,2026-04,0,20
 E06000019,"Herefordshire, County of",la,West Midlands,2026-05,0,33
 E06000019,"Herefordshire, County of",la,West Midlands,2026-06,0,30
+E06000019,"Herefordshire, County of",la,West Midlands,2026-07,0,30
+E06000019,"Herefordshire, County of",la,West Midlands,2026-08,0,32
+E06000019,"Herefordshire, County of",la,West Midlands,2026-09,0,29
 E07000098,Hertsmere,la,East of England,2023-05,0,2
 E07000098,Hertsmere,la,East of England,2023-06,0,1
 E07000098,Hertsmere,la,East of England,2023-07,0,1
@@ -4863,6 +5244,9 @@ E07000098,Hertsmere,la,East of England,2026-03,0,1
 E07000098,Hertsmere,la,East of England,2026-04,0,2
 E07000098,Hertsmere,la,East of England,2026-05,0,2
 E07000098,Hertsmere,la,East of England,2026-06,0,2
+E07000098,Hertsmere,la,East of England,2026-07,0,2
+E07000098,Hertsmere,la,East of England,2026-08,0,3
+E07000098,Hertsmere,la,East of England,2026-09,0,2
 E07000037,High Peak,la,East Midlands,2023-05,0,3
 E07000037,High Peak,la,East Midlands,2023-06,0,6
 E07000037,High Peak,la,East Midlands,2023-07,0,5
@@ -4901,6 +5285,9 @@ E07000037,High Peak,la,East Midlands,2026-03,0,2
 E07000037,High Peak,la,East Midlands,2026-04,0,0
 E07000037,High Peak,la,East Midlands,2026-05,0,4
 E07000037,High Peak,la,East Midlands,2026-06,0,8
+E07000037,High Peak,la,East Midlands,2026-07,0,4
+E07000037,High Peak,la,East Midlands,2026-08,0,5
+E07000037,High Peak,la,East Midlands,2026-09,0,5
 E09000017,Hillingdon,la,London,2023-05,0,24
 E09000017,Hillingdon,la,London,2023-06,1,45
 E09000017,Hillingdon,la,London,2023-07,0,69
@@ -4939,6 +5326,9 @@ E09000017,Hillingdon,la,London,2026-03,7,63
 E09000017,Hillingdon,la,London,2026-04,3,54
 E09000017,Hillingdon,la,London,2026-05,3,74
 E09000017,Hillingdon,la,London,2026-06,3,58
+E09000017,Hillingdon,la,London,2026-07,0,58
+E09000017,Hillingdon,la,London,2026-08,1,60
+E09000017,Hillingdon,la,London,2026-09,2,69
 E07000132,Hinckley and Bosworth,la,East Midlands,2023-05,0,6
 E07000132,Hinckley and Bosworth,la,East Midlands,2023-06,0,2
 E07000132,Hinckley and Bosworth,la,East Midlands,2023-07,0,6
@@ -4977,6 +5367,9 @@ E07000132,Hinckley and Bosworth,la,East Midlands,2026-03,0,5
 E07000132,Hinckley and Bosworth,la,East Midlands,2026-04,0,6
 E07000132,Hinckley and Bosworth,la,East Midlands,2026-05,0,4
 E07000132,Hinckley and Bosworth,la,East Midlands,2026-06,0,4
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-07,0,4
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-08,0,4
+E07000132,Hinckley and Bosworth,la,East Midlands,2026-09,0,4
 E07000227,Horsham,la,South East,2023-05,0,7
 E07000227,Horsham,la,South East,2023-06,0,5
 E07000227,Horsham,la,South East,2023-07,0,1
@@ -5015,6 +5408,9 @@ E07000227,Horsham,la,South East,2026-03,0,11
 E07000227,Horsham,la,South East,2026-04,0,12
 E07000227,Horsham,la,South East,2026-05,0,18
 E07000227,Horsham,la,South East,2026-06,0,18
+E07000227,Horsham,la,South East,2026-07,0,17
+E07000227,Horsham,la,South East,2026-08,0,19
+E07000227,Horsham,la,South East,2026-09,0,9
 E09000018,Hounslow,la,London,2023-05,1,37
 E09000018,Hounslow,la,London,2023-06,0,35
 E09000018,Hounslow,la,London,2023-07,0,32
@@ -5053,6 +5449,9 @@ E09000018,Hounslow,la,London,2026-03,7,29
 E09000018,Hounslow,la,London,2026-04,7,27
 E09000018,Hounslow,la,London,2026-05,4,45
 E09000018,Hounslow,la,London,2026-06,2,27
+E09000018,Hounslow,la,London,2026-07,2,37
+E09000018,Hounslow,la,London,2026-08,1,39
+E09000018,Hounslow,la,London,2026-09,0,39
 E07000011,Huntingdonshire,la,East of England,2023-05,0,4
 E07000011,Huntingdonshire,la,East of England,2023-06,0,6
 E07000011,Huntingdonshire,la,East of England,2023-07,0,4
@@ -5091,6 +5490,9 @@ E07000011,Huntingdonshire,la,East of England,2026-03,0,12
 E07000011,Huntingdonshire,la,East of England,2026-04,0,9
 E07000011,Huntingdonshire,la,East of England,2026-05,0,10
 E07000011,Huntingdonshire,la,East of England,2026-06,0,9
+E07000011,Huntingdonshire,la,East of England,2026-07,0,7
+E07000011,Huntingdonshire,la,East of England,2026-08,0,5
+E07000011,Huntingdonshire,la,East of England,2026-09,0,5
 E07000120,Hyndburn,la,North West,2023-05,0,1
 E07000120,Hyndburn,la,North West,2023-06,0,2
 E07000120,Hyndburn,la,North West,2023-07,0,2
@@ -5129,6 +5531,9 @@ E07000120,Hyndburn,la,North West,2026-03,0,4
 E07000120,Hyndburn,la,North West,2026-04,0,3
 E07000120,Hyndburn,la,North West,2026-05,0,4
 E07000120,Hyndburn,la,North West,2026-06,0,4
+E07000120,Hyndburn,la,North West,2026-07,0,3
+E07000120,Hyndburn,la,North West,2026-08,0,5
+E07000120,Hyndburn,la,North West,2026-09,0,4
 E07000202,Ipswich,la,East of England,2023-05,0,40
 E07000202,Ipswich,la,East of England,2023-06,0,44
 E07000202,Ipswich,la,East of England,2023-07,0,33
@@ -5167,6 +5572,9 @@ E07000202,Ipswich,la,East of England,2026-03,0,38
 E07000202,Ipswich,la,East of England,2026-04,0,39
 E07000202,Ipswich,la,East of England,2026-05,0,41
 E07000202,Ipswich,la,East of England,2026-06,0,43
+E07000202,Ipswich,la,East of England,2026-07,0,54
+E07000202,Ipswich,la,East of England,2026-08,0,50
+E07000202,Ipswich,la,East of England,2026-09,0,50
 E06000046,Isle of Wight,la,South East,2023-05,0,11
 E06000046,Isle of Wight,la,South East,2023-06,0,11
 E06000046,Isle of Wight,la,South East,2023-07,0,8
@@ -5205,6 +5613,9 @@ E06000046,Isle of Wight,la,South East,2026-03,0,19
 E06000046,Isle of Wight,la,South East,2026-04,0,24
 E06000046,Isle of Wight,la,South East,2026-05,0,32
 E06000046,Isle of Wight,la,South East,2026-06,0,29
+E06000046,Isle of Wight,la,South East,2026-07,0,30
+E06000046,Isle of Wight,la,South East,2026-08,0,36
+E06000046,Isle of Wight,la,South East,2026-09,0,40
 E06000053,Isles of Scilly,la,South West,2023-05,,0
 E06000053,Isles of Scilly,la,South West,2023-06,,0
 E06000053,Isles of Scilly,la,South West,2023-07,0,0
@@ -5243,6 +5654,9 @@ E06000053,Isles of Scilly,la,South West,2026-03,0,0
 E06000053,Isles of Scilly,la,South West,2026-04,0,0
 E06000053,Isles of Scilly,la,South West,2026-05,0,0
 E06000053,Isles of Scilly,la,South West,2026-06,0,0
+E06000053,Isles of Scilly,la,South West,2026-07,0,0
+E06000053,Isles of Scilly,la,South West,2026-08,0,0
+E06000053,Isles of Scilly,la,South West,2026-09,0,0
 E09000019,Islington,la,London,2023-05,4,43
 E09000019,Islington,la,London,2023-06,1,21
 E09000019,Islington,la,London,2023-07,0,32
@@ -5281,6 +5695,9 @@ E09000019,Islington,la,London,2026-03,0,35
 E09000019,Islington,la,London,2026-04,0,51
 E09000019,Islington,la,London,2026-05,0,52
 E09000019,Islington,la,London,2026-06,0,41
+E09000019,Islington,la,London,2026-07,0,61
+E09000019,Islington,la,London,2026-08,1,58
+E09000019,Islington,la,London,2026-09,0,63
 E09000020,Kensington and Chelsea,la,London,2023-05,0,21
 E09000020,Kensington and Chelsea,la,London,2023-06,0,21
 E09000020,Kensington and Chelsea,la,London,2023-07,0,21
@@ -5319,6 +5736,9 @@ E09000020,Kensington and Chelsea,la,London,2026-03,0,40
 E09000020,Kensington and Chelsea,la,London,2026-04,0,42
 E09000020,Kensington and Chelsea,la,London,2026-05,2,35
 E09000020,Kensington and Chelsea,la,London,2026-06,0,50
+E09000020,Kensington and Chelsea,la,London,2026-07,0,57
+E09000020,Kensington and Chelsea,la,London,2026-08,1,54
+E09000020,Kensington and Chelsea,la,London,2026-09,0,37
 E07000146,King's Lynn and West Norfolk,la,East of England,2023-05,0,3
 E07000146,King's Lynn and West Norfolk,la,East of England,2023-06,0,3
 E07000146,King's Lynn and West Norfolk,la,East of England,2023-07,0,3
@@ -5357,6 +5777,9 @@ E07000146,King's Lynn and West Norfolk,la,East of England,2026-03,0,1
 E07000146,King's Lynn and West Norfolk,la,East of England,2026-04,0,2
 E07000146,King's Lynn and West Norfolk,la,East of England,2026-05,0,3
 E07000146,King's Lynn and West Norfolk,la,East of England,2026-06,0,2
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-07,0,3
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-08,0,8
+E07000146,King's Lynn and West Norfolk,la,East of England,2026-09,0,10
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2023-05,0,58
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2023-06,0,64
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2023-07,0,56
@@ -5395,6 +5818,9 @@ E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-03,0,83
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-04,2,81
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-05,0,95
 E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-06,0,91
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-07,1,112
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-08,0,100
+E06000010,"Kingston upon Hull, City of",la,Yorkshire and The Humber,2026-09,0,111
 E09000021,Kingston upon Thames,la,London,2023-05,0,27
 E09000021,Kingston upon Thames,la,London,2023-06,0,28
 E09000021,Kingston upon Thames,la,London,2023-07,0,10
@@ -5433,6 +5859,9 @@ E09000021,Kingston upon Thames,la,London,2026-03,0,9
 E09000021,Kingston upon Thames,la,London,2026-04,0,6
 E09000021,Kingston upon Thames,la,London,2026-05,0,10
 E09000021,Kingston upon Thames,la,London,2026-06,0,6
+E09000021,Kingston upon Thames,la,London,2026-07,0,27
+E09000021,Kingston upon Thames,la,London,2026-08,0,20
+E09000021,Kingston upon Thames,la,London,2026-09,0,20
 E08000034,Kirklees,la,Yorkshire and The Humber,2023-05,0,11
 E08000034,Kirklees,la,Yorkshire and The Humber,2023-06,0,27
 E08000034,Kirklees,la,Yorkshire and The Humber,2023-07,0,11
@@ -5471,6 +5900,9 @@ E08000034,Kirklees,la,Yorkshire and The Humber,2026-03,0,22
 E08000034,Kirklees,la,Yorkshire and The Humber,2026-04,0,16
 E08000034,Kirklees,la,Yorkshire and The Humber,2026-05,0,18
 E08000034,Kirklees,la,Yorkshire and The Humber,2026-06,0,25
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-07,0,26
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-08,0,26
+E08000034,Kirklees,la,Yorkshire and The Humber,2026-09,0,27
 E08000011,Knowsley,la,North West,2023-05,0,3
 E08000011,Knowsley,la,North West,2023-06,1,6
 E08000011,Knowsley,la,North West,2023-07,0,8
@@ -5509,6 +5941,9 @@ E08000011,Knowsley,la,North West,2026-03,4,8
 E08000011,Knowsley,la,North West,2026-04,4,8
 E08000011,Knowsley,la,North West,2026-05,4,8
 E08000011,Knowsley,la,North West,2026-06,4,8
+E08000011,Knowsley,la,North West,2026-07,4,8
+E08000011,Knowsley,la,North West,2026-08,2,10
+E08000011,Knowsley,la,North West,2026-09,1,9
 E09000022,Lambeth,la,London,2023-05,1,83
 E09000022,Lambeth,la,London,2023-06,0,98
 E09000022,Lambeth,la,London,2023-07,1,109
@@ -5547,6 +5982,9 @@ E09000022,Lambeth,la,London,2026-03,1,58
 E09000022,Lambeth,la,London,2026-04,3,67
 E09000022,Lambeth,la,London,2026-05,3,61
 E09000022,Lambeth,la,London,2026-06,3,63
+E09000022,Lambeth,la,London,2026-07,0,48
+E09000022,Lambeth,la,London,2026-08,2,73
+E09000022,Lambeth,la,London,2026-09,2,81
 E07000121,Lancaster,la,North West,2023-05,0,6
 E07000121,Lancaster,la,North West,2023-06,0,11
 E07000121,Lancaster,la,North West,2023-07,0,10
@@ -5584,7 +6022,10 @@ E07000121,Lancaster,la,North West,2026-02,0,8
 E07000121,Lancaster,la,North West,2026-03,0,8
 E07000121,Lancaster,la,North West,2026-04,0,7
 E07000121,Lancaster,la,North West,2026-05,0,10
-E07000121,Lancaster,la,North West,2026-06,0,10
+E07000121,Lancaster,la,North West,2026-06,0,12
+E07000121,Lancaster,la,North West,2026-07,0,11
+E07000121,Lancaster,la,North West,2026-08,0,11
+E07000121,Lancaster,la,North West,2026-09,0,11
 E08000035,Leeds,la,Yorkshire and The Humber,2023-05,1,117
 E08000035,Leeds,la,Yorkshire and The Humber,2023-06,0,111
 E08000035,Leeds,la,Yorkshire and The Humber,2023-07,0,133
@@ -5623,6 +6064,9 @@ E08000035,Leeds,la,Yorkshire and The Humber,2026-03,0,131
 E08000035,Leeds,la,Yorkshire and The Humber,2026-04,0,140
 E08000035,Leeds,la,Yorkshire and The Humber,2026-05,0,142
 E08000035,Leeds,la,Yorkshire and The Humber,2026-06,0,154
+E08000035,Leeds,la,Yorkshire and The Humber,2026-07,0,178
+E08000035,Leeds,la,Yorkshire and The Humber,2026-08,0,159
+E08000035,Leeds,la,Yorkshire and The Humber,2026-09,0,179
 E06000016,Leicester,la,East Midlands,2023-05,3,69
 E06000016,Leicester,la,East Midlands,2023-06,14,98
 E06000016,Leicester,la,East Midlands,2023-07,2,105
@@ -5661,6 +6105,9 @@ E06000016,Leicester,la,East Midlands,2026-03,1,102
 E06000016,Leicester,la,East Midlands,2026-04,0,87
 E06000016,Leicester,la,East Midlands,2026-05,1,87
 E06000016,Leicester,la,East Midlands,2026-06,1,94
+E06000016,Leicester,la,East Midlands,2026-07,0,104
+E06000016,Leicester,la,East Midlands,2026-08,0,78
+E06000016,Leicester,la,East Midlands,2026-09,0,98
 E07000063,Lewes,la,South East,2023-05,0,6
 E07000063,Lewes,la,South East,2023-06,0,10
 E07000063,Lewes,la,South East,2023-07,0,13
@@ -5699,6 +6146,9 @@ E07000063,Lewes,la,South East,2026-03,0,14
 E07000063,Lewes,la,South East,2026-04,0,11
 E07000063,Lewes,la,South East,2026-05,0,10
 E07000063,Lewes,la,South East,2026-06,0,17
+E07000063,Lewes,la,South East,2026-07,0,12
+E07000063,Lewes,la,South East,2026-08,0,11
+E07000063,Lewes,la,South East,2026-09,0,17
 E09000023,Lewisham,la,London,2023-05,0,51
 E09000023,Lewisham,la,London,2023-06,0,42
 E09000023,Lewisham,la,London,2023-07,0,40
@@ -5737,6 +6187,9 @@ E09000023,Lewisham,la,London,2026-03,0,33
 E09000023,Lewisham,la,London,2026-04,0,30
 E09000023,Lewisham,la,London,2026-05,1,25
 E09000023,Lewisham,la,London,2026-06,0,32
+E09000023,Lewisham,la,London,2026-07,0,31
+E09000023,Lewisham,la,London,2026-08,0,34
+E09000023,Lewisham,la,London,2026-09,0,49
 E07000194,Lichfield,la,West Midlands,2023-05,0,2
 E07000194,Lichfield,la,West Midlands,2023-06,0,2
 E07000194,Lichfield,la,West Midlands,2023-07,0,3
@@ -5775,6 +6228,9 @@ E07000194,Lichfield,la,West Midlands,2026-03,0,5
 E07000194,Lichfield,la,West Midlands,2026-04,0,5
 E07000194,Lichfield,la,West Midlands,2026-05,0,6
 E07000194,Lichfield,la,West Midlands,2026-06,0,7
+E07000194,Lichfield,la,West Midlands,2026-07,0,7
+E07000194,Lichfield,la,West Midlands,2026-08,0,5
+E07000194,Lichfield,la,West Midlands,2026-09,0,4
 E07000138,Lincoln,la,East Midlands,2023-05,,14
 E07000138,Lincoln,la,East Midlands,2023-06,0,33
 E07000138,Lincoln,la,East Midlands,2023-07,0,12
@@ -5813,6 +6269,9 @@ E07000138,Lincoln,la,East Midlands,2026-03,0,28
 E07000138,Lincoln,la,East Midlands,2026-04,0,27
 E07000138,Lincoln,la,East Midlands,2026-05,0,38
 E07000138,Lincoln,la,East Midlands,2026-06,0,28
+E07000138,Lincoln,la,East Midlands,2026-07,0,47
+E07000138,Lincoln,la,East Midlands,2026-08,0,40
+E07000138,Lincoln,la,East Midlands,2026-09,0,30
 E08000012,Liverpool,la,North West,2023-05,0,128
 E08000012,Liverpool,la,North West,2023-06,0,149
 E08000012,Liverpool,la,North West,2023-07,0,146
@@ -5851,6 +6310,9 @@ E08000012,Liverpool,la,North West,2026-03,26,197
 E08000012,Liverpool,la,North West,2026-04,25,230
 E08000012,Liverpool,la,North West,2026-05,6,179
 E08000012,Liverpool,la,North West,2026-06,6,195
+E08000012,Liverpool,la,North West,2026-07,1,178
+E08000012,Liverpool,la,North West,2026-08,0,139
+E08000012,Liverpool,la,North West,2026-09,0,128
 E06000032,Luton,la,East of England,2023-05,0,37
 E06000032,Luton,la,East of England,2023-06,7,51
 E06000032,Luton,la,East of England,2023-07,3,57
@@ -5889,6 +6351,9 @@ E06000032,Luton,la,East of England,2026-03,0,54
 E06000032,Luton,la,East of England,2026-04,1,59
 E06000032,Luton,la,East of England,2026-05,1,60
 E06000032,Luton,la,East of England,2026-06,0,65
+E06000032,Luton,la,East of England,2026-07,0,85
+E06000032,Luton,la,East of England,2026-08,1,74
+E06000032,Luton,la,East of England,2026-09,0,79
 E07000110,Maidstone,la,South East,2023-05,0,4
 E07000110,Maidstone,la,South East,2023-06,0,4
 E07000110,Maidstone,la,South East,2023-07,0,5
@@ -5927,6 +6392,9 @@ E07000110,Maidstone,la,South East,2026-03,0,5
 E07000110,Maidstone,la,South East,2026-04,0,13
 E07000110,Maidstone,la,South East,2026-05,0,9
 E07000110,Maidstone,la,South East,2026-06,0,12
+E07000110,Maidstone,la,South East,2026-07,0,14
+E07000110,Maidstone,la,South East,2026-08,0,12
+E07000110,Maidstone,la,South East,2026-09,0,7
 E07000074,Maldon,la,East of England,2023-05,0,0
 E07000074,Maldon,la,East of England,2023-06,0,0
 E07000074,Maldon,la,East of England,2023-07,0,0
@@ -5965,6 +6433,9 @@ E07000074,Maldon,la,East of England,2026-03,0,0
 E07000074,Maldon,la,East of England,2026-04,0,4
 E07000074,Maldon,la,East of England,2026-05,0,4
 E07000074,Maldon,la,East of England,2026-06,0,3
+E07000074,Maldon,la,East of England,2026-07,0,5
+E07000074,Maldon,la,East of England,2026-08,0,4
+E07000074,Maldon,la,East of England,2026-09,0,7
 E07000235,Malvern Hills,la,West Midlands,2023-05,0,5
 E07000235,Malvern Hills,la,West Midlands,2023-06,0,7
 E07000235,Malvern Hills,la,West Midlands,2023-07,0,6
@@ -6003,6 +6474,9 @@ E07000235,Malvern Hills,la,West Midlands,2026-03,0,7
 E07000235,Malvern Hills,la,West Midlands,2026-04,0,4
 E07000235,Malvern Hills,la,West Midlands,2026-05,0,3
 E07000235,Malvern Hills,la,West Midlands,2026-06,0,5
+E07000235,Malvern Hills,la,West Midlands,2026-07,0,5
+E07000235,Malvern Hills,la,West Midlands,2026-08,0,7
+E07000235,Malvern Hills,la,West Midlands,2026-09,0,5
 E08000003,Manchester,la,North West,2023-05,4,77
 E08000003,Manchester,la,North West,2023-06,3,103
 E08000003,Manchester,la,North West,2023-07,9,157
@@ -6041,6 +6515,9 @@ E08000003,Manchester,la,North West,2026-03,0,152
 E08000003,Manchester,la,North West,2026-04,0,183
 E08000003,Manchester,la,North West,2026-05,1,167
 E08000003,Manchester,la,North West,2026-06,0,195
+E08000003,Manchester,la,North West,2026-07,2,175
+E08000003,Manchester,la,North West,2026-08,0,171
+E08000003,Manchester,la,North West,2026-09,1,177
 E07000174,Mansfield,la,East Midlands,2023-05,0,20
 E07000174,Mansfield,la,East Midlands,2023-06,0,9
 E07000174,Mansfield,la,East Midlands,2023-07,0,6
@@ -6079,6 +6556,9 @@ E07000174,Mansfield,la,East Midlands,2026-03,0,26
 E07000174,Mansfield,la,East Midlands,2026-04,0,37
 E07000174,Mansfield,la,East Midlands,2026-05,0,41
 E07000174,Mansfield,la,East Midlands,2026-06,0,29
+E07000174,Mansfield,la,East Midlands,2026-07,0,46
+E07000174,Mansfield,la,East Midlands,2026-08,0,31
+E07000174,Mansfield,la,East Midlands,2026-09,0,36
 E06000035,Medway,la,South East,2023-05,0,28
 E06000035,Medway,la,South East,2023-06,0,37
 E06000035,Medway,la,South East,2023-07,0,37
@@ -6117,6 +6597,9 @@ E06000035,Medway,la,South East,2026-03,0,20
 E06000035,Medway,la,South East,2026-04,0,25
 E06000035,Medway,la,South East,2026-05,0,21
 E06000035,Medway,la,South East,2026-06,0,15
+E06000035,Medway,la,South East,2026-07,0,22
+E06000035,Medway,la,South East,2026-08,0,33
+E06000035,Medway,la,South East,2026-09,0,34
 E07000133,Melton,la,East Midlands,2023-05,0,1
 E07000133,Melton,la,East Midlands,2023-06,0,2
 E07000133,Melton,la,East Midlands,2023-07,0,1
@@ -6155,6 +6638,9 @@ E07000133,Melton,la,East Midlands,2026-03,0,0
 E07000133,Melton,la,East Midlands,2026-04,0,1
 E07000133,Melton,la,East Midlands,2026-05,0,1
 E07000133,Melton,la,East Midlands,2026-06,0,0
+E07000133,Melton,la,East Midlands,2026-07,0,1
+E07000133,Melton,la,East Midlands,2026-08,0,1
+E07000133,Melton,la,East Midlands,2026-09,0,0
 E09000024,Merton,la,London,2023-05,0,1
 E09000024,Merton,la,London,2023-06,0,7
 E09000024,Merton,la,London,2023-07,0,9
@@ -6193,6 +6679,9 @@ E09000024,Merton,la,London,2026-03,0,7
 E09000024,Merton,la,London,2026-04,0,3
 E09000024,Merton,la,London,2026-05,0,5
 E09000024,Merton,la,London,2026-06,0,9
+E09000024,Merton,la,London,2026-07,0,9
+E09000024,Merton,la,London,2026-08,0,9
+E09000024,Merton,la,London,2026-09,0,9
 E07000042,Mid Devon,la,South West,2023-05,0,4
 E07000042,Mid Devon,la,South West,2023-06,0,6
 E07000042,Mid Devon,la,South West,2023-07,0,5
@@ -6231,6 +6720,9 @@ E07000042,Mid Devon,la,South West,2026-03,0,3
 E07000042,Mid Devon,la,South West,2026-04,0,4
 E07000042,Mid Devon,la,South West,2026-05,0,4
 E07000042,Mid Devon,la,South West,2026-06,0,5
+E07000042,Mid Devon,la,South West,2026-07,0,5
+E07000042,Mid Devon,la,South West,2026-08,0,7
+E07000042,Mid Devon,la,South West,2026-09,0,3
 E07000203,Mid Suffolk,la,East of England,2023-05,0,1
 E07000203,Mid Suffolk,la,East of England,2023-06,0,2
 E07000203,Mid Suffolk,la,East of England,2023-07,0,3
@@ -6269,6 +6761,9 @@ E07000203,Mid Suffolk,la,East of England,2026-03,0,4
 E07000203,Mid Suffolk,la,East of England,2026-04,0,6
 E07000203,Mid Suffolk,la,East of England,2026-05,0,4
 E07000203,Mid Suffolk,la,East of England,2026-06,0,6
+E07000203,Mid Suffolk,la,East of England,2026-07,0,6
+E07000203,Mid Suffolk,la,East of England,2026-08,0,7
+E07000203,Mid Suffolk,la,East of England,2026-09,0,8
 E07000228,Mid Sussex,la,South East,2023-05,0,6
 E07000228,Mid Sussex,la,South East,2023-06,0,1
 E07000228,Mid Sussex,la,South East,2023-07,0,0
@@ -6307,6 +6802,9 @@ E07000228,Mid Sussex,la,South East,2026-03,0,7
 E07000228,Mid Sussex,la,South East,2026-04,0,5
 E07000228,Mid Sussex,la,South East,2026-05,0,9
 E07000228,Mid Sussex,la,South East,2026-06,0,2
+E07000228,Mid Sussex,la,South East,2026-07,0,9
+E07000228,Mid Sussex,la,South East,2026-08,0,7
+E07000228,Mid Sussex,la,South East,2026-09,0,9
 E06000002,Middlesbrough,la,North East,2023-05,0,36
 E06000002,Middlesbrough,la,North East,2023-06,0,47
 E06000002,Middlesbrough,la,North East,2023-07,0,52
@@ -6345,6 +6843,9 @@ E06000002,Middlesbrough,la,North East,2026-03,0,76
 E06000002,Middlesbrough,la,North East,2026-04,0,46
 E06000002,Middlesbrough,la,North East,2026-05,0,57
 E06000002,Middlesbrough,la,North East,2026-06,0,38
+E06000002,Middlesbrough,la,North East,2026-07,0,68
+E06000002,Middlesbrough,la,North East,2026-08,0,60
+E06000002,Middlesbrough,la,North East,2026-09,0,76
 E06000042,Milton Keynes,la,South East,2023-05,0,36
 E06000042,Milton Keynes,la,South East,2023-06,1,53
 E06000042,Milton Keynes,la,South East,2023-07,0,69
@@ -6383,6 +6884,9 @@ E06000042,Milton Keynes,la,South East,2026-03,1,87
 E06000042,Milton Keynes,la,South East,2026-04,2,83
 E06000042,Milton Keynes,la,South East,2026-05,2,90
 E06000042,Milton Keynes,la,South East,2026-06,0,80
+E06000042,Milton Keynes,la,South East,2026-07,0,80
+E06000042,Milton Keynes,la,South East,2026-08,1,97
+E06000042,Milton Keynes,la,South East,2026-09,1,99
 E07000210,Mole Valley,la,South East,2023-05,0,4
 E07000210,Mole Valley,la,South East,2023-06,0,6
 E07000210,Mole Valley,la,South East,2023-07,0,3
@@ -6421,6 +6925,9 @@ E07000210,Mole Valley,la,South East,2026-03,0,1
 E07000210,Mole Valley,la,South East,2026-04,0,2
 E07000210,Mole Valley,la,South East,2026-05,0,2
 E07000210,Mole Valley,la,South East,2026-06,0,2
+E07000210,Mole Valley,la,South East,2026-07,0,2
+E07000210,Mole Valley,la,South East,2026-08,0,1
+E07000210,Mole Valley,la,South East,2026-09,0,1
 E07000091,New Forest,la,South East,2023-05,0,6
 E07000091,New Forest,la,South East,2023-06,0,11
 E07000091,New Forest,la,South East,2023-07,0,12
@@ -6459,6 +6966,9 @@ E07000091,New Forest,la,South East,2026-03,0,8
 E07000091,New Forest,la,South East,2026-04,0,4
 E07000091,New Forest,la,South East,2026-05,0,9
 E07000091,New Forest,la,South East,2026-06,0,10
+E07000091,New Forest,la,South East,2026-07,0,10
+E07000091,New Forest,la,South East,2026-08,0,8
+E07000091,New Forest,la,South East,2026-09,0,10
 E07000175,Newark and Sherwood,la,East Midlands,2023-05,0,6
 E07000175,Newark and Sherwood,la,East Midlands,2023-06,0,3
 E07000175,Newark and Sherwood,la,East Midlands,2023-07,0,5
@@ -6497,6 +7007,9 @@ E07000175,Newark and Sherwood,la,East Midlands,2026-03,0,10
 E07000175,Newark and Sherwood,la,East Midlands,2026-04,0,4
 E07000175,Newark and Sherwood,la,East Midlands,2026-05,0,6
 E07000175,Newark and Sherwood,la,East Midlands,2026-06,0,4
+E07000175,Newark and Sherwood,la,East Midlands,2026-07,0,6
+E07000175,Newark and Sherwood,la,East Midlands,2026-08,0,7
+E07000175,Newark and Sherwood,la,East Midlands,2026-09,0,7
 E08000021,Newcastle upon Tyne,la,North East,2023-05,0,82
 E08000021,Newcastle upon Tyne,la,North East,2023-06,0,86
 E08000021,Newcastle upon Tyne,la,North East,2023-07,0,81
@@ -6535,6 +7048,9 @@ E08000021,Newcastle upon Tyne,la,North East,2026-03,0,87
 E08000021,Newcastle upon Tyne,la,North East,2026-04,0,78
 E08000021,Newcastle upon Tyne,la,North East,2026-05,0,107
 E08000021,Newcastle upon Tyne,la,North East,2026-06,0,90
+E08000021,Newcastle upon Tyne,la,North East,2026-07,0,84
+E08000021,Newcastle upon Tyne,la,North East,2026-08,0,78
+E08000021,Newcastle upon Tyne,la,North East,2026-09,0,78
 E07000195,Newcastle-under-Lyme,la,West Midlands,2023-05,0,17
 E07000195,Newcastle-under-Lyme,la,West Midlands,2023-06,0,12
 E07000195,Newcastle-under-Lyme,la,West Midlands,2023-07,0,18
@@ -6573,6 +7089,9 @@ E07000195,Newcastle-under-Lyme,la,West Midlands,2026-03,0,9
 E07000195,Newcastle-under-Lyme,la,West Midlands,2026-04,0,22
 E07000195,Newcastle-under-Lyme,la,West Midlands,2026-05,0,34
 E07000195,Newcastle-under-Lyme,la,West Midlands,2026-06,0,14
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-07,0,19
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-08,0,20
+E07000195,Newcastle-under-Lyme,la,West Midlands,2026-09,0,29
 E09000025,Newham,la,London,2023-05,1,73
 E09000025,Newham,la,London,2023-06,1,73
 E09000025,Newham,la,London,2023-07,0,83
@@ -6611,6 +7130,9 @@ E09000025,Newham,la,London,2026-03,4,51
 E09000025,Newham,la,London,2026-04,1,54
 E09000025,Newham,la,London,2026-05,1,70
 E09000025,Newham,la,London,2026-06,0,83
+E09000025,Newham,la,London,2026-07,1,110
+E09000025,Newham,la,London,2026-08,3,84
+E09000025,Newham,la,London,2026-09,2,67
 E07000043,North Devon,la,South West,2023-05,0,19
 E07000043,North Devon,la,South West,2023-06,0,21
 E07000043,North Devon,la,South West,2023-07,0,16
@@ -6649,6 +7171,9 @@ E07000043,North Devon,la,South West,2026-03,0,14
 E07000043,North Devon,la,South West,2026-04,0,10
 E07000043,North Devon,la,South West,2026-05,0,15
 E07000043,North Devon,la,South West,2026-06,0,11
+E07000043,North Devon,la,South West,2026-07,0,11
+E07000043,North Devon,la,South West,2026-08,0,9
+E07000043,North Devon,la,South West,2026-09,0,17
 E07000038,North East Derbyshire,la,East Midlands,2023-05,0,0
 E07000038,North East Derbyshire,la,East Midlands,2023-06,0,2
 E07000038,North East Derbyshire,la,East Midlands,2023-07,0,1
@@ -6687,6 +7212,9 @@ E07000038,North East Derbyshire,la,East Midlands,2026-03,0,0
 E07000038,North East Derbyshire,la,East Midlands,2026-04,0,1
 E07000038,North East Derbyshire,la,East Midlands,2026-05,0,1
 E07000038,North East Derbyshire,la,East Midlands,2026-06,0,0
+E07000038,North East Derbyshire,la,East Midlands,2026-07,0,4
+E07000038,North East Derbyshire,la,East Midlands,2026-08,0,9
+E07000038,North East Derbyshire,la,East Midlands,2026-09,0,6
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2023-05,,28
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2023-06,,28
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2023-07,,28
@@ -6725,6 +7253,9 @@ E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-03,0,17
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-04,0,25
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-05,0,23
 E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-06,0,29
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-07,0,33
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-08,0,41
+E06000012,North East Lincolnshire,la,Yorkshire and The Humber,2026-09,0,41
 E07000099,North Hertfordshire,la,East of England,2023-05,0,5
 E07000099,North Hertfordshire,la,East of England,2023-06,0,7
 E07000099,North Hertfordshire,la,East of England,2023-07,0,5
@@ -6763,6 +7294,9 @@ E07000099,North Hertfordshire,la,East of England,2026-03,0,7
 E07000099,North Hertfordshire,la,East of England,2026-04,0,7
 E07000099,North Hertfordshire,la,East of England,2026-05,0,1
 E07000099,North Hertfordshire,la,East of England,2026-06,0,1
+E07000099,North Hertfordshire,la,East of England,2026-07,0,3
+E07000099,North Hertfordshire,la,East of England,2026-08,0,3
+E07000099,North Hertfordshire,la,East of England,2026-09,0,3
 E07000139,North Kesteven,la,East Midlands,2023-05,0,1
 E07000139,North Kesteven,la,East Midlands,2023-06,0,1
 E07000139,North Kesteven,la,East Midlands,2023-07,0,1
@@ -6801,6 +7335,9 @@ E07000139,North Kesteven,la,East Midlands,2026-03,0,0
 E07000139,North Kesteven,la,East Midlands,2026-04,0,0
 E07000139,North Kesteven,la,East Midlands,2026-05,0,0
 E07000139,North Kesteven,la,East Midlands,2026-06,0,0
+E07000139,North Kesteven,la,East Midlands,2026-07,0,0
+E07000139,North Kesteven,la,East Midlands,2026-08,0,0
+E07000139,North Kesteven,la,East Midlands,2026-09,0,0
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2023-05,0,7
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2023-06,0,6
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2023-07,0,5
@@ -6839,6 +7376,9 @@ E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-03,0,15
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-04,0,15
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-05,0,16
 E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-06,0,16
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-07,0,16
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-08,0,16
+E06000013,North Lincolnshire,la,Yorkshire and The Humber,2026-09,0,16
 E07000147,North Norfolk,la,East of England,2023-05,0,7
 E07000147,North Norfolk,la,East of England,2023-06,0,5
 E07000147,North Norfolk,la,East of England,2023-07,0,5
@@ -6877,6 +7417,9 @@ E07000147,North Norfolk,la,East of England,2026-03,0,8
 E07000147,North Norfolk,la,East of England,2026-04,0,8
 E07000147,North Norfolk,la,East of England,2026-05,0,5
 E07000147,North Norfolk,la,East of England,2026-06,0,11
+E07000147,North Norfolk,la,East of England,2026-07,0,7
+E07000147,North Norfolk,la,East of England,2026-08,0,12
+E07000147,North Norfolk,la,East of England,2026-09,0,13
 E06000061,North Northamptonshire,la,East Midlands,2023-05,0,41
 E06000061,North Northamptonshire,la,East Midlands,2023-06,0,28
 E06000061,North Northamptonshire,la,East Midlands,2023-07,0,34
@@ -6915,6 +7458,9 @@ E06000061,North Northamptonshire,la,East Midlands,2026-03,0,26
 E06000061,North Northamptonshire,la,East Midlands,2026-04,0,27
 E06000061,North Northamptonshire,la,East Midlands,2026-05,0,25
 E06000061,North Northamptonshire,la,East Midlands,2026-06,0,32
+E06000061,North Northamptonshire,la,East Midlands,2026-07,0,47
+E06000061,North Northamptonshire,la,East Midlands,2026-08,0,40
+E06000061,North Northamptonshire,la,East Midlands,2026-09,0,47
 E06000024,North Somerset,la,South West,2023-05,0,22
 E06000024,North Somerset,la,South West,2023-06,0,29
 E06000024,North Somerset,la,South West,2023-07,0,18
@@ -6952,7 +7498,10 @@ E06000024,North Somerset,la,South West,2026-02,0,36
 E06000024,North Somerset,la,South West,2026-03,0,36
 E06000024,North Somerset,la,South West,2026-04,0,41
 E06000024,North Somerset,la,South West,2026-05,0,36
-E06000024,North Somerset,la,South West,2026-06,0,36
+E06000024,North Somerset,la,South West,2026-06,0,39
+E06000024,North Somerset,la,South West,2026-07,0,60
+E06000024,North Somerset,la,South West,2026-08,0,55
+E06000024,North Somerset,la,South West,2026-09,0,49
 E08000022,North Tyneside,la,North East,2023-05,,3
 E08000022,North Tyneside,la,North East,2023-06,,3
 E08000022,North Tyneside,la,North East,2023-07,,3
@@ -6991,6 +7540,9 @@ E08000022,North Tyneside,la,North East,2026-03,0,8
 E08000022,North Tyneside,la,North East,2026-04,0,6
 E08000022,North Tyneside,la,North East,2026-05,0,6
 E08000022,North Tyneside,la,North East,2026-06,0,14
+E08000022,North Tyneside,la,North East,2026-07,0,16
+E08000022,North Tyneside,la,North East,2026-08,0,18
+E08000022,North Tyneside,la,North East,2026-09,0,15
 E07000218,North Warwickshire,la,West Midlands,2023-05,0,0
 E07000218,North Warwickshire,la,West Midlands,2023-06,0,0
 E07000218,North Warwickshire,la,West Midlands,2023-07,0,0
@@ -7029,6 +7581,9 @@ E07000218,North Warwickshire,la,West Midlands,2026-03,0,0
 E07000218,North Warwickshire,la,West Midlands,2026-04,0,0
 E07000218,North Warwickshire,la,West Midlands,2026-05,0,0
 E07000218,North Warwickshire,la,West Midlands,2026-06,0,0
+E07000218,North Warwickshire,la,West Midlands,2026-07,0,0
+E07000218,North Warwickshire,la,West Midlands,2026-08,0,0
+E07000218,North Warwickshire,la,West Midlands,2026-09,0,0
 E07000134,North West Leicestershire,la,East Midlands,2023-05,0,5
 E07000134,North West Leicestershire,la,East Midlands,2023-06,0,2
 E07000134,North West Leicestershire,la,East Midlands,2023-07,0,2
@@ -7067,6 +7622,9 @@ E07000134,North West Leicestershire,la,East Midlands,2026-03,0,8
 E07000134,North West Leicestershire,la,East Midlands,2026-04,0,4
 E07000134,North West Leicestershire,la,East Midlands,2026-05,0,4
 E07000134,North West Leicestershire,la,East Midlands,2026-06,0,3
+E07000134,North West Leicestershire,la,East Midlands,2026-07,0,4
+E07000134,North West Leicestershire,la,East Midlands,2026-08,0,4
+E07000134,North West Leicestershire,la,East Midlands,2026-09,0,5
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2023-05,0,27
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2023-06,0,33
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2023-07,0,24
@@ -7105,6 +7663,9 @@ E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-03,1,39
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-04,0,44
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-05,0,46
 E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-06,0,42
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-07,0,41
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-08,0,62
+E06000065,North Yorkshire,la,Yorkshire and The Humber,2026-09,0,58
 E06000057,Northumberland,la,North East,2023-05,0,5
 E06000057,Northumberland,la,North East,2023-06,0,2
 E06000057,Northumberland,la,North East,2023-07,0,2
@@ -7143,6 +7704,9 @@ E06000057,Northumberland,la,North East,2026-03,0,9
 E06000057,Northumberland,la,North East,2026-04,0,9
 E06000057,Northumberland,la,North East,2026-05,0,9
 E06000057,Northumberland,la,North East,2026-06,0,7
+E06000057,Northumberland,la,North East,2026-07,0,17
+E06000057,Northumberland,la,North East,2026-08,0,16
+E06000057,Northumberland,la,North East,2026-09,0,7
 E07000148,Norwich,la,East of England,2023-05,0,26
 E07000148,Norwich,la,East of England,2023-06,1,25
 E07000148,Norwich,la,East of England,2023-07,0,31
@@ -7181,6 +7745,9 @@ E07000148,Norwich,la,East of England,2026-03,1,26
 E07000148,Norwich,la,East of England,2026-04,0,11
 E07000148,Norwich,la,East of England,2026-05,0,16
 E07000148,Norwich,la,East of England,2026-06,0,30
+E07000148,Norwich,la,East of England,2026-07,0,28
+E07000148,Norwich,la,East of England,2026-08,0,25
+E07000148,Norwich,la,East of England,2026-09,0,43
 E06000018,Nottingham,la,East Midlands,2023-05,1,192
 E06000018,Nottingham,la,East Midlands,2023-06,1,184
 E06000018,Nottingham,la,East Midlands,2023-07,2,221
@@ -7219,6 +7786,9 @@ E06000018,Nottingham,la,East Midlands,2026-03,1,128
 E06000018,Nottingham,la,East Midlands,2026-04,1,127
 E06000018,Nottingham,la,East Midlands,2026-05,0,131
 E06000018,Nottingham,la,East Midlands,2026-06,1,169
+E06000018,Nottingham,la,East Midlands,2026-07,1,141
+E06000018,Nottingham,la,East Midlands,2026-08,0,117
+E06000018,Nottingham,la,East Midlands,2026-09,0,101
 E07000219,Nuneaton and Bedworth,la,West Midlands,2023-05,0,1
 E07000219,Nuneaton and Bedworth,la,West Midlands,2023-06,0,1
 E07000219,Nuneaton and Bedworth,la,West Midlands,2023-07,0,3
@@ -7257,6 +7827,9 @@ E07000219,Nuneaton and Bedworth,la,West Midlands,2026-03,0,17
 E07000219,Nuneaton and Bedworth,la,West Midlands,2026-04,0,16
 E07000219,Nuneaton and Bedworth,la,West Midlands,2026-05,0,14
 E07000219,Nuneaton and Bedworth,la,West Midlands,2026-06,0,25
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-07,0,27
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-08,0,22
+E07000219,Nuneaton and Bedworth,la,West Midlands,2026-09,0,23
 E07000135,Oadby and Wigston,la,East Midlands,2023-05,0,0
 E07000135,Oadby and Wigston,la,East Midlands,2023-06,0,0
 E07000135,Oadby and Wigston,la,East Midlands,2023-07,0,0
@@ -7295,6 +7868,9 @@ E07000135,Oadby and Wigston,la,East Midlands,2026-03,1,2
 E07000135,Oadby and Wigston,la,East Midlands,2026-04,1,4
 E07000135,Oadby and Wigston,la,East Midlands,2026-05,0,2
 E07000135,Oadby and Wigston,la,East Midlands,2026-06,0,1
+E07000135,Oadby and Wigston,la,East Midlands,2026-07,0,1
+E07000135,Oadby and Wigston,la,East Midlands,2026-08,0,1
+E07000135,Oadby and Wigston,la,East Midlands,2026-09,0,2
 E08000004,Oldham,la,North West,2023-05,1,7
 E08000004,Oldham,la,North West,2023-06,0,7
 E08000004,Oldham,la,North West,2023-07,1,11
@@ -7333,6 +7909,9 @@ E08000004,Oldham,la,North West,2026-03,6,9
 E08000004,Oldham,la,North West,2026-04,11,21
 E08000004,Oldham,la,North West,2026-05,4,20
 E08000004,Oldham,la,North West,2026-06,7,20
+E08000004,Oldham,la,North West,2026-07,1,10
+E08000004,Oldham,la,North West,2026-08,3,8
+E08000004,Oldham,la,North West,2026-09,0,2
 E07000178,Oxford,la,South East,2023-05,0,80
 E07000178,Oxford,la,South East,2023-06,1,74
 E07000178,Oxford,la,South East,2023-07,1,59
@@ -7371,6 +7950,9 @@ E07000178,Oxford,la,South East,2026-03,0,55
 E07000178,Oxford,la,South East,2026-04,0,55
 E07000178,Oxford,la,South East,2026-05,0,57
 E07000178,Oxford,la,South East,2026-06,0,62
+E07000178,Oxford,la,South East,2026-07,0,63
+E07000178,Oxford,la,South East,2026-08,2,55
+E07000178,Oxford,la,South East,2026-09,0,44
 E07000122,Pendle,la,North West,2023-05,0,0
 E07000122,Pendle,la,North West,2023-06,0,0
 E07000122,Pendle,la,North West,2023-07,0,1
@@ -7409,6 +7991,9 @@ E07000122,Pendle,la,North West,2026-03,0,2
 E07000122,Pendle,la,North West,2026-04,0,0
 E07000122,Pendle,la,North West,2026-05,0,2
 E07000122,Pendle,la,North West,2026-06,0,4
+E07000122,Pendle,la,North West,2026-07,0,7
+E07000122,Pendle,la,North West,2026-08,0,5
+E07000122,Pendle,la,North West,2026-09,0,4
 E06000031,Peterborough,la,East of England,2023-05,0,67
 E06000031,Peterborough,la,East of England,2023-06,0,78
 E06000031,Peterborough,la,East of England,2023-07,0,76
@@ -7447,6 +8032,9 @@ E06000031,Peterborough,la,East of England,2026-03,3,59
 E06000031,Peterborough,la,East of England,2026-04,1,80
 E06000031,Peterborough,la,East of England,2026-05,1,71
 E06000031,Peterborough,la,East of England,2026-06,1,91
+E06000031,Peterborough,la,East of England,2026-07,1,60
+E06000031,Peterborough,la,East of England,2026-08,0,61
+E06000031,Peterborough,la,East of England,2026-09,1,67
 E06000026,Plymouth,la,South West,2023-05,0,45
 E06000026,Plymouth,la,South West,2023-06,0,75
 E06000026,Plymouth,la,South West,2023-07,0,82
@@ -7485,6 +8073,9 @@ E06000026,Plymouth,la,South West,2026-03,0,55
 E06000026,Plymouth,la,South West,2026-04,0,69
 E06000026,Plymouth,la,South West,2026-05,0,77
 E06000026,Plymouth,la,South West,2026-06,0,95
+E06000026,Plymouth,la,South West,2026-07,0,106
+E06000026,Plymouth,la,South West,2026-08,0,101
+E06000026,Plymouth,la,South West,2026-09,0,93
 E06000044,Portsmouth,la,South East,2023-05,1,42
 E06000044,Portsmouth,la,South East,2023-06,1,56
 E06000044,Portsmouth,la,South East,2023-07,2,69
@@ -7523,6 +8114,9 @@ E06000044,Portsmouth,la,South East,2026-03,2,49
 E06000044,Portsmouth,la,South East,2026-04,1,50
 E06000044,Portsmouth,la,South East,2026-05,0,63
 E06000044,Portsmouth,la,South East,2026-06,0,67
+E06000044,Portsmouth,la,South East,2026-07,0,86
+E06000044,Portsmouth,la,South East,2026-08,0,96
+E06000044,Portsmouth,la,South East,2026-09,0,74
 E07000123,Preston,la,North West,2023-05,0,55
 E07000123,Preston,la,North West,2023-06,0,65
 E07000123,Preston,la,North West,2023-07,0,49
@@ -7561,6 +8155,9 @@ E07000123,Preston,la,North West,2026-03,1,35
 E07000123,Preston,la,North West,2026-04,0,23
 E07000123,Preston,la,North West,2026-05,1,21
 E07000123,Preston,la,North West,2026-06,1,44
+E07000123,Preston,la,North West,2026-07,0,30
+E07000123,Preston,la,North West,2026-08,0,35
+E07000123,Preston,la,North West,2026-09,0,32
 E06000038,Reading,la,South East,2023-05,0,56
 E06000038,Reading,la,South East,2023-06,0,73
 E06000038,Reading,la,South East,2023-07,0,71
@@ -7599,6 +8196,9 @@ E06000038,Reading,la,South East,2026-03,1,75
 E06000038,Reading,la,South East,2026-04,0,84
 E06000038,Reading,la,South East,2026-05,0,75
 E06000038,Reading,la,South East,2026-06,0,89
+E06000038,Reading,la,South East,2026-07,1,96
+E06000038,Reading,la,South East,2026-08,1,71
+E06000038,Reading,la,South East,2026-09,2,73
 E09000026,Redbridge,la,London,2023-05,0,33
 E09000026,Redbridge,la,London,2023-06,2,28
 E09000026,Redbridge,la,London,2023-07,1,37
@@ -7637,6 +8237,9 @@ E09000026,Redbridge,la,London,2026-03,1,47
 E09000026,Redbridge,la,London,2026-04,1,56
 E09000026,Redbridge,la,London,2026-05,2,52
 E09000026,Redbridge,la,London,2026-06,0,49
+E09000026,Redbridge,la,London,2026-07,0,65
+E09000026,Redbridge,la,London,2026-08,0,42
+E09000026,Redbridge,la,London,2026-09,0,40
 E06000003,Redcar and Cleveland,la,North East,2023-05,0,3
 E06000003,Redcar and Cleveland,la,North East,2023-06,0,3
 E06000003,Redcar and Cleveland,la,North East,2023-07,0,3
@@ -7675,6 +8278,9 @@ E06000003,Redcar and Cleveland,la,North East,2026-03,0,2
 E06000003,Redcar and Cleveland,la,North East,2026-04,0,9
 E06000003,Redcar and Cleveland,la,North East,2026-05,0,9
 E06000003,Redcar and Cleveland,la,North East,2026-06,0,5
+E06000003,Redcar and Cleveland,la,North East,2026-07,0,17
+E06000003,Redcar and Cleveland,la,North East,2026-08,0,22
+E06000003,Redcar and Cleveland,la,North East,2026-09,0,6
 E07000236,Redditch,la,West Midlands,2023-05,0,6
 E07000236,Redditch,la,West Midlands,2023-06,0,8
 E07000236,Redditch,la,West Midlands,2023-07,0,4
@@ -7713,6 +8319,9 @@ E07000236,Redditch,la,West Midlands,2026-03,0,6
 E07000236,Redditch,la,West Midlands,2026-04,0,6
 E07000236,Redditch,la,West Midlands,2026-05,0,5
 E07000236,Redditch,la,West Midlands,2026-06,0,6
+E07000236,Redditch,la,West Midlands,2026-07,0,11
+E07000236,Redditch,la,West Midlands,2026-08,0,8
+E07000236,Redditch,la,West Midlands,2026-09,0,12
 E07000211,Reigate and Banstead,la,South East,2023-05,0,6
 E07000211,Reigate and Banstead,la,South East,2023-06,0,6
 E07000211,Reigate and Banstead,la,South East,2023-07,0,6
@@ -7751,6 +8360,9 @@ E07000211,Reigate and Banstead,la,South East,2026-03,1,8
 E07000211,Reigate and Banstead,la,South East,2026-04,1,8
 E07000211,Reigate and Banstead,la,South East,2026-05,1,9
 E07000211,Reigate and Banstead,la,South East,2026-06,0,8
+E07000211,Reigate and Banstead,la,South East,2026-07,0,8
+E07000211,Reigate and Banstead,la,South East,2026-08,0,8
+E07000211,Reigate and Banstead,la,South East,2026-09,1,10
 E07000124,Ribble Valley,la,North West,2023-05,,0
 E07000124,Ribble Valley,la,North West,2023-06,0,2
 E07000124,Ribble Valley,la,North West,2023-07,0,2
@@ -7789,6 +8401,9 @@ E07000124,Ribble Valley,la,North West,2026-03,0,3
 E07000124,Ribble Valley,la,North West,2026-04,0,3
 E07000124,Ribble Valley,la,North West,2026-05,0,3
 E07000124,Ribble Valley,la,North West,2026-06,0,5
+E07000124,Ribble Valley,la,North West,2026-07,0,3
+E07000124,Ribble Valley,la,North West,2026-08,0,3
+E07000124,Ribble Valley,la,North West,2026-09,0,3
 E09000027,Richmond upon Thames,la,London,2023-05,0,9
 E09000027,Richmond upon Thames,la,London,2023-06,0,25
 E09000027,Richmond upon Thames,la,London,2023-07,0,13
@@ -7827,6 +8442,9 @@ E09000027,Richmond upon Thames,la,London,2026-03,0,12
 E09000027,Richmond upon Thames,la,London,2026-04,0,15
 E09000027,Richmond upon Thames,la,London,2026-05,0,25
 E09000027,Richmond upon Thames,la,London,2026-06,0,17
+E09000027,Richmond upon Thames,la,London,2026-07,0,25
+E09000027,Richmond upon Thames,la,London,2026-08,0,14
+E09000027,Richmond upon Thames,la,London,2026-09,0,21
 E08000005,Rochdale,la,North West,2023-05,0,10
 E08000005,Rochdale,la,North West,2023-06,1,27
 E08000005,Rochdale,la,North West,2023-07,2,20
@@ -7865,6 +8483,9 @@ E08000005,Rochdale,la,North West,2026-03,0,9
 E08000005,Rochdale,la,North West,2026-04,0,18
 E08000005,Rochdale,la,North West,2026-05,0,23
 E08000005,Rochdale,la,North West,2026-06,0,18
+E08000005,Rochdale,la,North West,2026-07,0,22
+E08000005,Rochdale,la,North West,2026-08,0,31
+E08000005,Rochdale,la,North West,2026-09,0,27
 E07000075,Rochford,la,East of England,2023-05,0,2
 E07000075,Rochford,la,East of England,2023-06,0,2
 E07000075,Rochford,la,East of England,2023-07,0,2
@@ -7903,6 +8524,9 @@ E07000075,Rochford,la,East of England,2026-03,0,1
 E07000075,Rochford,la,East of England,2026-04,0,2
 E07000075,Rochford,la,East of England,2026-05,0,2
 E07000075,Rochford,la,East of England,2026-06,0,7
+E07000075,Rochford,la,East of England,2026-07,0,6
+E07000075,Rochford,la,East of England,2026-08,0,3
+E07000075,Rochford,la,East of England,2026-09,0,4
 E07000125,Rossendale,la,North West,2023-05,0,4
 E07000125,Rossendale,la,North West,2023-06,0,2
 E07000125,Rossendale,la,North West,2023-07,0,2
@@ -7941,6 +8565,9 @@ E07000125,Rossendale,la,North West,2026-03,0,0
 E07000125,Rossendale,la,North West,2026-04,0,2
 E07000125,Rossendale,la,North West,2026-05,0,0
 E07000125,Rossendale,la,North West,2026-06,0,1
+E07000125,Rossendale,la,North West,2026-07,0,0
+E07000125,Rossendale,la,North West,2026-08,0,0
+E07000125,Rossendale,la,North West,2026-09,0,0
 E07000064,Rother,la,South East,2023-05,0,9
 E07000064,Rother,la,South East,2023-06,0,7
 E07000064,Rother,la,South East,2023-07,0,8
@@ -7979,6 +8606,9 @@ E07000064,Rother,la,South East,2026-03,0,11
 E07000064,Rother,la,South East,2026-04,0,14
 E07000064,Rother,la,South East,2026-05,0,10
 E07000064,Rother,la,South East,2026-06,0,12
+E07000064,Rother,la,South East,2026-07,0,16
+E07000064,Rother,la,South East,2026-08,0,17
+E07000064,Rother,la,South East,2026-09,0,11
 E08000018,Rotherham,la,Yorkshire and The Humber,2023-05,0,7
 E08000018,Rotherham,la,Yorkshire and The Humber,2023-06,0,8
 E08000018,Rotherham,la,Yorkshire and The Humber,2023-07,0,15
@@ -8017,6 +8647,9 @@ E08000018,Rotherham,la,Yorkshire and The Humber,2026-03,0,11
 E08000018,Rotherham,la,Yorkshire and The Humber,2026-04,0,21
 E08000018,Rotherham,la,Yorkshire and The Humber,2026-05,0,21
 E08000018,Rotherham,la,Yorkshire and The Humber,2026-06,0,18
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-07,0,13
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-08,0,11
+E08000018,Rotherham,la,Yorkshire and The Humber,2026-09,0,16
 E07000220,Rugby,la,West Midlands,2023-05,0,8
 E07000220,Rugby,la,West Midlands,2023-06,0,9
 E07000220,Rugby,la,West Midlands,2023-07,0,9
@@ -8055,6 +8688,9 @@ E07000220,Rugby,la,West Midlands,2026-03,0,17
 E07000220,Rugby,la,West Midlands,2026-04,0,14
 E07000220,Rugby,la,West Midlands,2026-05,0,12
 E07000220,Rugby,la,West Midlands,2026-06,0,16
+E07000220,Rugby,la,West Midlands,2026-07,0,17
+E07000220,Rugby,la,West Midlands,2026-08,0,18
+E07000220,Rugby,la,West Midlands,2026-09,0,17
 E07000212,Runnymede,la,South East,2023-05,0,1
 E07000212,Runnymede,la,South East,2023-06,0,2
 E07000212,Runnymede,la,South East,2023-07,0,1
@@ -8093,6 +8729,9 @@ E07000212,Runnymede,la,South East,2026-03,0,3
 E07000212,Runnymede,la,South East,2026-04,0,4
 E07000212,Runnymede,la,South East,2026-05,0,5
 E07000212,Runnymede,la,South East,2026-06,0,6
+E07000212,Runnymede,la,South East,2026-07,0,7
+E07000212,Runnymede,la,South East,2026-08,0,4
+E07000212,Runnymede,la,South East,2026-09,0,5
 E07000176,Rushcliffe,la,East Midlands,2023-05,0,2
 E07000176,Rushcliffe,la,East Midlands,2023-06,0,9
 E07000176,Rushcliffe,la,East Midlands,2023-07,0,11
@@ -8131,6 +8770,9 @@ E07000176,Rushcliffe,la,East Midlands,2026-03,0,9
 E07000176,Rushcliffe,la,East Midlands,2026-04,0,9
 E07000176,Rushcliffe,la,East Midlands,2026-05,0,12
 E07000176,Rushcliffe,la,East Midlands,2026-06,0,7
+E07000176,Rushcliffe,la,East Midlands,2026-07,0,17
+E07000176,Rushcliffe,la,East Midlands,2026-08,0,9
+E07000176,Rushcliffe,la,East Midlands,2026-09,0,17
 E07000092,Rushmoor,la,South East,2023-05,0,7
 E07000092,Rushmoor,la,South East,2023-06,0,5
 E07000092,Rushmoor,la,South East,2023-07,0,6
@@ -8169,6 +8811,9 @@ E07000092,Rushmoor,la,South East,2026-03,0,7
 E07000092,Rushmoor,la,South East,2026-04,0,6
 E07000092,Rushmoor,la,South East,2026-05,0,8
 E07000092,Rushmoor,la,South East,2026-06,0,9
+E07000092,Rushmoor,la,South East,2026-07,0,4
+E07000092,Rushmoor,la,South East,2026-08,0,5
+E07000092,Rushmoor,la,South East,2026-09,0,8
 E06000017,Rutland,la,East Midlands,2023-05,0,0
 E06000017,Rutland,la,East Midlands,2023-06,0,0
 E06000017,Rutland,la,East Midlands,2023-07,0,0
@@ -8207,6 +8852,9 @@ E06000017,Rutland,la,East Midlands,2026-03,0,1
 E06000017,Rutland,la,East Midlands,2026-04,0,3
 E06000017,Rutland,la,East Midlands,2026-05,0,1
 E06000017,Rutland,la,East Midlands,2026-06,0,0
+E06000017,Rutland,la,East Midlands,2026-07,0,0
+E06000017,Rutland,la,East Midlands,2026-08,0,0
+E06000017,Rutland,la,East Midlands,2026-09,0,0
 E08000006,Salford,la,North West,2023-05,0,13
 E08000006,Salford,la,North West,2023-06,0,9
 E08000006,Salford,la,North West,2023-07,0,12
@@ -8245,6 +8893,9 @@ E08000006,Salford,la,North West,2026-03,0,17
 E08000006,Salford,la,North West,2026-04,0,23
 E08000006,Salford,la,North West,2026-05,0,27
 E08000006,Salford,la,North West,2026-06,1,17
+E08000006,Salford,la,North West,2026-07,1,41
+E08000006,Salford,la,North West,2026-08,2,46
+E08000006,Salford,la,North West,2026-09,2,41
 E08000028,Sandwell,la,West Midlands,2023-05,,3
 E08000028,Sandwell,la,West Midlands,2023-06,,3
 E08000028,Sandwell,la,West Midlands,2023-07,,3
@@ -8283,6 +8934,9 @@ E08000028,Sandwell,la,West Midlands,2026-03,1,43
 E08000028,Sandwell,la,West Midlands,2026-04,1,43
 E08000028,Sandwell,la,West Midlands,2026-05,0,28
 E08000028,Sandwell,la,West Midlands,2026-06,0,40
+E08000028,Sandwell,la,West Midlands,2026-07,0,40
+E08000028,Sandwell,la,West Midlands,2026-08,0,37
+E08000028,Sandwell,la,West Midlands,2026-09,0,40
 E08000014,Sefton,la,North West,2023-05,0,6
 E08000014,Sefton,la,North West,2023-06,0,7
 E08000014,Sefton,la,North West,2023-07,0,6
@@ -8321,6 +8975,9 @@ E08000014,Sefton,la,North West,2026-03,0,16
 E08000014,Sefton,la,North West,2026-04,0,15
 E08000014,Sefton,la,North West,2026-05,0,17
 E08000014,Sefton,la,North West,2026-06,0,19
+E08000014,Sefton,la,North West,2026-07,0,23
+E08000014,Sefton,la,North West,2026-08,0,20
+E08000014,Sefton,la,North West,2026-09,0,10
 E07000111,Sevenoaks,la,South East,2023-05,,2
 E07000111,Sevenoaks,la,South East,2023-06,0,2
 E07000111,Sevenoaks,la,South East,2023-07,0,2
@@ -8359,6 +9016,9 @@ E07000111,Sevenoaks,la,South East,2026-03,0,8
 E07000111,Sevenoaks,la,South East,2026-04,0,3
 E07000111,Sevenoaks,la,South East,2026-05,0,3
 E07000111,Sevenoaks,la,South East,2026-06,0,5
+E07000111,Sevenoaks,la,South East,2026-07,0,9
+E07000111,Sevenoaks,la,South East,2026-08,0,7
+E07000111,Sevenoaks,la,South East,2026-09,0,9
 E08000039,Sheffield,la,Yorkshire and The Humber,2023-05,0,120
 E08000039,Sheffield,la,Yorkshire and The Humber,2023-06,0,130
 E08000039,Sheffield,la,Yorkshire and The Humber,2023-07,0,117
@@ -8397,6 +9057,9 @@ E08000039,Sheffield,la,Yorkshire and The Humber,2026-03,9,150
 E08000039,Sheffield,la,Yorkshire and The Humber,2026-04,11,147
 E08000039,Sheffield,la,Yorkshire and The Humber,2026-05,0,146
 E08000039,Sheffield,la,Yorkshire and The Humber,2026-06,0,150
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-07,1,145
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-08,2,133
+E08000039,Sheffield,la,Yorkshire and The Humber,2026-09,1,127
 E06000051,Shropshire,la,West Midlands,2023-05,0,21
 E06000051,Shropshire,la,West Midlands,2023-06,0,24
 E06000051,Shropshire,la,West Midlands,2023-07,0,25
@@ -8435,6 +9098,9 @@ E06000051,Shropshire,la,West Midlands,2026-03,0,17
 E06000051,Shropshire,la,West Midlands,2026-04,0,15
 E06000051,Shropshire,la,West Midlands,2026-05,0,18
 E06000051,Shropshire,la,West Midlands,2026-06,0,15
+E06000051,Shropshire,la,West Midlands,2026-07,0,22
+E06000051,Shropshire,la,West Midlands,2026-08,0,27
+E06000051,Shropshire,la,West Midlands,2026-09,0,18
 E06000039,Slough,la,South East,2023-05,1,37
 E06000039,Slough,la,South East,2023-06,1,38
 E06000039,Slough,la,South East,2023-07,4,46
@@ -8473,6 +9139,9 @@ E06000039,Slough,la,South East,2026-03,0,16
 E06000039,Slough,la,South East,2026-04,0,17
 E06000039,Slough,la,South East,2026-05,0,21
 E06000039,Slough,la,South East,2026-06,0,20
+E06000039,Slough,la,South East,2026-07,0,23
+E06000039,Slough,la,South East,2026-08,0,22
+E06000039,Slough,la,South East,2026-09,0,19
 E08000029,Solihull,la,West Midlands,2023-05,0,17
 E08000029,Solihull,la,West Midlands,2023-06,0,16
 E08000029,Solihull,la,West Midlands,2023-07,0,19
@@ -8511,6 +9180,9 @@ E08000029,Solihull,la,West Midlands,2026-03,0,25
 E08000029,Solihull,la,West Midlands,2026-04,1,32
 E08000029,Solihull,la,West Midlands,2026-05,0,36
 E08000029,Solihull,la,West Midlands,2026-06,0,21
+E08000029,Solihull,la,West Midlands,2026-07,1,24
+E08000029,Solihull,la,West Midlands,2026-08,0,27
+E08000029,Solihull,la,West Midlands,2026-09,0,21
 E06000066,Somerset,la,South West,2023-05,0,120
 E06000066,Somerset,la,South West,2023-06,0,100
 E06000066,Somerset,la,South West,2023-07,0,108
@@ -8549,6 +9221,9 @@ E06000066,Somerset,la,South West,2026-03,0,124
 E06000066,Somerset,la,South West,2026-04,0,136
 E06000066,Somerset,la,South West,2026-05,0,155
 E06000066,Somerset,la,South West,2026-06,0,131
+E06000066,Somerset,la,South West,2026-07,0,156
+E06000066,Somerset,la,South West,2026-08,0,130
+E06000066,Somerset,la,South West,2026-09,0,171
 E07000012,South Cambridgeshire,la,East of England,2023-05,0,3
 E07000012,South Cambridgeshire,la,East of England,2023-06,0,3
 E07000012,South Cambridgeshire,la,East of England,2023-07,0,2
@@ -8587,6 +9262,9 @@ E07000012,South Cambridgeshire,la,East of England,2026-03,0,6
 E07000012,South Cambridgeshire,la,East of England,2026-04,0,3
 E07000012,South Cambridgeshire,la,East of England,2026-05,0,7
 E07000012,South Cambridgeshire,la,East of England,2026-06,0,4
+E07000012,South Cambridgeshire,la,East of England,2026-07,0,5
+E07000012,South Cambridgeshire,la,East of England,2026-08,0,7
+E07000012,South Cambridgeshire,la,East of England,2026-09,0,7
 E07000039,South Derbyshire,la,East Midlands,2023-05,0,1
 E07000039,South Derbyshire,la,East Midlands,2023-06,0,0
 E07000039,South Derbyshire,la,East Midlands,2023-07,0,0
@@ -8625,6 +9303,9 @@ E07000039,South Derbyshire,la,East Midlands,2026-03,0,0
 E07000039,South Derbyshire,la,East Midlands,2026-04,0,2
 E07000039,South Derbyshire,la,East Midlands,2026-05,0,0
 E07000039,South Derbyshire,la,East Midlands,2026-06,0,0
+E07000039,South Derbyshire,la,East Midlands,2026-07,0,0
+E07000039,South Derbyshire,la,East Midlands,2026-08,0,5
+E07000039,South Derbyshire,la,East Midlands,2026-09,0,0
 E06000025,South Gloucestershire,la,South West,2023-05,3,7
 E06000025,South Gloucestershire,la,South West,2023-06,0,5
 E06000025,South Gloucestershire,la,South West,2023-07,1,4
@@ -8663,6 +9344,9 @@ E06000025,South Gloucestershire,la,South West,2026-03,0,7
 E06000025,South Gloucestershire,la,South West,2026-04,0,2
 E06000025,South Gloucestershire,la,South West,2026-05,0,7
 E06000025,South Gloucestershire,la,South West,2026-06,0,2
+E06000025,South Gloucestershire,la,South West,2026-07,0,6
+E06000025,South Gloucestershire,la,South West,2026-08,0,7
+E06000025,South Gloucestershire,la,South West,2026-09,0,8
 E07000044,South Hams,la,South West,2023-05,0,7
 E07000044,South Hams,la,South West,2023-06,0,6
 E07000044,South Hams,la,South West,2023-07,0,8
@@ -8701,6 +9385,9 @@ E07000044,South Hams,la,South West,2026-03,0,9
 E07000044,South Hams,la,South West,2026-04,0,11
 E07000044,South Hams,la,South West,2026-05,0,13
 E07000044,South Hams,la,South West,2026-06,0,15
+E07000044,South Hams,la,South West,2026-07,0,18
+E07000044,South Hams,la,South West,2026-08,0,20
+E07000044,South Hams,la,South West,2026-09,0,15
 E07000140,South Holland,la,East Midlands,2023-05,0,8
 E07000140,South Holland,la,East Midlands,2023-06,0,5
 E07000140,South Holland,la,East Midlands,2023-07,0,7
@@ -8739,6 +9426,9 @@ E07000140,South Holland,la,East Midlands,2026-03,0,8
 E07000140,South Holland,la,East Midlands,2026-04,0,21
 E07000140,South Holland,la,East Midlands,2026-05,0,24
 E07000140,South Holland,la,East Midlands,2026-06,0,25
+E07000140,South Holland,la,East Midlands,2026-07,0,18
+E07000140,South Holland,la,East Midlands,2026-08,0,19
+E07000140,South Holland,la,East Midlands,2026-09,0,14
 E07000141,South Kesteven,la,East Midlands,2023-05,0,6
 E07000141,South Kesteven,la,East Midlands,2023-06,0,12
 E07000141,South Kesteven,la,East Midlands,2023-07,0,10
@@ -8777,6 +9467,9 @@ E07000141,South Kesteven,la,East Midlands,2026-03,0,5
 E07000141,South Kesteven,la,East Midlands,2026-04,0,4
 E07000141,South Kesteven,la,East Midlands,2026-05,0,3
 E07000141,South Kesteven,la,East Midlands,2026-06,0,4
+E07000141,South Kesteven,la,East Midlands,2026-07,0,3
+E07000141,South Kesteven,la,East Midlands,2026-08,0,3
+E07000141,South Kesteven,la,East Midlands,2026-09,0,2
 E07000149,South Norfolk,la,East of England,2023-05,0,2
 E07000149,South Norfolk,la,East of England,2023-06,0,11
 E07000149,South Norfolk,la,East of England,2023-07,0,0
@@ -8815,6 +9508,9 @@ E07000149,South Norfolk,la,East of England,2026-03,0,2
 E07000149,South Norfolk,la,East of England,2026-04,0,4
 E07000149,South Norfolk,la,East of England,2026-05,0,3
 E07000149,South Norfolk,la,East of England,2026-06,0,3
+E07000149,South Norfolk,la,East of England,2026-07,0,4
+E07000149,South Norfolk,la,East of England,2026-08,0,5
+E07000149,South Norfolk,la,East of England,2026-09,0,5
 E07000179,South Oxfordshire,la,South East,2023-05,0,5
 E07000179,South Oxfordshire,la,South East,2023-06,0,6
 E07000179,South Oxfordshire,la,South East,2023-07,0,6
@@ -8853,6 +9549,9 @@ E07000179,South Oxfordshire,la,South East,2026-03,0,10
 E07000179,South Oxfordshire,la,South East,2026-04,0,11
 E07000179,South Oxfordshire,la,South East,2026-05,0,9
 E07000179,South Oxfordshire,la,South East,2026-06,0,7
+E07000179,South Oxfordshire,la,South East,2026-07,0,12
+E07000179,South Oxfordshire,la,South East,2026-08,0,15
+E07000179,South Oxfordshire,la,South East,2026-09,0,11
 E07000126,South Ribble,la,North West,2023-05,0,1
 E07000126,South Ribble,la,North West,2023-06,0,1
 E07000126,South Ribble,la,North West,2023-07,0,2
@@ -8891,6 +9590,9 @@ E07000126,South Ribble,la,North West,2026-03,0,1
 E07000126,South Ribble,la,North West,2026-04,0,1
 E07000126,South Ribble,la,North West,2026-05,0,1
 E07000126,South Ribble,la,North West,2026-06,0,1
+E07000126,South Ribble,la,North West,2026-07,0,1
+E07000126,South Ribble,la,North West,2026-08,0,2
+E07000126,South Ribble,la,North West,2026-09,0,1
 E07000196,South Staffordshire,la,West Midlands,2023-05,0,0
 E07000196,South Staffordshire,la,West Midlands,2023-06,0,0
 E07000196,South Staffordshire,la,West Midlands,2023-07,0,0
@@ -8929,6 +9631,9 @@ E07000196,South Staffordshire,la,West Midlands,2026-03,0,0
 E07000196,South Staffordshire,la,West Midlands,2026-04,0,0
 E07000196,South Staffordshire,la,West Midlands,2026-05,0,0
 E07000196,South Staffordshire,la,West Midlands,2026-06,0,0
+E07000196,South Staffordshire,la,West Midlands,2026-07,0,0
+E07000196,South Staffordshire,la,West Midlands,2026-08,0,0
+E07000196,South Staffordshire,la,West Midlands,2026-09,0,0
 E08000023,South Tyneside,la,North East,2023-05,0,30
 E08000023,South Tyneside,la,North East,2023-06,0,18
 E08000023,South Tyneside,la,North East,2023-07,0,25
@@ -8967,6 +9672,9 @@ E08000023,South Tyneside,la,North East,2026-03,0,30
 E08000023,South Tyneside,la,North East,2026-04,0,20
 E08000023,South Tyneside,la,North East,2026-05,0,19
 E08000023,South Tyneside,la,North East,2026-06,0,14
+E08000023,South Tyneside,la,North East,2026-07,0,13
+E08000023,South Tyneside,la,North East,2026-08,0,12
+E08000023,South Tyneside,la,North East,2026-09,0,16
 E06000045,Southampton,la,South East,2023-05,0,105
 E06000045,Southampton,la,South East,2023-06,1,85
 E06000045,Southampton,la,South East,2023-07,0,72
@@ -9005,6 +9713,9 @@ E06000045,Southampton,la,South East,2026-03,0,68
 E06000045,Southampton,la,South East,2026-04,0,65
 E06000045,Southampton,la,South East,2026-05,0,42
 E06000045,Southampton,la,South East,2026-06,0,52
+E06000045,Southampton,la,South East,2026-07,0,50
+E06000045,Southampton,la,South East,2026-08,0,57
+E06000045,Southampton,la,South East,2026-09,0,59
 E06000033,Southend-on-Sea,la,East of England,2023-05,0,51
 E06000033,Southend-on-Sea,la,East of England,2023-06,0,67
 E06000033,Southend-on-Sea,la,East of England,2023-07,0,63
@@ -9043,6 +9754,9 @@ E06000033,Southend-on-Sea,la,East of England,2026-03,0,54
 E06000033,Southend-on-Sea,la,East of England,2026-04,0,71
 E06000033,Southend-on-Sea,la,East of England,2026-05,0,84
 E06000033,Southend-on-Sea,la,East of England,2026-06,0,83
+E06000033,Southend-on-Sea,la,East of England,2026-07,0,99
+E06000033,Southend-on-Sea,la,East of England,2026-08,0,72
+E06000033,Southend-on-Sea,la,East of England,2026-09,0,89
 E09000028,Southwark,la,London,2023-05,3,71
 E09000028,Southwark,la,London,2023-06,0,27
 E09000028,Southwark,la,London,2023-07,0,19
@@ -9081,6 +9795,9 @@ E09000028,Southwark,la,London,2026-03,0,90
 E09000028,Southwark,la,London,2026-04,0,96
 E09000028,Southwark,la,London,2026-05,1,78
 E09000028,Southwark,la,London,2026-06,2,100
+E09000028,Southwark,la,London,2026-07,2,103
+E09000028,Southwark,la,London,2026-08,1,92
+E09000028,Southwark,la,London,2026-09,1,109
 E07000213,Spelthorne,la,South East,2023-05,0,3
 E07000213,Spelthorne,la,South East,2023-06,0,6
 E07000213,Spelthorne,la,South East,2023-07,0,6
@@ -9119,6 +9836,9 @@ E07000213,Spelthorne,la,South East,2026-03,0,4
 E07000213,Spelthorne,la,South East,2026-04,0,4
 E07000213,Spelthorne,la,South East,2026-05,0,4
 E07000213,Spelthorne,la,South East,2026-06,0,5
+E07000213,Spelthorne,la,South East,2026-07,0,3
+E07000213,Spelthorne,la,South East,2026-08,0,9
+E07000213,Spelthorne,la,South East,2026-09,0,3
 E07000240,St Albans,la,East of England,2023-05,0,13
 E07000240,St Albans,la,East of England,2023-06,0,11
 E07000240,St Albans,la,East of England,2023-07,0,15
@@ -9157,6 +9877,9 @@ E07000240,St Albans,la,East of England,2026-03,0,12
 E07000240,St Albans,la,East of England,2026-04,0,13
 E07000240,St Albans,la,East of England,2026-05,0,10
 E07000240,St Albans,la,East of England,2026-06,0,12
+E07000240,St Albans,la,East of England,2026-07,0,12
+E07000240,St Albans,la,East of England,2026-08,0,12
+E07000240,St Albans,la,East of England,2026-09,0,12
 E08000013,St. Helens,la,North West,2023-05,0,31
 E08000013,St. Helens,la,North West,2023-06,0,24
 E08000013,St. Helens,la,North West,2023-07,0,27
@@ -9177,7 +9900,7 @@ E08000013,St. Helens,la,North West,2024-09,0,57
 E08000013,St. Helens,la,North West,2024-10,1,54
 E08000013,St. Helens,la,North West,2024-11,1,33
 E08000013,St. Helens,la,North West,2024-12,0,39
-E08000013,St. Helens,la,North West,2025-01,0,33
+E08000013,St. Helens,la,North West,2025-01,6,33
 E08000013,St. Helens,la,North West,2025-02,0,42
 E08000013,St. Helens,la,North West,2025-03,0,56
 E08000013,St. Helens,la,North West,2025-04,13,55
@@ -9195,6 +9918,9 @@ E08000013,St. Helens,la,North West,2026-03,2,31
 E08000013,St. Helens,la,North West,2026-04,3,51
 E08000013,St. Helens,la,North West,2026-05,7,59
 E08000013,St. Helens,la,North West,2026-06,6,59
+E08000013,St. Helens,la,North West,2026-07,4,50
+E08000013,St. Helens,la,North West,2026-08,1,40
+E08000013,St. Helens,la,North West,2026-09,2,40
 E07000197,Stafford,la,West Midlands,2023-05,,9
 E07000197,Stafford,la,West Midlands,2023-06,0,13
 E07000197,Stafford,la,West Midlands,2023-07,0,16
@@ -9233,6 +9959,9 @@ E07000197,Stafford,la,West Midlands,2026-03,0,4
 E07000197,Stafford,la,West Midlands,2026-04,0,3
 E07000197,Stafford,la,West Midlands,2026-05,0,3
 E07000197,Stafford,la,West Midlands,2026-06,0,4
+E07000197,Stafford,la,West Midlands,2026-07,0,4
+E07000197,Stafford,la,West Midlands,2026-08,0,6
+E07000197,Stafford,la,West Midlands,2026-09,0,7
 E07000198,Staffordshire Moorlands,la,West Midlands,2023-05,0,0
 E07000198,Staffordshire Moorlands,la,West Midlands,2023-06,0,1
 E07000198,Staffordshire Moorlands,la,West Midlands,2023-07,0,2
@@ -9271,6 +10000,9 @@ E07000198,Staffordshire Moorlands,la,West Midlands,2026-03,0,3
 E07000198,Staffordshire Moorlands,la,West Midlands,2026-04,0,8
 E07000198,Staffordshire Moorlands,la,West Midlands,2026-05,0,3
 E07000198,Staffordshire Moorlands,la,West Midlands,2026-06,0,4
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-07,0,4
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-08,0,6
+E07000198,Staffordshire Moorlands,la,West Midlands,2026-09,0,4
 E07000243,Stevenage,la,East of England,2023-05,0,8
 E07000243,Stevenage,la,East of England,2023-06,0,11
 E07000243,Stevenage,la,East of England,2023-07,0,10
@@ -9309,6 +10041,9 @@ E07000243,Stevenage,la,East of England,2026-03,0,11
 E07000243,Stevenage,la,East of England,2026-04,0,10
 E07000243,Stevenage,la,East of England,2026-05,0,13
 E07000243,Stevenage,la,East of England,2026-06,0,16
+E07000243,Stevenage,la,East of England,2026-07,0,22
+E07000243,Stevenage,la,East of England,2026-08,0,17
+E07000243,Stevenage,la,East of England,2026-09,0,12
 E08000007,Stockport,la,North West,2023-05,0,15
 E08000007,Stockport,la,North West,2023-06,0,14
 E08000007,Stockport,la,North West,2023-07,0,18
@@ -9347,6 +10082,9 @@ E08000007,Stockport,la,North West,2026-03,1,35
 E08000007,Stockport,la,North West,2026-04,0,39
 E08000007,Stockport,la,North West,2026-05,0,50
 E08000007,Stockport,la,North West,2026-06,0,38
+E08000007,Stockport,la,North West,2026-07,0,42
+E08000007,Stockport,la,North West,2026-08,0,54
+E08000007,Stockport,la,North West,2026-09,0,45
 E06000004,Stockton-on-Tees,la,North East,2023-05,0,28
 E06000004,Stockton-on-Tees,la,North East,2023-06,0,20
 E06000004,Stockton-on-Tees,la,North East,2023-07,0,9
@@ -9385,6 +10123,9 @@ E06000004,Stockton-on-Tees,la,North East,2026-03,0,19
 E06000004,Stockton-on-Tees,la,North East,2026-04,0,11
 E06000004,Stockton-on-Tees,la,North East,2026-05,0,11
 E06000004,Stockton-on-Tees,la,North East,2026-06,0,18
+E06000004,Stockton-on-Tees,la,North East,2026-07,0,13
+E06000004,Stockton-on-Tees,la,North East,2026-08,0,10
+E06000004,Stockton-on-Tees,la,North East,2026-09,1,16
 E06000021,Stoke-on-Trent,la,West Midlands,2023-05,0,111
 E06000021,Stoke-on-Trent,la,West Midlands,2023-06,0,108
 E06000021,Stoke-on-Trent,la,West Midlands,2023-07,0,103
@@ -9423,6 +10164,9 @@ E06000021,Stoke-on-Trent,la,West Midlands,2026-03,3,108
 E06000021,Stoke-on-Trent,la,West Midlands,2026-04,1,105
 E06000021,Stoke-on-Trent,la,West Midlands,2026-05,1,94
 E06000021,Stoke-on-Trent,la,West Midlands,2026-06,0,112
+E06000021,Stoke-on-Trent,la,West Midlands,2026-07,0,134
+E06000021,Stoke-on-Trent,la,West Midlands,2026-08,0,130
+E06000021,Stoke-on-Trent,la,West Midlands,2026-09,1,80
 E07000221,Stratford-on-Avon,la,West Midlands,2023-05,0,5
 E07000221,Stratford-on-Avon,la,West Midlands,2023-06,0,5
 E07000221,Stratford-on-Avon,la,West Midlands,2023-07,0,6
@@ -9461,6 +10205,9 @@ E07000221,Stratford-on-Avon,la,West Midlands,2026-03,0,12
 E07000221,Stratford-on-Avon,la,West Midlands,2026-04,0,10
 E07000221,Stratford-on-Avon,la,West Midlands,2026-05,0,14
 E07000221,Stratford-on-Avon,la,West Midlands,2026-06,0,12
+E07000221,Stratford-on-Avon,la,West Midlands,2026-07,0,29
+E07000221,Stratford-on-Avon,la,West Midlands,2026-08,0,25
+E07000221,Stratford-on-Avon,la,West Midlands,2026-09,0,20
 E07000082,Stroud,la,South West,2023-05,,4
 E07000082,Stroud,la,South West,2023-06,0,1
 E07000082,Stroud,la,South West,2023-07,0,1
@@ -9499,6 +10246,9 @@ E07000082,Stroud,la,South West,2026-03,0,4
 E07000082,Stroud,la,South West,2026-04,0,4
 E07000082,Stroud,la,South West,2026-05,0,1
 E07000082,Stroud,la,South West,2026-06,0,5
+E07000082,Stroud,la,South West,2026-07,0,3
+E07000082,Stroud,la,South West,2026-08,0,7
+E07000082,Stroud,la,South West,2026-09,0,8
 E08000024,Sunderland,la,North East,2023-05,0,14
 E08000024,Sunderland,la,North East,2023-06,0,13
 E08000024,Sunderland,la,North East,2023-07,0,19
@@ -9537,6 +10287,9 @@ E08000024,Sunderland,la,North East,2026-03,0,14
 E08000024,Sunderland,la,North East,2026-04,0,23
 E08000024,Sunderland,la,North East,2026-05,0,16
 E08000024,Sunderland,la,North East,2026-06,0,13
+E08000024,Sunderland,la,North East,2026-07,0,15
+E08000024,Sunderland,la,North East,2026-08,0,11
+E08000024,Sunderland,la,North East,2026-09,0,11
 E07000214,Surrey Heath,la,South East,2023-05,0,12
 E07000214,Surrey Heath,la,South East,2023-06,0,8
 E07000214,Surrey Heath,la,South East,2023-07,0,7
@@ -9575,6 +10328,9 @@ E07000214,Surrey Heath,la,South East,2026-03,0,8
 E07000214,Surrey Heath,la,South East,2026-04,0,9
 E07000214,Surrey Heath,la,South East,2026-05,0,8
 E07000214,Surrey Heath,la,South East,2026-06,0,7
+E07000214,Surrey Heath,la,South East,2026-07,0,6
+E07000214,Surrey Heath,la,South East,2026-08,0,7
+E07000214,Surrey Heath,la,South East,2026-09,0,6
 E09000029,Sutton,la,London,2023-05,0,0
 E09000029,Sutton,la,London,2023-06,0,2
 E09000029,Sutton,la,London,2023-07,0,0
@@ -9613,6 +10369,9 @@ E09000029,Sutton,la,London,2026-03,0,3
 E09000029,Sutton,la,London,2026-04,0,0
 E09000029,Sutton,la,London,2026-05,0,7
 E09000029,Sutton,la,London,2026-06,0,4
+E09000029,Sutton,la,London,2026-07,0,5
+E09000029,Sutton,la,London,2026-08,0,2
+E09000029,Sutton,la,London,2026-09,0,4
 E07000113,Swale,la,South East,2023-05,0,11
 E07000113,Swale,la,South East,2023-06,0,18
 E07000113,Swale,la,South East,2023-07,0,18
@@ -9651,6 +10410,9 @@ E07000113,Swale,la,South East,2026-03,0,12
 E07000113,Swale,la,South East,2026-04,0,16
 E07000113,Swale,la,South East,2026-05,0,12
 E07000113,Swale,la,South East,2026-06,0,10
+E07000113,Swale,la,South East,2026-07,0,17
+E07000113,Swale,la,South East,2026-08,0,25
+E07000113,Swale,la,South East,2026-09,0,25
 E06000030,Swindon,la,South West,2023-05,,16
 E06000030,Swindon,la,South West,2023-06,0,24
 E06000030,Swindon,la,South West,2023-07,0,21
@@ -9689,6 +10451,9 @@ E06000030,Swindon,la,South West,2026-03,0,19
 E06000030,Swindon,la,South West,2026-04,1,21
 E06000030,Swindon,la,South West,2026-05,0,17
 E06000030,Swindon,la,South West,2026-06,0,25
+E06000030,Swindon,la,South West,2026-07,0,36
+E06000030,Swindon,la,South West,2026-08,0,30
+E06000030,Swindon,la,South West,2026-09,0,32
 E08000008,Tameside,la,North West,2023-05,0,9
 E08000008,Tameside,la,North West,2023-06,0,13
 E08000008,Tameside,la,North West,2023-07,0,15
@@ -9727,6 +10492,9 @@ E08000008,Tameside,la,North West,2026-03,1,13
 E08000008,Tameside,la,North West,2026-04,3,24
 E08000008,Tameside,la,North West,2026-05,5,38
 E08000008,Tameside,la,North West,2026-06,2,33
+E08000008,Tameside,la,North West,2026-07,1,25
+E08000008,Tameside,la,North West,2026-08,0,20
+E08000008,Tameside,la,North West,2026-09,0,22
 E07000199,Tamworth,la,West Midlands,2023-05,0,1
 E07000199,Tamworth,la,West Midlands,2023-06,0,1
 E07000199,Tamworth,la,West Midlands,2023-07,0,2
@@ -9765,6 +10533,9 @@ E07000199,Tamworth,la,West Midlands,2026-03,0,3
 E07000199,Tamworth,la,West Midlands,2026-04,0,2
 E07000199,Tamworth,la,West Midlands,2026-05,0,1
 E07000199,Tamworth,la,West Midlands,2026-06,0,3
+E07000199,Tamworth,la,West Midlands,2026-07,0,5
+E07000199,Tamworth,la,West Midlands,2026-08,0,5
+E07000199,Tamworth,la,West Midlands,2026-09,0,2
 E07000215,Tandridge,la,South East,2023-05,0,5
 E07000215,Tandridge,la,South East,2023-06,0,4
 E07000215,Tandridge,la,South East,2023-07,0,4
@@ -9803,6 +10574,9 @@ E07000215,Tandridge,la,South East,2026-03,0,7
 E07000215,Tandridge,la,South East,2026-04,0,6
 E07000215,Tandridge,la,South East,2026-05,0,8
 E07000215,Tandridge,la,South East,2026-06,0,6
+E07000215,Tandridge,la,South East,2026-07,0,5
+E07000215,Tandridge,la,South East,2026-08,0,6
+E07000215,Tandridge,la,South East,2026-09,0,5
 E07000045,Teignbridge,la,South West,2023-05,0,11
 E07000045,Teignbridge,la,South West,2023-06,0,11
 E07000045,Teignbridge,la,South West,2023-07,0,10
@@ -9841,6 +10615,9 @@ E07000045,Teignbridge,la,South West,2026-03,0,4
 E07000045,Teignbridge,la,South West,2026-04,0,11
 E07000045,Teignbridge,la,South West,2026-05,0,15
 E07000045,Teignbridge,la,South West,2026-06,0,9
+E07000045,Teignbridge,la,South West,2026-07,0,17
+E07000045,Teignbridge,la,South West,2026-08,0,14
+E07000045,Teignbridge,la,South West,2026-09,0,21
 E06000020,Telford and Wrekin,la,West Midlands,2023-05,0,7
 E06000020,Telford and Wrekin,la,West Midlands,2023-06,0,13
 E06000020,Telford and Wrekin,la,West Midlands,2023-07,0,6
@@ -9879,6 +10656,9 @@ E06000020,Telford and Wrekin,la,West Midlands,2026-03,0,21
 E06000020,Telford and Wrekin,la,West Midlands,2026-04,0,14
 E06000020,Telford and Wrekin,la,West Midlands,2026-05,0,10
 E06000020,Telford and Wrekin,la,West Midlands,2026-06,0,9
+E06000020,Telford and Wrekin,la,West Midlands,2026-07,0,21
+E06000020,Telford and Wrekin,la,West Midlands,2026-08,0,19
+E06000020,Telford and Wrekin,la,West Midlands,2026-09,0,21
 E07000076,Tendring,la,East of England,2023-05,0,7
 E07000076,Tendring,la,East of England,2023-06,0,12
 E07000076,Tendring,la,East of England,2023-07,0,16
@@ -9917,6 +10697,9 @@ E07000076,Tendring,la,East of England,2026-03,0,12
 E07000076,Tendring,la,East of England,2026-04,0,15
 E07000076,Tendring,la,East of England,2026-05,0,20
 E07000076,Tendring,la,East of England,2026-06,0,25
+E07000076,Tendring,la,East of England,2026-07,0,28
+E07000076,Tendring,la,East of England,2026-08,0,28
+E07000076,Tendring,la,East of England,2026-09,0,27
 E07000093,Test Valley,la,South East,2023-05,0,7
 E07000093,Test Valley,la,South East,2023-06,0,5
 E07000093,Test Valley,la,South East,2023-07,0,2
@@ -9955,6 +10738,9 @@ E07000093,Test Valley,la,South East,2026-03,0,5
 E07000093,Test Valley,la,South East,2026-04,0,4
 E07000093,Test Valley,la,South East,2026-05,0,5
 E07000093,Test Valley,la,South East,2026-06,0,4
+E07000093,Test Valley,la,South East,2026-07,0,2
+E07000093,Test Valley,la,South East,2026-08,0,5
+E07000093,Test Valley,la,South East,2026-09,0,3
 E07000083,Tewkesbury,la,South West,2023-05,0,2
 E07000083,Tewkesbury,la,South West,2023-06,0,3
 E07000083,Tewkesbury,la,South West,2023-07,0,3
@@ -9993,6 +10779,9 @@ E07000083,Tewkesbury,la,South West,2026-03,0,4
 E07000083,Tewkesbury,la,South West,2026-04,0,4
 E07000083,Tewkesbury,la,South West,2026-05,0,2
 E07000083,Tewkesbury,la,South West,2026-06,0,5
+E07000083,Tewkesbury,la,South West,2026-07,0,4
+E07000083,Tewkesbury,la,South West,2026-08,0,5
+E07000083,Tewkesbury,la,South West,2026-09,0,5
 E07000114,Thanet,la,South East,2023-05,0,29
 E07000114,Thanet,la,South East,2023-06,0,20
 E07000114,Thanet,la,South East,2023-07,0,36
@@ -10031,6 +10820,9 @@ E07000114,Thanet,la,South East,2026-03,0,30
 E07000114,Thanet,la,South East,2026-04,0,26
 E07000114,Thanet,la,South East,2026-05,0,37
 E07000114,Thanet,la,South East,2026-06,0,37
+E07000114,Thanet,la,South East,2026-07,0,56
+E07000114,Thanet,la,South East,2026-08,0,53
+E07000114,Thanet,la,South East,2026-09,0,47
 E07000102,Three Rivers,la,East of England,2023-05,0,1
 E07000102,Three Rivers,la,East of England,2023-06,0,1
 E07000102,Three Rivers,la,East of England,2023-07,0,1
@@ -10069,6 +10861,9 @@ E07000102,Three Rivers,la,East of England,2026-03,0,2
 E07000102,Three Rivers,la,East of England,2026-04,0,2
 E07000102,Three Rivers,la,East of England,2026-05,0,3
 E07000102,Three Rivers,la,East of England,2026-06,0,3
+E07000102,Three Rivers,la,East of England,2026-07,0,7
+E07000102,Three Rivers,la,East of England,2026-08,0,1
+E07000102,Three Rivers,la,East of England,2026-09,0,3
 E06000034,Thurrock,la,East of England,2023-05,0,9
 E06000034,Thurrock,la,East of England,2023-06,0,13
 E06000034,Thurrock,la,East of England,2023-07,0,15
@@ -10107,6 +10902,9 @@ E06000034,Thurrock,la,East of England,2026-03,1,15
 E06000034,Thurrock,la,East of England,2026-04,1,14
 E06000034,Thurrock,la,East of England,2026-05,0,16
 E06000034,Thurrock,la,East of England,2026-06,0,20
+E06000034,Thurrock,la,East of England,2026-07,0,19
+E06000034,Thurrock,la,East of England,2026-08,0,25
+E06000034,Thurrock,la,East of England,2026-09,0,29
 E07000115,Tonbridge and Malling,la,South East,2023-05,0,4
 E07000115,Tonbridge and Malling,la,South East,2023-06,0,4
 E07000115,Tonbridge and Malling,la,South East,2023-07,0,9
@@ -10145,6 +10943,9 @@ E07000115,Tonbridge and Malling,la,South East,2026-03,0,4
 E07000115,Tonbridge and Malling,la,South East,2026-04,0,3
 E07000115,Tonbridge and Malling,la,South East,2026-05,0,3
 E07000115,Tonbridge and Malling,la,South East,2026-06,0,1
+E07000115,Tonbridge and Malling,la,South East,2026-07,0,6
+E07000115,Tonbridge and Malling,la,South East,2026-08,0,4
+E07000115,Tonbridge and Malling,la,South East,2026-09,0,6
 E06000027,Torbay,la,South West,2023-05,,24
 E06000027,Torbay,la,South West,2023-06,0,54
 E06000027,Torbay,la,South West,2023-07,0,64
@@ -10183,6 +10984,9 @@ E06000027,Torbay,la,South West,2026-03,0,36
 E06000027,Torbay,la,South West,2026-04,0,53
 E06000027,Torbay,la,South West,2026-05,0,55
 E06000027,Torbay,la,South West,2026-06,0,53
+E06000027,Torbay,la,South West,2026-07,0,64
+E06000027,Torbay,la,South West,2026-08,0,56
+E06000027,Torbay,la,South West,2026-09,0,36
 E07000046,Torridge,la,South West,2023-05,0,22
 E07000046,Torridge,la,South West,2023-06,0,26
 E07000046,Torridge,la,South West,2023-07,0,24
@@ -10221,6 +11025,9 @@ E07000046,Torridge,la,South West,2026-03,0,16
 E07000046,Torridge,la,South West,2026-04,0,10
 E07000046,Torridge,la,South West,2026-05,0,11
 E07000046,Torridge,la,South West,2026-06,0,10
+E07000046,Torridge,la,South West,2026-07,0,10
+E07000046,Torridge,la,South West,2026-08,0,7
+E07000046,Torridge,la,South West,2026-09,0,8
 E09000030,Tower Hamlets,la,London,2023-05,1,58
 E09000030,Tower Hamlets,la,London,2023-06,0,64
 E09000030,Tower Hamlets,la,London,2023-07,0,53
@@ -10259,6 +11066,9 @@ E09000030,Tower Hamlets,la,London,2026-03,1,54
 E09000030,Tower Hamlets,la,London,2026-04,0,61
 E09000030,Tower Hamlets,la,London,2026-05,0,75
 E09000030,Tower Hamlets,la,London,2026-06,0,81
+E09000030,Tower Hamlets,la,London,2026-07,1,112
+E09000030,Tower Hamlets,la,London,2026-08,2,83
+E09000030,Tower Hamlets,la,London,2026-09,0,91
 E08000009,Trafford,la,North West,2023-05,0,11
 E08000009,Trafford,la,North West,2023-06,0,5
 E08000009,Trafford,la,North West,2023-07,0,5
@@ -10297,6 +11107,9 @@ E08000009,Trafford,la,North West,2026-03,0,14
 E08000009,Trafford,la,North West,2026-04,0,13
 E08000009,Trafford,la,North West,2026-05,0,13
 E08000009,Trafford,la,North West,2026-06,1,10
+E08000009,Trafford,la,North West,2026-07,0,17
+E08000009,Trafford,la,North West,2026-08,0,16
+E08000009,Trafford,la,North West,2026-09,1,18
 E07000116,Tunbridge Wells,la,South East,2023-05,0,10
 E07000116,Tunbridge Wells,la,South East,2023-06,0,9
 E07000116,Tunbridge Wells,la,South East,2023-07,0,9
@@ -10335,6 +11148,9 @@ E07000116,Tunbridge Wells,la,South East,2026-03,0,4
 E07000116,Tunbridge Wells,la,South East,2026-04,0,4
 E07000116,Tunbridge Wells,la,South East,2026-05,0,6
 E07000116,Tunbridge Wells,la,South East,2026-06,0,2
+E07000116,Tunbridge Wells,la,South East,2026-07,0,8
+E07000116,Tunbridge Wells,la,South East,2026-08,0,7
+E07000116,Tunbridge Wells,la,South East,2026-09,0,12
 E07000077,Uttlesford,la,East of England,2023-05,0,2
 E07000077,Uttlesford,la,East of England,2023-06,0,3
 E07000077,Uttlesford,la,East of England,2023-07,0,3
@@ -10373,6 +11189,9 @@ E07000077,Uttlesford,la,East of England,2026-03,0,3
 E07000077,Uttlesford,la,East of England,2026-04,0,1
 E07000077,Uttlesford,la,East of England,2026-05,0,1
 E07000077,Uttlesford,la,East of England,2026-06,0,0
+E07000077,Uttlesford,la,East of England,2026-07,0,0
+E07000077,Uttlesford,la,East of England,2026-08,0,0
+E07000077,Uttlesford,la,East of England,2026-09,0,0
 E07000180,Vale of White Horse,la,South East,2023-05,0,0
 E07000180,Vale of White Horse,la,South East,2023-06,0,0
 E07000180,Vale of White Horse,la,South East,2023-07,0,2
@@ -10411,6 +11230,9 @@ E07000180,Vale of White Horse,la,South East,2026-03,0,7
 E07000180,Vale of White Horse,la,South East,2026-04,0,12
 E07000180,Vale of White Horse,la,South East,2026-05,0,8
 E07000180,Vale of White Horse,la,South East,2026-06,0,5
+E07000180,Vale of White Horse,la,South East,2026-07,0,5
+E07000180,Vale of White Horse,la,South East,2026-08,0,7
+E07000180,Vale of White Horse,la,South East,2026-09,0,13
 E08000036,Wakefield,la,Yorkshire and The Humber,2023-05,0,14
 E08000036,Wakefield,la,Yorkshire and The Humber,2023-06,0,15
 E08000036,Wakefield,la,Yorkshire and The Humber,2023-07,0,13
@@ -10449,6 +11271,9 @@ E08000036,Wakefield,la,Yorkshire and The Humber,2026-03,0,26
 E08000036,Wakefield,la,Yorkshire and The Humber,2026-04,0,29
 E08000036,Wakefield,la,Yorkshire and The Humber,2026-05,0,41
 E08000036,Wakefield,la,Yorkshire and The Humber,2026-06,0,41
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-07,0,40
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-08,0,40
+E08000036,Wakefield,la,Yorkshire and The Humber,2026-09,0,40
 E08000030,Walsall,la,West Midlands,2023-05,0,8
 E08000030,Walsall,la,West Midlands,2023-06,0,15
 E08000030,Walsall,la,West Midlands,2023-07,0,16
@@ -10487,6 +11312,9 @@ E08000030,Walsall,la,West Midlands,2026-03,0,25
 E08000030,Walsall,la,West Midlands,2026-04,0,33
 E08000030,Walsall,la,West Midlands,2026-05,0,24
 E08000030,Walsall,la,West Midlands,2026-06,0,29
+E08000030,Walsall,la,West Midlands,2026-07,0,32
+E08000030,Walsall,la,West Midlands,2026-08,0,13
+E08000030,Walsall,la,West Midlands,2026-09,0,31
 E09000031,Waltham Forest,la,London,2023-05,,23
 E09000031,Waltham Forest,la,London,2023-06,1,30
 E09000031,Waltham Forest,la,London,2023-07,0,15
@@ -10525,6 +11353,9 @@ E09000031,Waltham Forest,la,London,2026-03,0,30
 E09000031,Waltham Forest,la,London,2026-04,0,7
 E09000031,Waltham Forest,la,London,2026-05,0,9
 E09000031,Waltham Forest,la,London,2026-06,2,15
+E09000031,Waltham Forest,la,London,2026-07,1,7
+E09000031,Waltham Forest,la,London,2026-08,0,10
+E09000031,Waltham Forest,la,London,2026-09,0,8
 E09000032,Wandsworth,la,London,2023-05,1,19
 E09000032,Wandsworth,la,London,2023-06,0,22
 E09000032,Wandsworth,la,London,2023-07,0,29
@@ -10563,6 +11394,9 @@ E09000032,Wandsworth,la,London,2026-03,1,27
 E09000032,Wandsworth,la,London,2026-04,0,27
 E09000032,Wandsworth,la,London,2026-05,0,28
 E09000032,Wandsworth,la,London,2026-06,2,30
+E09000032,Wandsworth,la,London,2026-07,0,34
+E09000032,Wandsworth,la,London,2026-08,1,27
+E09000032,Wandsworth,la,London,2026-09,0,29
 E06000007,Warrington,la,North West,2023-05,0,34
 E06000007,Warrington,la,North West,2023-06,0,25
 E06000007,Warrington,la,North West,2023-07,0,24
@@ -10601,6 +11435,9 @@ E06000007,Warrington,la,North West,2026-03,4,18
 E06000007,Warrington,la,North West,2026-04,2,7
 E06000007,Warrington,la,North West,2026-05,0,10
 E06000007,Warrington,la,North West,2026-06,0,17
+E06000007,Warrington,la,North West,2026-07,1,15
+E06000007,Warrington,la,North West,2026-08,1,15
+E06000007,Warrington,la,North West,2026-09,2,12
 E07000222,Warwick,la,West Midlands,2023-05,0,19
 E07000222,Warwick,la,West Midlands,2023-06,0,20
 E07000222,Warwick,la,West Midlands,2023-07,0,22
@@ -10639,6 +11476,9 @@ E07000222,Warwick,la,West Midlands,2026-03,0,16
 E07000222,Warwick,la,West Midlands,2026-04,0,16
 E07000222,Warwick,la,West Midlands,2026-05,0,16
 E07000222,Warwick,la,West Midlands,2026-06,0,16
+E07000222,Warwick,la,West Midlands,2026-07,0,16
+E07000222,Warwick,la,West Midlands,2026-08,0,12
+E07000222,Warwick,la,West Midlands,2026-09,0,12
 E07000103,Watford,la,East of England,2023-05,0,13
 E07000103,Watford,la,East of England,2023-06,0,19
 E07000103,Watford,la,East of England,2023-07,0,12
@@ -10677,6 +11517,9 @@ E07000103,Watford,la,East of England,2026-03,0,15
 E07000103,Watford,la,East of England,2026-04,0,17
 E07000103,Watford,la,East of England,2026-05,0,25
 E07000103,Watford,la,East of England,2026-06,0,27
+E07000103,Watford,la,East of England,2026-07,0,21
+E07000103,Watford,la,East of England,2026-08,0,26
+E07000103,Watford,la,East of England,2026-09,0,22
 E07000216,Waverley,la,South East,2023-05,0,7
 E07000216,Waverley,la,South East,2023-06,0,3
 E07000216,Waverley,la,South East,2023-07,0,3
@@ -10715,6 +11558,9 @@ E07000216,Waverley,la,South East,2026-03,0,5
 E07000216,Waverley,la,South East,2026-04,0,7
 E07000216,Waverley,la,South East,2026-05,0,8
 E07000216,Waverley,la,South East,2026-06,0,9
+E07000216,Waverley,la,South East,2026-07,0,7
+E07000216,Waverley,la,South East,2026-08,0,7
+E07000216,Waverley,la,South East,2026-09,0,10
 E07000065,Wealden,la,South East,2023-05,0,3
 E07000065,Wealden,la,South East,2023-06,0,7
 E07000065,Wealden,la,South East,2023-07,0,6
@@ -10753,6 +11599,9 @@ E07000065,Wealden,la,South East,2026-03,0,8
 E07000065,Wealden,la,South East,2026-04,0,5
 E07000065,Wealden,la,South East,2026-05,0,5
 E07000065,Wealden,la,South East,2026-06,0,7
+E07000065,Wealden,la,South East,2026-07,0,6
+E07000065,Wealden,la,South East,2026-08,0,7
+E07000065,Wealden,la,South East,2026-09,0,9
 E07000241,Welwyn Hatfield,la,East of England,2023-05,0,4
 E07000241,Welwyn Hatfield,la,East of England,2023-06,0,5
 E07000241,Welwyn Hatfield,la,East of England,2023-07,0,4
@@ -10791,6 +11640,9 @@ E07000241,Welwyn Hatfield,la,East of England,2026-03,2,10
 E07000241,Welwyn Hatfield,la,East of England,2026-04,0,14
 E07000241,Welwyn Hatfield,la,East of England,2026-05,0,12
 E07000241,Welwyn Hatfield,la,East of England,2026-06,1,9
+E07000241,Welwyn Hatfield,la,East of England,2026-07,1,9
+E07000241,Welwyn Hatfield,la,East of England,2026-08,0,11
+E07000241,Welwyn Hatfield,la,East of England,2026-09,0,7
 E06000037,West Berkshire,la,South East,2023-05,0,7
 E06000037,West Berkshire,la,South East,2023-06,0,9
 E06000037,West Berkshire,la,South East,2023-07,0,9
@@ -10829,6 +11681,9 @@ E06000037,West Berkshire,la,South East,2026-03,0,13
 E06000037,West Berkshire,la,South East,2026-04,0,11
 E06000037,West Berkshire,la,South East,2026-05,0,10
 E06000037,West Berkshire,la,South East,2026-06,0,10
+E06000037,West Berkshire,la,South East,2026-07,0,15
+E06000037,West Berkshire,la,South East,2026-08,0,18
+E06000037,West Berkshire,la,South East,2026-09,0,15
 E07000047,West Devon,la,South West,2023-05,,0
 E07000047,West Devon,la,South West,2023-06,0,1
 E07000047,West Devon,la,South West,2023-07,0,1
@@ -10867,6 +11722,9 @@ E07000047,West Devon,la,South West,2026-03,0,7
 E07000047,West Devon,la,South West,2026-04,0,10
 E07000047,West Devon,la,South West,2026-05,0,6
 E07000047,West Devon,la,South West,2026-06,0,6
+E07000047,West Devon,la,South West,2026-07,0,5
+E07000047,West Devon,la,South West,2026-08,0,4
+E07000047,West Devon,la,South West,2026-09,0,6
 E07000127,West Lancashire,la,North West,2023-05,,3
 E07000127,West Lancashire,la,North West,2023-06,,3
 E07000127,West Lancashire,la,North West,2023-07,,3
@@ -10905,6 +11763,9 @@ E07000127,West Lancashire,la,North West,2026-03,0,2
 E07000127,West Lancashire,la,North West,2026-04,0,0
 E07000127,West Lancashire,la,North West,2026-05,0,0
 E07000127,West Lancashire,la,North West,2026-06,0,0
+E07000127,West Lancashire,la,North West,2026-07,0,0
+E07000127,West Lancashire,la,North West,2026-08,0,0
+E07000127,West Lancashire,la,North West,2026-09,0,0
 E07000142,West Lindsey,la,East Midlands,2023-05,0,1
 E07000142,West Lindsey,la,East Midlands,2023-06,0,1
 E07000142,West Lindsey,la,East Midlands,2023-07,0,1
@@ -10943,6 +11804,9 @@ E07000142,West Lindsey,la,East Midlands,2026-03,0,3
 E07000142,West Lindsey,la,East Midlands,2026-04,0,2
 E07000142,West Lindsey,la,East Midlands,2026-05,0,2
 E07000142,West Lindsey,la,East Midlands,2026-06,0,2
+E07000142,West Lindsey,la,East Midlands,2026-07,0,3
+E07000142,West Lindsey,la,East Midlands,2026-08,0,4
+E07000142,West Lindsey,la,East Midlands,2026-09,0,3
 E06000062,West Northamptonshire,la,East Midlands,2023-05,0,36
 E06000062,West Northamptonshire,la,East Midlands,2023-06,0,45
 E06000062,West Northamptonshire,la,East Midlands,2023-07,0,49
@@ -10981,6 +11845,9 @@ E06000062,West Northamptonshire,la,East Midlands,2026-03,0,41
 E06000062,West Northamptonshire,la,East Midlands,2026-04,0,53
 E06000062,West Northamptonshire,la,East Midlands,2026-05,0,54
 E06000062,West Northamptonshire,la,East Midlands,2026-06,0,41
+E06000062,West Northamptonshire,la,East Midlands,2026-07,0,73
+E06000062,West Northamptonshire,la,East Midlands,2026-08,0,66
+E06000062,West Northamptonshire,la,East Midlands,2026-09,0,56
 E07000181,West Oxfordshire,la,South East,2023-05,0,2
 E07000181,West Oxfordshire,la,South East,2023-06,0,3
 E07000181,West Oxfordshire,la,South East,2023-07,0,1
@@ -11019,6 +11886,9 @@ E07000181,West Oxfordshire,la,South East,2026-03,0,2
 E07000181,West Oxfordshire,la,South East,2026-04,0,2
 E07000181,West Oxfordshire,la,South East,2026-05,0,2
 E07000181,West Oxfordshire,la,South East,2026-06,0,3
+E07000181,West Oxfordshire,la,South East,2026-07,0,2
+E07000181,West Oxfordshire,la,South East,2026-08,0,3
+E07000181,West Oxfordshire,la,South East,2026-09,0,2
 E07000245,West Suffolk,la,East of England,2023-05,0,7
 E07000245,West Suffolk,la,East of England,2023-06,0,10
 E07000245,West Suffolk,la,East of England,2023-07,0,11
@@ -11057,6 +11927,9 @@ E07000245,West Suffolk,la,East of England,2026-03,0,12
 E07000245,West Suffolk,la,East of England,2026-04,0,9
 E07000245,West Suffolk,la,East of England,2026-05,1,21
 E07000245,West Suffolk,la,East of England,2026-06,0,13
+E07000245,West Suffolk,la,East of England,2026-07,0,14
+E07000245,West Suffolk,la,East of England,2026-08,0,12
+E07000245,West Suffolk,la,East of England,2026-09,0,13
 E09000033,Westminster,la,London,2023-05,3,370
 E09000033,Westminster,la,London,2023-06,3,370
 E09000033,Westminster,la,London,2023-07,0,349
@@ -11095,6 +11968,9 @@ E09000033,Westminster,la,London,2026-03,8,496
 E09000033,Westminster,la,London,2026-04,8,496
 E09000033,Westminster,la,London,2026-05,1,472
 E09000033,Westminster,la,London,2026-06,1,472
+E09000033,Westminster,la,London,2026-07,5,533
+E09000033,Westminster,la,London,2026-08,5,533
+E09000033,Westminster,la,London,2026-09,1,536
 E06000064,Westmorland and Furness,la,North West,2023-05,0,18
 E06000064,Westmorland and Furness,la,North West,2023-06,0,28
 E06000064,Westmorland and Furness,la,North West,2023-07,0,24
@@ -11133,6 +12009,9 @@ E06000064,Westmorland and Furness,la,North West,2026-03,0,23
 E06000064,Westmorland and Furness,la,North West,2026-04,0,21
 E06000064,Westmorland and Furness,la,North West,2026-05,0,18
 E06000064,Westmorland and Furness,la,North West,2026-06,0,21
+E06000064,Westmorland and Furness,la,North West,2026-07,0,26
+E06000064,Westmorland and Furness,la,North West,2026-08,0,27
+E06000064,Westmorland and Furness,la,North West,2026-09,0,25
 E08000010,Wigan,la,North West,2023-05,2,54
 E08000010,Wigan,la,North West,2023-06,0,81
 E08000010,Wigan,la,North West,2023-07,0,82
@@ -11171,6 +12050,9 @@ E08000010,Wigan,la,North West,2026-03,0,49
 E08000010,Wigan,la,North West,2026-04,0,46
 E08000010,Wigan,la,North West,2026-05,1,43
 E08000010,Wigan,la,North West,2026-06,0,46
+E08000010,Wigan,la,North West,2026-07,0,18
+E08000010,Wigan,la,North West,2026-08,0,34
+E08000010,Wigan,la,North West,2026-09,0,41
 E06000054,Wiltshire,la,South West,2023-05,0,31
 E06000054,Wiltshire,la,South West,2023-06,0,41
 E06000054,Wiltshire,la,South West,2023-07,0,49
@@ -11209,6 +12091,9 @@ E06000054,Wiltshire,la,South West,2026-03,1,45
 E06000054,Wiltshire,la,South West,2026-04,0,37
 E06000054,Wiltshire,la,South West,2026-05,0,46
 E06000054,Wiltshire,la,South West,2026-06,0,53
+E06000054,Wiltshire,la,South West,2026-07,0,64
+E06000054,Wiltshire,la,South West,2026-08,0,57
+E06000054,Wiltshire,la,South West,2026-09,0,69
 E07000094,Winchester,la,South East,2023-05,0,6
 E07000094,Winchester,la,South East,2023-06,0,7
 E07000094,Winchester,la,South East,2023-07,0,6
@@ -11247,6 +12132,9 @@ E07000094,Winchester,la,South East,2026-03,0,6
 E07000094,Winchester,la,South East,2026-04,0,10
 E07000094,Winchester,la,South East,2026-05,0,15
 E07000094,Winchester,la,South East,2026-06,0,12
+E07000094,Winchester,la,South East,2026-07,0,13
+E07000094,Winchester,la,South East,2026-08,0,19
+E07000094,Winchester,la,South East,2026-09,0,17
 E06000040,Windsor and Maidenhead,la,South East,2023-05,0,10
 E06000040,Windsor and Maidenhead,la,South East,2023-06,0,10
 E06000040,Windsor and Maidenhead,la,South East,2023-07,0,14
@@ -11285,6 +12173,9 @@ E06000040,Windsor and Maidenhead,la,South East,2026-03,0,22
 E06000040,Windsor and Maidenhead,la,South East,2026-04,0,18
 E06000040,Windsor and Maidenhead,la,South East,2026-05,0,15
 E06000040,Windsor and Maidenhead,la,South East,2026-06,0,18
+E06000040,Windsor and Maidenhead,la,South East,2026-07,0,22
+E06000040,Windsor and Maidenhead,la,South East,2026-08,0,15
+E06000040,Windsor and Maidenhead,la,South East,2026-09,0,20
 E08000015,Wirral,la,North West,2023-05,0,22
 E08000015,Wirral,la,North West,2023-06,0,15
 E08000015,Wirral,la,North West,2023-07,0,20
@@ -11323,6 +12214,9 @@ E08000015,Wirral,la,North West,2026-03,5,42
 E08000015,Wirral,la,North West,2026-04,4,33
 E08000015,Wirral,la,North West,2026-05,0,32
 E08000015,Wirral,la,North West,2026-06,0,24
+E08000015,Wirral,la,North West,2026-07,0,35
+E08000015,Wirral,la,North West,2026-08,0,32
+E08000015,Wirral,la,North West,2026-09,0,25
 E07000217,Woking,la,South East,2023-05,0,1
 E07000217,Woking,la,South East,2023-06,0,4
 E07000217,Woking,la,South East,2023-07,0,7
@@ -11360,7 +12254,10 @@ E07000217,Woking,la,South East,2026-02,0,15
 E07000217,Woking,la,South East,2026-03,0,8
 E07000217,Woking,la,South East,2026-04,0,19
 E07000217,Woking,la,South East,2026-05,0,14
-E07000217,Woking,la,South East,2026-06,0,14
+E07000217,Woking,la,South East,2026-06,0,12
+E07000217,Woking,la,South East,2026-07,0,14
+E07000217,Woking,la,South East,2026-08,0,15
+E07000217,Woking,la,South East,2026-09,0,14
 E06000041,Wokingham,la,South East,2023-05,0,8
 E06000041,Wokingham,la,South East,2023-06,0,15
 E06000041,Wokingham,la,South East,2023-07,0,13
@@ -11399,6 +12296,9 @@ E06000041,Wokingham,la,South East,2026-03,0,6
 E06000041,Wokingham,la,South East,2026-04,1,10
 E06000041,Wokingham,la,South East,2026-05,0,10
 E06000041,Wokingham,la,South East,2026-06,0,7
+E06000041,Wokingham,la,South East,2026-07,0,9
+E06000041,Wokingham,la,South East,2026-08,0,13
+E06000041,Wokingham,la,South East,2026-09,0,16
 E08000031,Wolverhampton,la,West Midlands,2023-05,0,26
 E08000031,Wolverhampton,la,West Midlands,2023-06,0,30
 E08000031,Wolverhampton,la,West Midlands,2023-07,0,24
@@ -11437,6 +12337,9 @@ E08000031,Wolverhampton,la,West Midlands,2026-03,0,28
 E08000031,Wolverhampton,la,West Midlands,2026-04,0,32
 E08000031,Wolverhampton,la,West Midlands,2026-05,0,34
 E08000031,Wolverhampton,la,West Midlands,2026-06,0,30
+E08000031,Wolverhampton,la,West Midlands,2026-07,0,47
+E08000031,Wolverhampton,la,West Midlands,2026-08,0,53
+E08000031,Wolverhampton,la,West Midlands,2026-09,0,53
 E07000237,Worcester,la,West Midlands,2023-05,0,14
 E07000237,Worcester,la,West Midlands,2023-06,0,16
 E07000237,Worcester,la,West Midlands,2023-07,0,26
@@ -11475,6 +12378,9 @@ E07000237,Worcester,la,West Midlands,2026-03,0,23
 E07000237,Worcester,la,West Midlands,2026-04,0,19
 E07000237,Worcester,la,West Midlands,2026-05,0,23
 E07000237,Worcester,la,West Midlands,2026-06,0,27
+E07000237,Worcester,la,West Midlands,2026-07,0,35
+E07000237,Worcester,la,West Midlands,2026-08,0,47
+E07000237,Worcester,la,West Midlands,2026-09,0,49
 E07000229,Worthing,la,South East,2023-05,0,27
 E07000229,Worthing,la,South East,2023-06,0,28
 E07000229,Worthing,la,South East,2023-07,0,33
@@ -11513,6 +12419,9 @@ E07000229,Worthing,la,South East,2026-03,0,27
 E07000229,Worthing,la,South East,2026-04,0,46
 E07000229,Worthing,la,South East,2026-05,0,34
 E07000229,Worthing,la,South East,2026-06,0,49
+E07000229,Worthing,la,South East,2026-07,0,51
+E07000229,Worthing,la,South East,2026-08,0,46
+E07000229,Worthing,la,South East,2026-09,0,56
 E07000238,Wychavon,la,West Midlands,2023-05,0,8
 E07000238,Wychavon,la,West Midlands,2023-06,0,13
 E07000238,Wychavon,la,West Midlands,2023-07,0,10
@@ -11551,6 +12460,9 @@ E07000238,Wychavon,la,West Midlands,2026-03,0,8
 E07000238,Wychavon,la,West Midlands,2026-04,0,8
 E07000238,Wychavon,la,West Midlands,2026-05,0,8
 E07000238,Wychavon,la,West Midlands,2026-06,0,7
+E07000238,Wychavon,la,West Midlands,2026-07,0,9
+E07000238,Wychavon,la,West Midlands,2026-08,0,8
+E07000238,Wychavon,la,West Midlands,2026-09,0,9
 E07000128,Wyre,la,North West,2023-05,0,5
 E07000128,Wyre,la,North West,2023-06,0,5
 E07000128,Wyre,la,North West,2023-07,0,5
@@ -11589,6 +12501,9 @@ E07000128,Wyre,la,North West,2026-03,0,5
 E07000128,Wyre,la,North West,2026-04,0,7
 E07000128,Wyre,la,North West,2026-05,0,10
 E07000128,Wyre,la,North West,2026-06,0,12
+E07000128,Wyre,la,North West,2026-07,1,11
+E07000128,Wyre,la,North West,2026-08,0,11
+E07000128,Wyre,la,North West,2026-09,0,17
 E07000239,Wyre Forest,la,West Midlands,2023-05,0,5
 E07000239,Wyre Forest,la,West Midlands,2023-06,0,3
 E07000239,Wyre Forest,la,West Midlands,2023-07,0,3
@@ -11627,6 +12542,9 @@ E07000239,Wyre Forest,la,West Midlands,2026-03,0,5
 E07000239,Wyre Forest,la,West Midlands,2026-04,0,7
 E07000239,Wyre Forest,la,West Midlands,2026-05,0,5
 E07000239,Wyre Forest,la,West Midlands,2026-06,0,8
+E07000239,Wyre Forest,la,West Midlands,2026-07,0,8
+E07000239,Wyre Forest,la,West Midlands,2026-08,0,7
+E07000239,Wyre Forest,la,West Midlands,2026-09,0,6
 E06000014,York,la,Yorkshire and The Humber,2023-05,0,41
 E06000014,York,la,Yorkshire and The Humber,2023-06,0,52
 E06000014,York,la,Yorkshire and The Humber,2023-07,0,55
@@ -11665,3 +12583,6 @@ E06000014,York,la,Yorkshire and The Humber,2026-03,0,62
 E06000014,York,la,Yorkshire and The Humber,2026-04,0,53
 E06000014,York,la,Yorkshire and The Humber,2026-05,0,54
 E06000014,York,la,Yorkshire and The Humber,2026-06,0,47
+E06000014,York,la,Yorkshire and The Humber,2026-07,0,75
+E06000014,York,la,Yorkshire and The Humber,2026-08,0,64
+E06000014,York,la,Yorkshire and The Humber,2026-09,0,69

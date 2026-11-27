@@ -2,22 +2,6 @@
  "upcoming": [
   {
    "series": "MHCLG statutory homelessness",
-   "title": "Statutory homelessness in England: April to June 2026",
-   "state": "confirmed",
-   "date": "2026-11-26",
-   "month_only": false,
-   "url": "https://www.gov.uk/government/statistics/announcements/statutory-homelessness-in-england-april-to-june-2026"
-  },
-  {
-   "series": "Home Office immigration statistics",
-   "title": "Immigration system statistics, year ending September 2026",
-   "state": "confirmed",
-   "date": "2026-11-26",
-   "month_only": false,
-   "url": "https://www.gov.uk/government/statistics/announcements/immigration-system-statistics-year-ending-september-2026"
-  },
-  {
-   "series": "MHCLG statutory homelessness",
    "title": "Statutory homelessness in England: Financial Year 2025-26",
    "state": "provisional",
    "date": "2027-01-31",
